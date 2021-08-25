@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color-primary;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  color: $text-color-primary;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: center;
+  cursor: pointer;
+  font: 400 22px $font-family-main;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 136%;
+  border: 0px;
+}
+
+h1 {
+  margin: 0;
+}

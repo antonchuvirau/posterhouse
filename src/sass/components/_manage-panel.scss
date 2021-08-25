@@ -1,0 +1,27 @@
+.manage-panel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 54px;
+    padding-bottom: 70px;
+}
+
+.manage-panel__filters {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.manage-panel__filter-item {
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 26px;
+    color: $color-neutral-40;
+}
+
+.manage-panel__filter-item--state_active {
+    color: $color-neutral-10;
+    text-decoration: underline;
+}
