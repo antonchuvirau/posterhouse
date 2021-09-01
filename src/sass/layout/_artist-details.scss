@@ -1,0 +1,33 @@
+.artist-details {
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+}
+
+.artist-details__content {
+    width: 490px;
+}
+
+.artist-details__image {
+
+}
+
+.artist-details__name {
+    @include h3;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.artist-details__country {
+    color: $color-neutral-30;
+    margin-bottom: 33px;
+}
+
+.artist-details__description {
+    margin-bottom: 33px;
+}
+
+.artist-details__expand-btn {
+    text-decoration-line: underline;
+    cursor: pointer;
+}

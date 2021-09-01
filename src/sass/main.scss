@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'abstracts/mixins',
+  'abstracts/variables';
+  // 'abstracts/functions',
+
+// 2. Base stuff
+@import
+'base/base',
+'base/fonts',
+'base/typography';
+// 'base/helpers';
+
+// 3. Components
+@import
+  'components/button',
+  'components/copyright',
+  'components/media-link',
+  'components/product-card',
+  'components/artist-card',
+  'components/authorisation-tabs',
+  'components/manage-panel';
+
+// 4. Layout-related sections
+@import
+'layout/action-btn',
+'layout/address-bar',
+'layout/artist-details',
+'layout/footer',
+'layout/header',
+'layout/main',
+'layout/product-details',
+'layout/card-list',
+'layout/selection',
+'layout/wrapper';
+
+// 5. Page-specific styles
+@import
+  'pages/artists',
+  'pages/artist',
+  'pages/authorisation',
+  'pages/artwork',
+  'pages/home',
+  'pages/product';
+
+// 6. Themes
+// @import
+//   'themes/default';
+
+// 7. Vendors
+@import
+  'vendors/normalize';

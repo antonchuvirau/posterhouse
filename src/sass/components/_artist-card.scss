@@ -1,0 +1,27 @@
+.artist-card {
+    width: 390px;
+    height: 530px;
+    background-color: $background-color-primary-grey-87;
+}
+
+.artist-card__container {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.artist-card__image {
+    margin-top: 40px;
+}
+
+.artist-card__name {
+    margin-top: 30px;
+    color: $color-neutral-0;
+}
+
+.artist-card__location {
+    margin-top: 10px;
+    color: $color-neutral-60;
+}
