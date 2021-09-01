@@ -1,0 +1,13 @@
+.button_bright_arrow {
+  @include bright-button;
+  padding: 15px 45px;
+}
+
+.button_bright--width_small {
+  @include bright-button;
+  padding: 15px 28px;
+}
+
+.button_dark {
+  @include dark-button;
+}

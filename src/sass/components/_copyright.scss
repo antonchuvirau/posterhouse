@@ -1,0 +1,18 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+}
+
+.copyright__logo {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.copyright__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
