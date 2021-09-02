@@ -1,0 +1,28 @@
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 290px;
+    height: 100%;
+    opacity: 1;
+    z-index: 107;
+    background-color: $background-color-main;
+    padding: 30px;
+    overflow: auto;
+    display: flex;
+    animation-name: 'samplePreviewIn';
+    animation-duration: .40s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-delay: 5ms;
+}
+
+.side-panel__close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    & svg {
+        color: doveGray;
+    }
+};

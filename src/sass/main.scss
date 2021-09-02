@@ -15,7 +15,9 @@
 
 // 3. Components
 @import
+  'components/checkbox',
   'components/button',
+  'components/filter',
   'components/copyright',
   'components/media-link',
   'components/product-card',
@@ -25,6 +27,7 @@
 
 // 4. Layout-related sections
 @import
+'layout/side-panel',
 'layout/action-btn',
 'layout/address-bar',
 'layout/artist-details',
