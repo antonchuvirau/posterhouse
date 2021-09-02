@@ -25,6 +25,7 @@ export const useFiltersListStructure = () => {
         {
             title: 'Theme / Genre',
             textarea: true,
+            useScroll: true,
             checkBoxes: [
                 {
                     label: 'Abstract',
@@ -62,6 +63,7 @@ export const useFiltersListStructure = () => {
         {
             title: 'Artist',
             textarea: true,
+            useScroll: true,
             checkBoxes: [
                 {
                     label: 'Name Surname',
@@ -91,6 +93,16 @@ export const useFiltersListStructure = () => {
                 {
                     label: 'Name Surname',
                     id: 'Name Surname 6',
+                    checked: false,
+                },
+                {
+                    label: 'Name Surname',
+                    id: 'Name Surname 7',
+                    checked: false,
+                },
+                {
+                    label: 'Name Surname',
+                    id: 'Name Surname 8',
                     checked: false,
                 },
             ]
@@ -197,10 +209,6 @@ export const useFiltersListStructure = () => {
             textarea: true,
             checkBoxes: [],
         },
-
-
-
-
     ];
 
     return { filtersListStructure };

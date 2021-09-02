@@ -1,8 +1,9 @@
 import React from 'react';
 import CardList from '../components/common/CardList';
-import ManagePanel from '../components/common/ManagePanel';
-import ButtonBrightWithArrow from '../components/common/ButtonBrightWithArrow';
+import ManagePanel from '../components/common/manage-panel/ManagePanel';
+import ButtonBrightWithArrow from '../components/common/buttons/ButtonBrightWithArrow';
 import ProductCard from '../components/product/ProductCard';
+import { SORTED_ITEMS } from '../components/common/manage-panel/useSortByDropdownStructure';
 
 const HomePage = () => {
     const products = new Array(6).fill(0);
@@ -10,7 +11,7 @@ const HomePage = () => {
 
     return (
         <div className="home-page">
-            <ManagePanel />
+            <ManagePanel sortedItems={SORTED_ITEMS.PRODUCTS} />
             <div className="home-page__products-list">
                 <div className="home-page__content">
                     <CardList cardComponents={productsComponents} />

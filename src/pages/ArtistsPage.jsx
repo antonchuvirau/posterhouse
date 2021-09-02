@@ -1,8 +1,8 @@
 import React from 'react';
 import CardList from '../components/common/CardList';
-import ManagePanel from '../components/common/ManagePanel';
+import ManagePanel from '../components/common/manage-panel/ManagePanel';
 import ArtistCard from '../components/artist/ArtistCard';
-import ButtonBright from '../components/common/ButtonBright';
+import ButtonBright from '../components/common/buttons/ButtonBright';
 
 const ArtistsPage = () => {
     const artists = new Array(6).fill(0);

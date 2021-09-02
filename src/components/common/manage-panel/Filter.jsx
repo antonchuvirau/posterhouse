@@ -11,6 +11,7 @@ const Filter = ({
         textarea = false,
         checkBoxes = [],
         delimiter = false,
+        useScroll = false,
     } = filterStructure || {};
 
     if (delimiter) {
@@ -22,8 +23,8 @@ const Filter = ({
             <div htmlFor="" className="filter__title">
                 {title}
             </div>
-            <div className="filter__content">
-                {textarea && <input type="text" className="filter__textarea" placeholder="Search" />}
+            {textarea && <input type="text" className="filter__textarea" placeholder="Search" />}
+            <div className={`filter__content ${useScroll ? 'filter__content--scroll' : ''}`}>
                 {
                     checkBoxes.map(({ label, checked, id }) => (
                         <label key={id} className="filter__label custom-checkbox">

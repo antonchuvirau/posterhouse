@@ -2,10 +2,10 @@ import React from 'react';
 import AddressBar from '../components/common/AddressBar';
 import ArtistPageArtistDetails from '../components/artist/ArtistPageArtistDetails';
 import CardList from '../components/common/CardList';
-import ButtonBright from '../components/common/ButtonBright';
+import ButtonBright from '../components/common/buttons/ButtonBright';
 import ProductCard from '../components/product/ProductCard';
 import ArtistPageBiography from '../components/artist/ArtistPageBiography';
-import ManagePanel from '../components/common/ManagePanel';
+import ManagePanel from '../components/common/manage-panel/ManagePanel';
 
 const ArtistPage = () => {
     const products = new Array(6).fill(0);

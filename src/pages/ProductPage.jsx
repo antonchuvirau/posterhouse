@@ -3,7 +3,7 @@ import AddressBar from '../components/common/AddressBar';
 import ProductDetails from '../components/product/ProductDetails';
 import ArtistDetails from '../components/artist/ProductPageArtistDetails';
 import CardList from '../components/common/CardList';
-import ButtonBright from '../components/common/ButtonBright';
+import ButtonBright from '../components/common/buttons/ButtonBright';
 import ProductCard from '../components/product/ProductCard';
 
 const ProductPage = () => {

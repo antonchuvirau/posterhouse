@@ -1,7 +1,7 @@
 import React from 'react';
 import CardList from '../components/common/CardList';
-import ButtonBright from '../components/common/ButtonBright';
-import ManagePanel from '../components/common/ManagePanel';
+import ButtonBright from '../components/common/buttons/ButtonBright';
+import ManagePanel from '../components/common/manage-panel/ManagePanel';
 import ProductCard from '../components/product/ProductCard';
 
 const ProductListPage = () => {

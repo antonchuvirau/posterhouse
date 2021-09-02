@@ -1,5 +1,5 @@
 import React from 'react';
-import arrowRight from '../../assets/icons/arrow_right-black.svg';
+import arrowRight from '../../../assets/icons/arrow_right-black.svg';
 
 const ButtonBrightWithArrow = ({
     buttonLabel,

@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonDark from '../common/ButtonDark';
+import ButtonDark from '../common/buttons/ButtonDark';
 
 const CreateAccount = () => {
     return (

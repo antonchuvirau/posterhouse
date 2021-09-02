@@ -14,26 +14,34 @@ export const SidePanelConsumer = SidePanelContext.Consumer;
 let currentSidePanelId = 1;
 
 const SidePanelItem = ({
-    id,
-    body,
-    className,
-    closeButtonClassName = '',
-    hasCloseButton = true,
-    onClose,
-}) => (
+  id,
+  body,
+  className,
+  closeButtonClassName = "",
+  hasCloseButton = false,
+  onClose,
+  open,
+}) => {
+  return (
     <Fragment>
         <div className={`side-panel ${className}`} key={id}>
-            { body }
-            { hasCloseButton && <div className={closeButtonClassName || 'side-panel__close-btn'}>
-                <button
-                    aria-label='close'
-                    onClick={() => onClose(id)}>
-                    Close
-                </button>
-            </div> }
+            {body}
+            {hasCloseButton && (
+                <div className={closeButtonClassName || "side-panel__close-btn"}>
+                    <button aria-label="close" onClick={() => onClose(id)}>
+                        Close
+                    </button>
+                </div>
+            )}
         </div>
+        <div
+            className="side-panel__backdrop"
+            onClick={() => onClose(id)}
+            open={open}
+        />
     </Fragment>
-);
+  );
+};
 
 const SidePanelPlaceholder = ({ sidePanels, onClose, id }) => {
     return (sidePanels || []).map((sidePanelProps) => (

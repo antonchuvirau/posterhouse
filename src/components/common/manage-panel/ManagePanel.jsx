@@ -1,34 +1,21 @@
 
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import SidePanelContext from '../../contexts/SidePanelContext';
-import FiltersPanel from './filters-panel/FiltersPanel';
-import useComponentVisible from '../../hooks/useComponentVisible';
+import SidePanelContext from '../../../contexts/SidePanelContext';
+import FiltersPanel from './FiltersPanel';
+import DropDownMenu from './DropDownMenu';
 
 const ManagePanel = ({
     hideLeftSubPanel,
+    sortedItems,
 }) => {
-    const { showSidePanel, hideSidePanel } = useContext(SidePanelContext)
+    const { showSidePanel } = useContext(SidePanelContext)
 
     const filterPanelId = useRef(null);
 
     const onFilterClickHandler = () => {
         filterPanelId.current = showSidePanel({ body: <FiltersPanel />})
     }
-
-
-    // const { ref, isComponentVisible } = useComponentVisible(true);
-
-    // const DropDown = () => {
-    //     return (
-    //        <div ref={ref}>
-    //           {isComponentVisible && (<p>Dropdown Component</p>)}
-    //        </div>
-    //     );
-
-    // }
-
-
 
     return (
         <div className="manage-panel">
@@ -47,7 +34,10 @@ const ManagePanel = ({
             }
             <div className="manage-panel__filters">
                 <div className="manage-panel__filter-item">
-                    Sort by
+                    <DropDownMenu
+                        sortedItems={sortedItems}
+                        dropdownBtnLabel="Sort by"
+                    />
                 </div>
                 <div className="manage-panel__filter-item" onClick={onFilterClickHandler}>
                     Filter
