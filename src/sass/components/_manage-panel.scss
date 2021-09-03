@@ -1,11 +1,34 @@
 .manage-panel {
     width: 100%;
+    padding-top: 54px;
+}
+
+.manage-panel__search-bar {
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+}
+
+.manage-panel__search-field {
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    background-color: $background-color-light;
+    color: $color-neutral-30;
+    border: none;
+    resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.manage-panel__buttons-bar {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 54px;
-    padding-bottom: 70px;
 }
 
 .manage-panel__filters {

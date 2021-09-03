@@ -9,25 +9,25 @@ const CreateAccount = () => {
                     <div className="authorisation-field__label">
                         First name*
                     </div>
-                    <textarea className="authorisation-field__input"></textarea>
+                    <input type="text" className="authorisation-field__input"></input>
                 </div>
                 <div className="authorisation-field">
                     <div className="authorisation-field__label">
                         Last name*
                     </div>
-                    <textarea className="authorisation-field__input"></textarea>
+                    <input type="text" className="authorisation-field__input"></input>
                 </div>
                 <div className="authorisation-field">
                     <div className="authorisation-field__label">
                         E-mail address*
                     </div>
-                    <textarea className="authorisation-field__input"></textarea>
+                    <input type="text" className="authorisation-field__input"></input>
                 </div>
                 <div className="authorisation-field">
                     <div className="authorisation-field__label">
                         Password*
                     </div>
-                    <textarea className="authorisation-field__input"></textarea>
+                    <input type="text" className="authorisation-field__input"></input>
                 </div>
             </div>
             <div className="authorisation__btn-container">

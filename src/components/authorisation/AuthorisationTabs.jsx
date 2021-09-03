@@ -1,15 +1,33 @@
 import React from 'react';
+import { AUTHORISATION_PAGES } from '../../pages/AuthorisationPage';
 
-const AuthorisationTabs = () => {
+const AuthorisationTabs = ({
+    setCurrentAuthorisationPage,
+    currentAuthorisationPage,
+}) => {
     return (
         <div className="authorisation-tabs">
-            <div className="authorisation-tabs__item authorisation-tabs__item--state_active">
-                <h3 className="authorisation-tabs__label authorisation-tabs__label--state_active">
+            <div
+                onClick={() => setCurrentAuthorisationPage(AUTHORISATION_PAGES.LOGIN)}
+                className={`authorisation-tabs__item ${
+                    currentAuthorisationPage === AUTHORISATION_PAGES.LOGIN
+                    ? 'authorisation-tabs__item--state_active'
+                    : 'authorisation-tabs__item--state_inactive'
+                }`}
+            >
+                <h3 className="authorisation-tabs__label">
                     Log in
                 </h3>
             </div>
-            <div className="authorisation-tabs__item authorisation-tabs__item--state_inactive">
-                <h3 className="authorisation-tabs__label authorisation-tabs__label--state_inactive">
+            <div
+                onClick={() => setCurrentAuthorisationPage(AUTHORISATION_PAGES.CREATE_ACCOUNT)}
+                className={`authorisation-tabs__item ${
+                    currentAuthorisationPage === AUTHORISATION_PAGES.CREATE_ACCOUNT
+                    ? 'authorisation-tabs__item--state_active'
+                    : 'authorisation-tabs__item--state_inactive'
+                }`}
+            >
+                <h3 className="authorisation-tabs__label">
                     Create an account
                 </h3>
             </div>

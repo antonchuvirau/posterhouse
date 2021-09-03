@@ -1,3 +1,13 @@
+.custom-checkbox {
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
 /* для элемента input c type="checkbox" */
 .custom-checkbox__input {
     position: absolute;

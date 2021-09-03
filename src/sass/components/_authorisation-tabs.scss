@@ -12,14 +12,16 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
 }
 
 .authorisation-tabs__item--state_active {
     border-bottom: 2px solid $color-neutral-20;
+    color: $color-neutral-20;
 }
 
 .authorisation-tabs__item--state_inactive {
-
+    color: $color-neutral-60;
 }
 
 .authorisation-tabs__label {
@@ -27,9 +29,9 @@
 }
 
 .authorisation-tabs__label--state_active {
-    color: $color-neutral-20;
+
 }
 
 .authorisation-tabs__label--state_inactive {
-    color: $color-neutral-60;
+
 }

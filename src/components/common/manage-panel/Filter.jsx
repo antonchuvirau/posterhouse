@@ -1,6 +1,7 @@
 
 import React, { useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
+import CheckBox from '../CheckBox';
 
 const Filter = ({
     hideLeftSubPanel,
@@ -27,10 +28,17 @@ const Filter = ({
             <div className={`filter__content ${useScroll ? 'filter__content--scroll' : ''}`}>
                 {
                     checkBoxes.map(({ label, checked, id }) => (
-                        <label key={id} className="filter__label custom-checkbox">
-                            <input type="checkbox" className="filter__checkbox custom-checkbox__input" />
-                            <span className="custom-checkbox__label">{label}</span>
-                        </label>
+                        <CheckBox
+                            key={id}
+                            labelClasses="filter__label"
+                            inputClasses="filter__checkbox"
+                            label={label}
+                            checked={checked}
+                        />
+                        // <label key={id} className="filter__label custom-checkbox">
+                        //     <input type="checkbox" className="filter__checkbox custom-checkbox__input" />
+                        //     <span className="custom-checkbox__label">{label}</span>
+                        // </label>
                     ))
                 }
             </div>
