@@ -37,11 +37,18 @@
     margin-bottom: 22px;
 }
 
+.product-info__select-options {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .product-info__description {
     color: $color-neutral-30;
     font-size: 18px;
     line-height: 20px;
-    margin-bottom: 70px;
 }
 
 .product-info__price {

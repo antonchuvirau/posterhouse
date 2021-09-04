@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getInitialSortedByOptionsState } from './useSortByDropdownStructure';
+import { getInitialSortedByOptionsState } from './manage-panel/useSortByDropdownStructure';
 
 const DropDownMenu = ({
     dropdownBtnLabel,
@@ -10,7 +10,7 @@ const DropDownMenu = ({
     const [sortedByOptionsState, setSortedByOptionsState] = useState(() =>  getInitialSortedByOptionsState(sortedItems))
 
     const handleClick = useCallback((event) => {
-        if (event.target.matches('.dropdown__btn')) {
+        if (event.target.matches('.dropdown-menu__btn')) {
             return;
         }
 
@@ -26,20 +26,20 @@ const DropDownMenu = ({
     }, [handleClick])
 
     return (
-        <div className="dropdown">
+        <div className="dropdown-menu">
             <button
                 onClick={() => setIsOpen((prevState) => !prevState)}
-                className="dropdown__btn"
+                className="dropdown-menu__btn"
             >
                 {dropdownBtnLabel}
             </button>
             <div
-                id="dropdown__content"
-                className={`dropdown__content ${isOpen ? 'dropdown__content--state_visible' : 'dropdown__content--state_invisible'}`}
+                id="dropdown-menu__content"
+                className={`dropdown-menu__content ${isOpen ? 'dropdown-menu__content--state_visible' : 'dropdown-menu__content--state_invisible'}`}
             >
                 {
                     sortedByOptionsState.map(({ id, label, selected }) => (
-                        <a key={id} className={`dropdown__item ${selected ? 'dropdown__item--state_selected' : '' }`} href="#home">{label}</a>
+                        <a key={id} className={`dropdown-menu__item ${selected ? 'dropdown-menu__item--state_selected' : '' }`} href="#home">{label}</a>
                     ))
                 }
             </div>

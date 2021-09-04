@@ -1,15 +1,15 @@
-.dropdown {
+.dropdown-menu {
   position: relative;
   display: inline-block;
 }
 
-.dropdown__btn {
+.dropdown-menu__btn {
   cursor: pointer;
   border: none;
   color: $color-neutral-40;
 }
 
-.dropdown__content {
+.dropdown-menu__content {
   position: absolute;
   top: 30px;
   background-color: $background-color-light;
@@ -20,30 +20,30 @@
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.dropdown__content--state_visible {
+.dropdown-menu__content--state_visible {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.dropdown__content--state_invisible {
+.dropdown-menu__content--state_invisible {
   display: none;
 }
 
 
 /* Links inside the dropdown */
-.dropdown__item {
+.dropdown-menu__item {
   color: $color-neutral-50;
   font-size: 18px;
   line-height: 20px;
   text-decoration: none;
 }
 
-.dropdown__item--state_selected {
+.dropdown-menu__item--state_selected {
   color: $color-neutral-20;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown__item:hover {
+.dropdown-menu__item:hover {
   background-color: #ddd;
 }

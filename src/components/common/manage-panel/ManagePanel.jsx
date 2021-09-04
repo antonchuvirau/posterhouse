@@ -3,7 +3,7 @@ import React, { useCallback, useContext, useEffect, useRef, useState } from 'rea
 import PropTypes from 'prop-types';
 import SidePanelContext from '../../../contexts/SidePanelContext';
 import FiltersPanel from './FiltersPanel';
-import DropDownMenu from './DropDownMenu';
+import DropDownMenu from '../DropDownMenu';
 
 const ManagePanel = ({
     hideLeftSubPanel,
