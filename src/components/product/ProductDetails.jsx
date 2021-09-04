@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useShallowEqualSelector } from '../../redux/redux-utils/useShallowEqualSelector';
 import heartIcon from '../../assets/icons/heart_contur2.png';
 import instagramIcon from '../../assets/icons/instagram.svg';
@@ -7,8 +6,49 @@ import twitterIcon from '../../assets/icons/twitter.svg';
 import facebookIcon from '../../assets/icons/facebook.svg';
 import productImage from '../../assets/images/Buy-mock.png';
 import MediaLink from '../common/MediaLink';
-import DropdownOptionsSelect from '../common/DropdownOptionsSelect';
+import DropdownOptionsSelect from '../common/dropdowns/DropdownOptionsSelect';
 import { SELECT_PAPER, SELECT_SIZE, SELECT_FRAME, SELECT_MATTE } from '../../redux/product-reducer';
+import DropdownInfo from '../common/dropdowns/DropdownInfo';
+import TagsField from '../common/TagsField';
+
+const tagsList = [
+    {
+        label: 'Interior',
+        id: 'Interior',
+    },
+    {
+        label: 'Kitchen',
+        id: 'Kitchen',
+    },
+    {
+        label: 'Travel',
+        id: 'Travel',
+    },
+    {
+        label: 'Bathroom',
+        id: 'Bathroom',
+    },
+    {
+        label: 'Minimal',
+        id: 'Minimal',
+    },
+    {
+        label: 'Interior',
+        id: '1',
+    },
+    {
+        label: 'Interior',
+        id: '2',
+    },
+    {
+        label: 'Interior',
+        id: '3',
+    },
+    {
+        label: 'Interior',
+        id: '4',
+    },
+];
 
 const ProductDetails = () => {
     const paperSelectOptions = useShallowEqualSelector((state) => state.product.paperSelectOptions);
@@ -65,8 +105,17 @@ const ProductDetails = () => {
                 <button className="product-info__add-btn">
                     Add to cart
                 </button>
-                <div className="product-info__drop-down">Description</div>
-                <div className="product-info__drop-down">Additional information</div>
+                <DropdownInfo
+                    classes="product-info__drop-down"
+                    title="Description"
+                    description="1962 Gelatin silver print Estate stamp, in ink, au verso Estate # 6-0209-029-2-1-17 G Unframed Printed circa 1980 Provenance: Direct from the Estate of André Kertész, New York"
+                />
+                <DropdownInfo
+                    classes="product-info__drop-down"
+                    title="Shipping"
+                    description="Free shipping in North America for any order over $150 USD."
+                />
+                <TagsField tagsList={tagsList} />
                 <div className="product-info_share">
                     Share
                     <div className="media-links">

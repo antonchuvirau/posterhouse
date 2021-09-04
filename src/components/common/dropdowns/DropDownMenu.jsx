@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getInitialSortedByOptionsState } from './manage-panel/useSortByDropdownStructure';
+import { getInitialSortedByOptionsState } from '../manage-panel/useSortByDropdownStructure';
 
 const DropDownMenu = ({
     dropdownBtnLabel,

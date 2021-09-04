@@ -1,3 +1,4 @@
+import React from 'react';
 import frameClassicBlack from '../assets/images/Frame__Classic-Black.png';
 import frameClassicBrown from '../assets/images/Frame__Classic-Brown.png';
 import GalleryBlack from '../assets/images/Frame__Gallery-Black.png';
@@ -195,7 +196,7 @@ const matteSelectOptions = {
             id: 'Canson Infinity Baryta Photo Satin — 310 gsm',
         },
     ],
-    description: <a href="#">How to choose the paper?</a>,
+    description: <a href="#" className="matte-select-description">How to choose the paper?</a>,
 };
 
 
