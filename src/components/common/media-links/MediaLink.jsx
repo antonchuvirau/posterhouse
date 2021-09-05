@@ -6,7 +6,7 @@ const MediaLink = ({
     alt,
 }) => (
     <a href={link}>
-        <div className="media-link">
+        <div className="media-links__item">
             <img src={icon} alt={alt} />
         </div>
     </a>

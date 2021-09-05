@@ -1,15 +1,12 @@
 import React from 'react';
 import { useShallowEqualSelector } from '../../redux/redux-utils/useShallowEqualSelector';
 import heartIcon from '../../assets/icons/heart_contur2.png';
-import instagramIcon from '../../assets/icons/instagram.svg';
-import twitterIcon from '../../assets/icons/twitter.svg';
-import facebookIcon from '../../assets/icons/facebook.svg';
 import productImage from '../../assets/images/Buy-mock.png';
-import MediaLink from '../common/MediaLink';
 import DropdownOptionsSelect from '../common/dropdowns/DropdownOptionsSelect';
 import { SELECT_PAPER, SELECT_SIZE, SELECT_FRAME, SELECT_MATTE } from '../../redux/product-reducer';
 import DropdownInfo from '../common/dropdowns/DropdownInfo';
 import TagsField from '../common/TagsField';
+import MediaLinks from '../common/media-links/MediaLinks';
 
 const tagsList = [
     {
@@ -116,14 +113,7 @@ const ProductDetails = () => {
                     description="Free shipping in North America for any order over $150 USD."
                 />
                 <TagsField tagsList={tagsList} />
-                <div className="product-info_share">
-                    Share
-                    <div className="media-links">
-                        <MediaLink link="#" icon={instagramIcon} alt="instagram" />
-                        <MediaLink link="#" icon={twitterIcon} alt="twitter" />
-                        <MediaLink link="#" icon={facebookIcon} alt="facebook" />
-                    </div>
-                </div>
+                <MediaLinks />
             </div>
         </div>
     )};

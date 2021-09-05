@@ -8,6 +8,7 @@ import { setAppPage } from './redux/app-reducer';
 import ArtistsPage from './pages/ArtistsPage';
 import ArtistPage from './pages/ArtistPage';
 import LoginPage from './pages/AuthorisationPage';
+import WhishlistPage from './pages/WhishlistPage';
 
 const APP_PAGES = {
   ARTISTS: '/artists.html',
@@ -42,7 +43,8 @@ const App = () => {
       currentPage = <ProductPage />;
       break;
     case APP_PAGES.LOGIN:
-      currentPage = <LoginPage />;
+      // currentPage = <LoginPage />;
+      currentPage = <WhishlistPage />;
       break;
     default:
       currentPage = <HomePage />;

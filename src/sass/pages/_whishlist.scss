@@ -1,0 +1,98 @@
+.whishlist {
+
+}
+
+.whishlist__container {
+  width: 690px;
+  padding: 53px 0 100px 0;
+}
+
+.whishlist__title {
+  @include h3-title;
+  line-height: 70px;
+  letter-spacing: -0.01em;
+  padding-bottom: 13px;
+}
+
+.whishlist__cardslist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  padding-bottom: 62px;
+}
+
+.product-to-sell-card {
+  width: 100%;
+  border-bottom: 1px solid $color-neutral-70;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-to-sell-card__description {
+  padding-bottom: 7px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.product-to-sell-card__image {
+  width: 100px;
+  height: 120px;
+}
+
+.product-to-sell-card__info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.product-to-sell-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.product-to-sell-card__name {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.product-to-sell-card__author {
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-neutral-60;
+}
+
+.product-to-sell-card__count {
+  width: 90px;
+  height: 40px;
+  background-color: $background-color-primary-grey-87;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.product-to-sell-card__price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.product-to-sell-card__price {}
+
+.product-to-sell-card__close {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import artistPageImageMock from '../../assets/images/artist-page_image.png';
-import MediaLink from '../common/MediaLink';
+import MediaLink from '../common/media-links/MediaLink';
 import instagramIcon from '../../assets/icons/instagram.svg';
 import twitterIcon from '../../assets/icons/twitter.svg';
 
@@ -22,7 +22,7 @@ const ArtistDetails = () => (
                     <div className="artist-page-details__social-networks-title">
                         Social networks
                     </div>
-                    <div className="media-links">
+                    <div className="media-links__list">
                         <MediaLink link="#" icon={instagramIcon} alt="instagram" />
                         <MediaLink link="#" icon={twitterIcon} alt="twitter" />
                     </div>

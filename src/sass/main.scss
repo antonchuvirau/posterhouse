@@ -24,7 +24,7 @@
   'components/button',
   'components/filter',
   'components/copyright',
-  'components/media-link',
+  'components/media-links',
   'components/product-card',
   'components/artist-card',
   'components/authorisation-tabs',
@@ -46,6 +46,7 @@
 
 // 5. Page-specific styles
 @import
+  'pages/whishlist',
   'pages/artists',
   'pages/artist',
   'pages/authorisation',
