@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductToSellMock from '../../assets/images/Product-to-sell-mock.png'
-import Close from '../../assets/icons/close.svg';
+import CounterBtn from '../common/buttons/CounterBtn';
+import CloseBtn from '../common/buttons/CloseBtn';
 
 const ProductToSellCard = () => {
     return (
@@ -18,17 +19,11 @@ const ProductToSellCard = () => {
                             André Kertész
                         </div>
                     </div>
-                    <div className="product-to-sell-card__count">
-                        <span>-</span>
-                        <span>1</span>
-                        <span>+</span>
-                    </div>
+                    <CounterBtn classes="product-to-sell-card__count" />
                 </div>
             </div>
             <div className="product-to-sell-card__price-container">
-                <button className="product-to-sell-card__close">
-                    <img src={Close} alt="remove" />
-                </button>
+                <CloseBtn />
                 <div className="product-to-sell-card__price">
                     $ 100.00
                 </div>

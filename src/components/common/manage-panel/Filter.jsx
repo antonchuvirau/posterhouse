@@ -1,7 +1,7 @@
 
 import React, { useContext, useRef } from 'react';
 import PropTypes from 'prop-types';
-import CheckBox from '../CheckBox';
+import CheckBox from '../inputs/CheckBox';
 
 const Filter = ({
     hideLeftSubPanel,

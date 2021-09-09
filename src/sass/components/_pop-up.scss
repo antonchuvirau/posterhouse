@@ -1,0 +1,20 @@
+.pop-up {
+    width: 430px;
+    height: 430px;
+    background-color: green;
+    position: absolute;
+    margin: auto auto;
+}
+
+.close-btn {}
+
+.pop-up__title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    padding-bottom: 10px;
+}
+
+.pop-up__description {
+    color: $color-neutral-50;
+}

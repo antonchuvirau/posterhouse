@@ -1,0 +1,28 @@
+.no-products-in-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.no-products-in-list__title {
+    @include h3-title;
+    line-height: 47px;
+}
+
+.no-products-in-list__description {
+    padding-top: 10px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    line-height: 20px;
+    color: $color-neutral-50;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.no-products-in-list__action-btn {
+    margin-top: 33px;
+}

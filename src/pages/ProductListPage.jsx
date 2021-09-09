@@ -15,7 +15,7 @@ const ProductListPage = () => {
                 <CardList cardComponents={productsComponents} />
             </div>
             <div className="action-btn">
-                <ButtonBright buttonLabel="Show more" />
+                <ButtonBright label="Show more" />
             </div>
         </div>
     )

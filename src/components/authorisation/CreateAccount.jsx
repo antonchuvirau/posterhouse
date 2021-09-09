@@ -31,7 +31,7 @@ const CreateAccount = () => {
                 </div>
             </div>
             <div className="authorisation__btn-container">
-                <ButtonDark classes="authorisation__btn" buttonLabel="Create an account" />
+                <ButtonDark classes="authorisation__btn" label="Create an account" />
             </div>
         </form>
     )

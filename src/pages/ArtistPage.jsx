@@ -26,7 +26,7 @@ const ArtistPage = () => {
                 </div>
             </div>
             <div className="action-btn">
-                <ButtonBright small buttonLabel="Show more" />
+                <ButtonBright label="Show more" />
             </div>
         </div>
     )

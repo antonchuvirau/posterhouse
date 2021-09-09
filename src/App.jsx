@@ -9,6 +9,8 @@ import ArtistsPage from './pages/ArtistsPage';
 import ArtistPage from './pages/ArtistPage';
 import LoginPage from './pages/AuthorisationPage';
 import WhishlistPage from './pages/WhishlistPage';
+import CartInformationPage from './pages/CartInformationPage';
+import ShippingPaymentPage from './pages/ShippingPaymentPage';
 
 const APP_PAGES = {
   ARTISTS: '/artists.html',
@@ -44,7 +46,9 @@ const App = () => {
       break;
     case APP_PAGES.LOGIN:
       // currentPage = <LoginPage />;
-      currentPage = <WhishlistPage />;
+      // currentPage = <WhishlistPage />;
+      // currentPage = <CartInformationPage />;
+      currentPage = <ShippingPaymentPage />;
       break;
     default:
       currentPage = <HomePage />;

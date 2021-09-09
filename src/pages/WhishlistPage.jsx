@@ -1,25 +1,39 @@
 import React, { useState } from 'react';
 import AddressBar from '../components/common/AddressBar';
-import Login from '../components/authorisation/Login';
-import CreateAccount from '../components/authorisation/CreateAccount';
-import AuthorisationTabs from '../components/authorisation/AuthorisationTabs';
 import MediaLinks from '../components/common/media-links/MediaLinks';
-import ProductToSellMock from '../assets/images/Product-to-sell-mock.png'
-import Close from '../assets/icons/close.svg';
+import NoProductInList from '../components/product/NoProductInList';
 import ProductToSellCard from '../components/product/ProductToSellCard';
+import heart__grey from '../assets/icons/heart__grey.png';
 
 const WhishlistPage = () => {
+    // const products = [{id: 1}, {id: 2}, {id: 3}];
+    const products = [];
+
+    const noProductsInListDescription = (
+        <div className="no-products-in-list__description">
+            <span>Click the </span>
+            <img src={heart__grey} alt="like-button" />
+            <span> icon to add products</span>
+        </div>
+    );
+
     return (
         <div className="whishlist">
             <AddressBar address={'Home / Wishlist'} />
             <section className="whishlist__container">
                 <h3 className="whishlist__title">Wishlist</h3>
-                <div className="whishlist__cardslist">
-                    <ProductToSellCard />
-                    <ProductToSellCard />
-                    <ProductToSellCard />
-                </div>
-                <MediaLinks />
+                {!products?.length && <NoProductInList
+                    noProductsInListDescription={noProductsInListDescription}
+                    title="No products in your wishlist"
+                />}
+                {
+                    products.length && <>
+                        <div className="whishlist__cardslist">
+                            {products.map(({ id }) => <ProductToSellCard key={id} />)}
+                        </div>
+                        <MediaLinks />
+                    </>
+                }
             </section>
         </div>
     )

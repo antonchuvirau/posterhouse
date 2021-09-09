@@ -15,6 +15,10 @@
 
 // 3. Components
 @import
+  'components/_pop-up',
+  'components/dropdown-input-field',
+  'components/input-field',
+  'components/product-to-sell-card',
   'components/tag',
   'components/dropdown-info',
   'components/dropdown-select-info',
@@ -32,6 +36,7 @@
 
 // 4. Layout-related sections
 @import
+'layout/no-product-in-list',
 'layout/side-panel',
 'layout/action-btn',
 'layout/address-bar',
@@ -46,6 +51,8 @@
 
 // 5. Page-specific styles
 @import
+  'pages/shipping-payment',
+  'pages/cart-information-product-list',
   'pages/whishlist',
   'pages/artists',
   'pages/artist',

@@ -18,7 +18,7 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="action-btn">
-                <ButtonBrightWithArrow buttonLabel="View all artwork" />
+                <ButtonBrightWithArrow label="View all artwork" />
             </div>
         </div>
     )

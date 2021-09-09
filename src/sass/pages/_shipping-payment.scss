@@ -1,0 +1,145 @@
+.shipping-payment {}
+
+.shipping-payment__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 53px;
+  padding-bottom: 153px;
+}
+
+.shipping-payment__left-column {
+  width: 50%;
+}
+
+.shipping-payment__right-column {
+  width: 40%;
+}
+
+.shipping-payment__title {
+  @include h3-title;
+}
+
+.shipping-payment__input-list {
+  padding-top: 21px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.shipping-payment__order-cards {
+  padding-top: 31px;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-card {
+  border-bottom: 1px solid $color-neutral-70;
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.order-card__price {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.order-card__image-container {
+}
+
+.order-card__image {
+  width: 68px;
+  height: 80px;
+}
+
+.order-card__count {
+  width: 20px;
+  height: 20px;
+  background-color: $color-neutral-20;
+  color: $color-neutral-100;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -58px;
+  bottom: -10px;
+}
+
+.order-card__description {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.order-card__product-name {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.order-card__author {
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-neutral-60;
+}
+
+.shipping-payment__order-info {
+  padding: 38px 0;
+  border-bottom: 1px solid $color-neutral-70;
+}
+
+.shipping-payment__estimate {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shipping-payment__estimate-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipping-payment__total {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shipping-payment__payment-methods-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.shipping-payment__payment-method-btn {
+  width: 33%;
+  background-color: $background-color-primary-grey-87;
+  border: 1px solid $background-color-primary-grey-77;
+  border-radius: 5px;
+  height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shipping-payment__action-btn-container {
+  width: 100%;
+  padding-top: 80px;
+}

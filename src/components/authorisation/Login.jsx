@@ -1,6 +1,6 @@
 import React from 'react';
 import ButtonDark from '../common/buttons/ButtonDark';
-import CheckBox from '../common/CheckBox';
+import CheckBox from '../common/inputs/CheckBox';
 
 const Login = () => {
     return (
@@ -21,7 +21,7 @@ const Login = () => {
             </div>
             <div className="authorisation__btn">
                 <div className="authorisation__btn-container">
-                    <ButtonDark classes="authorisation__btn" buttonLabel="Log in" />
+                    <ButtonDark classes="authorisation__btn" label="Log in" />
                 </div>
             </div>
         </div>

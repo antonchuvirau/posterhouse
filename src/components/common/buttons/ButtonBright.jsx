@@ -1,11 +1,11 @@
 import React from 'react';
 
 const ButtonBright = ({
-    buttonLabel,
-    small,
+    label,
+    classes,
 }) => (
-    <button className="button_bright--width_small">
-        <span>{buttonLabel}</span>
+    <button className={`button_bright--width_small ${classes}`}>
+        <span>{label}</span>
     </button>
 );
 

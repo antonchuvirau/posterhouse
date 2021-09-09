@@ -1,12 +1,12 @@
 import React from 'react';
 
 const ButtonDark = ({
-    buttonLabel,
+    label,
     classes,
     small,
 }) => (
     <button className={`button_dark  ${classes}`}>
-        <span>{buttonLabel}</span>
+        <span>{label}</span>
     </button>
 );
 
