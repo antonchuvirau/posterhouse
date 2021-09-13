@@ -37,6 +37,17 @@
   text-transform: capitalize;
 }
 
+@mixin first-letter {
+  font-family: $font-family-titles;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 115px;
+  line-height: 104%;
+  float: left;
+  padding-right: 13px;
+  height: 90px;
+}
+
 @mixin button {
   display: flex;
   flex-direction: row;

@@ -3,10 +3,31 @@ import CardList from '../components/common/CardList';
 import ButtonBright from '../components/common/buttons/ButtonBright';
 import ManagePanel from '../components/common/manage-panel/ManagePanel';
 import ProductCard from '../components/product/ProductCard';
+import { useShallowEqualSelector } from '../redux/redux-utils/useShallowEqualSelector';
 
 const ProductListPage = () => {
-    const products = new Array(9).fill(0);
-    const productsComponents = products.map((elem, index) => <ProductCard key={`product-card-${index}`}/>)
+    const store = useShallowEqualSelector((state) => ({
+        productList: state.product.productList,
+    }));
+
+    const productsComponents = store.productList
+        .slice(0, 9)
+        .map(({
+            id,
+            name,
+            author,
+            price,
+            image,
+        }) => (
+            <ProductCard
+                key={`product-card-${id}`}
+                name={name}
+                author={author}
+                price={price}
+                image={image}
+                id={id}
+            />
+        ))
 
     return (
         <div className="product-list-page">

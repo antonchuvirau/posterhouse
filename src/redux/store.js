@@ -3,13 +3,13 @@ import {
   } from 'redux';
 import thunkMiddleWare from 'redux-thunk';
 import authReducer from './auth-reducer';
-import appReducer from './app-reducer';
 import productReducer from './product-reducer';
+import faqReducer from './faq-reducer';
 
   export const rootReducer = combineReducers({
     auth: authReducer,
     product: productReducer,
-    // app: appReducer,
+    faq: faqReducer,
   });
 
   // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

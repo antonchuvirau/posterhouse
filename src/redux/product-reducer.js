@@ -12,11 +12,22 @@ import EleganzaSilver from '../assets/images/Frame__Eleganza-Silver.png';
 import EleganzaBlack from '../assets/images/Frame__Eleganza-Black.png';
 import WalnutVeneer from '../assets/images/Frame__Walnut-Veneer.png';
 import MapleVeneer from '../assets/images/Frame__Maple-Veneer.png';
+import product1 from '../assets/images/product-1.png';
+import productImage from '../assets/images/Buy-mock.png';
 
-export const SELECT_PAPER = 'product/SELECT_PAPER';
-export const SELECT_SIZE = 'product/SELECT_SIZE';
-export const SELECT_FRAME = 'product/SELECT_FRAME';
-export const SELECT_MATTE = 'product/SELECT_MATTE';
+export const SELECT_PAPER = 'posterhaus/product/SELECT_PAPER';
+export const SELECT_SIZE = 'posterhaus/product/SELECT_SIZE';
+export const SELECT_FRAME = 'posterhaus/product/SELECT_FRAME';
+export const SELECT_MATTE = 'posterhaus/product/SELECT_MATTE';
+export const SET_PRODUCT_LIST = 'posterhaus/product/SET_PRODUCT_LIST';
+export const SET_PRODUCT_PAGE_PRODUCTS = 'posterhaus/product/SET_PRODUCT_PAGE_PRODUCTS';
+export const SET_PRODUCT = 'posterhaus/product/SET_PRODUCT';
+export const PRODUCT_PAGE_LOADING = 'posterhaus/product/PRODUCT_PAGE_LOADING';
+export const PRODUCT_PAGE_ERROR = 'posterhaus/product/PRODUCT_PAGE_ERROR';
+export const PRODUCTS_TO_ORDER_ADD_ONE = 'posterhaus/product/PRODUCT_COUNT_TO_ORDER_ADD_ONE';
+export const PRODUCTS_TO_ORDER_REMOVE_ONE = 'posterhaus/product/PRODUCT_COUNT_TO_ORDER_REMOVE_ONE';
+export const PRODUCTS_TO_ORDER_ADD = 'posterhaus/product/PRODUCTS_TO_ORDER_ADD';
+export const ADD_TO_WHISH_LIST = 'posterhaus/product/ADD_TO_WHISH_LIST';
 
 const paperSelectOptions = {
     title: 'Paper',
@@ -199,51 +210,351 @@ const matteSelectOptions = {
     description: <a href="#" className="matte-select-description">How to choose the paper?</a>,
 };
 
+const productList = [
+    {
+        id: 1,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '1',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 2,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '2',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 3,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        price: '$100.00',
+        authorId: '2',
+        image: product1,
+    },
+    {
+        id: 4,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '2',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 5,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '5',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 6,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '6',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 7,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '7',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 8,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '8',
+        price: '$100.00',
+        image: product1,
+    },
+    {
+        id: 9,
+        name: 'Glen road',
+        author: 'Lewis J Goetz',
+        authorId: '9',
+        price: '$100.00',
+        image: product1,
+    },
+];
+
+const tags = [
+    {
+        label: 'Interior',
+        id: 'Interior',
+    },
+    {
+        label: 'Kitchen',
+        id: 'Kitchen',
+    },
+    {
+        label: 'Travel',
+        id: 'Travel',
+    },
+    {
+        label: 'Bathroom',
+        id: 'Bathroom',
+    },
+    {
+        label: 'Minimal',
+        id: 'Minimal',
+    },
+    {
+        label: 'Interior',
+        id: '1',
+    },
+    {
+        label: 'Interior',
+        id: '2',
+    },
+    {
+        label: 'Interior',
+        id: '3',
+    },
+    {
+        label: 'Interior',
+        id: '4',
+    },
+];
+
+const descriptionFields = [
+    {
+        label: '1962',
+        id: '1',
+    },
+    {
+        label: 'Gelatin silver print',
+        id: 'Gelatin silver print',
+    },
+    {
+        label: 'Estate stamp, in ink, au verso',
+        id: 'Estate stamp, in ink, au verso',
+    },
+    {
+        label: 'Estate # 6-0209-029-2-1-17 G',
+        id: 'Estate # 6-0209-029-2-1-17 G',
+    },
+    {
+        label: 'Unframed',
+        id: 'Unframed',
+    },
+    {
+        label: 'Printed circa 1980',
+        id: 'Printed circa 1980',
+    },
+    {
+        label: 'Provenance: Direct from the Estate of André Kertész, New York',
+        id: 'Provenance: Direct from the Estate of André Kertész, New York',
+    },
+];
+
+const shippingFields = [
+    {
+        label: 'Free shipping in North America for any order over $150 USD.',
+        id: '1',
+    },
+];
+
+const product = {
+    id: 1,
+    productImage,
+    author: 'ANDRÉ KERTÉSZ',
+    name: '"Buy", Long Island University',
+    descriptionFields,
+    price: {
+        count: '100.00',
+        currency: 'EUR',
+    },
+    shippingFields,
+    tags,
+};
 
 const initialState = {
     paperSelectOptions,
     sizeSelectOptions,
     frameSelectOptions,
     matteSelectOptions,
+    productList,
+    productPageProducts : [],
+    product,
+    productsToOrder: [],
+    whishList: [],
 };
 
 const productReducer = (state = initialState, action) => {
-  switch (action.type) {
-      case SELECT_PAPER:
-          return {
-              ...state,
-              paperSelectOptions: {
-                  ...state.paperSelectOptions,
-                  selected: action.selected,
-              },
-          };
-      case SELECT_SIZE:
-          return {
-              ...state,
-              sizeSelectOptions: {
-                  ...state.sizeSelectOptions,
-                  selected: action.selected,
-              },
-          };
-      case SELECT_FRAME:
-          return {
-              ...state,
-              frameSelectOptions: {
-                  ...state.frameSelectOptions,
-                  selected: action.selected,
-              },
-          };
-      case SELECT_MATTE:
-          return {
-              ...state,
-              matteSelectOptions: {
-                  ...state.matteSelectOptions,
-                  selected: action.selected,
-              }
-          };
-    default:
-      return state;
-  }
+    switch (action.type) {
+        case SELECT_PAPER:
+            return {
+                ...state,
+                paperSelectOptions: {
+                    ...state.paperSelectOptions,
+                    selected: action.selected,
+                },
+            };
+        case SELECT_SIZE:
+            return {
+                ...state,
+                sizeSelectOptions: {
+                    ...state.sizeSelectOptions,
+                    selected: action.selected,
+                },
+            };
+        case SELECT_FRAME:
+            return {
+                ...state,
+                frameSelectOptions: {
+                    ...state.frameSelectOptions,
+                    selected: action.selected,
+                },
+            };
+        case SELECT_MATTE:
+            return {
+                ...state,
+                matteSelectOptions: {
+                    ...state.matteSelectOptions,
+                    selected: action.selected,
+                }
+            };
+        case SET_PRODUCT_LIST:
+            return {
+                ...state,
+                productList: action.productList,
+            };
+        case SET_PRODUCT_PAGE_PRODUCTS:
+            const { authorId, page, count } = action;
+
+            const productPageProducts = state.productList
+                .filter((elem) => elem.authorId === authorId)
+                .slice(page * count, page * count + count)
+
+            return {
+                ...state,
+                productPageProducts,
+            };
+        case SET_PRODUCT:
+            return {
+                ...state,
+                product: action.product,
+            };
+        case PRODUCT_PAGE_LOADING:
+            return {
+                ...state,
+                product: 'Loading...',
+            };
+        case PRODUCT_PAGE_ERROR:
+            return {
+                ...state,
+                product: action.error,
+            };
+        case ADD_TO_WHISH_LIST:{
+            const indexInWishList = state.whishList.findIndex((elem) => elem.id === action.id);
+
+            if (indexInWishList === -1) {
+                return {
+                    ...state,
+                    whishList: [...state.whishList, { id: action.id, count: action.count }],
+                };
+            }
+
+            const newWishList = state.whishList.slice();
+
+            newWishList[indexInWishList].count = action.count;
+
+            return {
+                ...state,
+                whishList: action.error,
+            };
+        }
+        case PRODUCTS_TO_ORDER_ADD:{
+            const productIndexInOrderList = state.productsToOrder.findIndex((elem) => elem.id === action.id);
+
+            if (productIndexInOrderList === -1) {
+                return {
+                    ...state,
+                    productsToOrder: [...state.productsToOrder, { id: action.id, count: action.count }],
+                };
+            }
+
+            const newProductsToOrderList = state.productsToOrder.slice();
+            newProductsToOrderList[productIndexInOrderList].count = action.count;
+
+            return {
+                ...state,
+                productsToOrder: newProductsToOrderList,
+            };
+        }
+        case PRODUCTS_TO_ORDER_ADD_ONE: {
+            const productIndexInOrderList = state.productsToOrder.findIndex((elem) => elem.id === action.id);
+
+            if (productIndexInOrderList === -1) {
+                return {
+                    ...state,
+                    productsToOrder: [...state.productsToOrder, { id: action.id, count: 1 }],
+                };
+            }
+
+            const newProductsToOrderList = state.productsToOrder.slice();
+            newProductsToOrderList[productIndexInOrderList].count += 1;
+
+            return {
+                ...state,
+                productsToOrder: newProductsToOrderList,
+            };
+        }
+        case PRODUCTS_TO_ORDER_REMOVE_ONE: {
+            const productIndexInOrderList = state.productsToOrder.findIndex((elem) => elem.id === action.id);
+
+            if (productIndexInOrderList === -1) {
+                return state;
+            }
+            const newProductsToOrder = state.productsToOrder.slice();
+            const product = state.productsToOrder[productIndexInOrderList];
+
+            if (product.count <= 1) {
+                newProductsToOrder.splice(productIndexInOrderList, 1);
+
+                return {
+                    ...state,
+                    productsToOrder: newProductsToOrder
+                };
+            }
+
+            newProductsToOrder[productIndexInOrderList].count -= 1;
+
+            return {
+                ...state,
+                productsToOrder: newProductsToOrder,
+            }
+        }
+        default:
+            return state;
+    }
 };
+
+export const fetchProduct = () => async (dispatch) => {
+    try {
+      dispatch({ type: PRODUCT_PAGE_LOADING });
+
+      const product = await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (Math.random() > 0.3) {
+            resolve(product);
+          } else {
+            reject("Error happend");
+          }
+        }, 1000);
+      });
+      dispatch({ type: SET_PRODUCT, product });
+    } catch (error) {
+      dispatch({ type: PRODUCT_PAGE_ERROR, product: error });
+    }
+  };
 
 export default productReducer;

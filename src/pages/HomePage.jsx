@@ -4,10 +4,31 @@ import ManagePanel from '../components/common/manage-panel/ManagePanel';
 import ButtonBrightWithArrow from '../components/common/buttons/ButtonBrightWithArrow';
 import ProductCard from '../components/product/ProductCard';
 import { SORTED_ITEMS } from '../components/common/manage-panel/useSortByDropdownStructure';
+import { useShallowEqualSelector } from '../redux/redux-utils/useShallowEqualSelector';
 
 const HomePage = () => {
-    const products = new Array(6).fill(0);
-    const productsComponents = products.map((elem, index) => <ProductCard key={`product-card-${index}`}/>)
+    const homePageData = useShallowEqualSelector((state) => ({
+        productList: state.product.productList,
+    }));
+
+    const productsComponents = homePageData.productList
+        .slice(0, 6)
+        .map(({
+            id,
+            name,
+            author,
+            price,
+            image,
+        }) => (
+            <ProductCard
+                key={`product-card-${id}`}
+                name={name}
+                author={author}
+                price={price}
+                image={image}
+                id={id}
+            />
+        ))
 
     return (
         <div className="home-page">

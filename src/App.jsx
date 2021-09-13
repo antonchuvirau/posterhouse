@@ -11,13 +11,15 @@ import LoginPage from './pages/AuthorisationPage';
 import WhishlistPage from './pages/WhishlistPage';
 import CartInformationPage from './pages/CartInformationPage';
 import ShippingPaymentPage from './pages/ShippingPaymentPage';
+import FAQPage from './pages/FAQPage';
 
 const APP_PAGES = {
   ARTISTS: '/artists.html',
   ARTIST: '/artist.html',
-  PRODUCT_LIST: '/product-list.html',
-  PRODUCT: '/product.html',
-  LOGIN: '/login.html',
+  PRODUCT_LIST: '/artworks.html',
+  PRODUCT: '/artwork.html',
+  LOGIN: '/explore.html',
+  FAQ: '/faq.html',
   HOME: '/',
 };
 
@@ -44,14 +46,20 @@ const App = () => {
     case APP_PAGES.PRODUCT:
       currentPage = <ProductPage />;
       break;
+    case APP_PAGES.HOME:
+      currentPage = <HomePage />;
+      break;
+    case APP_PAGES.FAQ:
+      currentPage = <FAQPage />;
+      break;
     case APP_PAGES.LOGIN:
-      // currentPage = <LoginPage />;
+      currentPage = <LoginPage />;
       // currentPage = <WhishlistPage />;
       // currentPage = <CartInformationPage />;
-      currentPage = <ShippingPaymentPage />;
+      // currentPage = <ShippingPaymentPage />;
       break;
     default:
-      currentPage = <HomePage />;
+      currentPage = null;
       break;
   }
 
