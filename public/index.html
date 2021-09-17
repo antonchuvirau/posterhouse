@@ -1,123 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <title>Posterhaus</title>
-</head>
-<body>
-  <section class="promo">
-    <div class="wrapper">
-      <div class="promo__container">
-        <header class="header">
-          <nav class="nav">
-            <ul class="nav__list">
-              <li class="nav__item">
-                <a href="./artworks.html">Artwork</a>
-              </li>
-              <li class="nav__item">
-                <a href="./artists.html">Artists</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="logo">
-            <a href="#" class="logo__link">Logo</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Posterhaus</title>
+  </head>
+
+  <body>
+    <section class="promo">
+      <div class="wrapper">
+        <div class="promo__container">
+          <header class="header">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="./artworks.html">Artwork</a>
+                </li>
+                <li class="nav__item">
+                  <a href="./artists.html">Artists</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="logo">
+              <a href="./index.html" class="logo__link">
+                <img
+                  src="./assets/icons/Logo--transparent_big.png"
+                  alt="Posterhaus"
+                />
+              </a>
+            </div>
+            <div class="actions">
+              <ul class="actions__list">
+                <li class="actions__item like">
+                  <a href="./wishlist.html">
+                    <img src="./assets/icons/heart_black.svg" alt="like" />
+                  </a>
+                </li>
+                <li class="actions__item login">
+                  <a href="./login.html" class="login__link">Log in</a>
+                </li>
+                <li class="actions__item currency">
+                  <select
+                    class="currency__select"
+                    name="currency-select"
+                    id="currency-select"
+                  >
+                    <option class="currency__option" value="USD">USD</option>
+                    <option class="currency__option" value="INR">INR</option>
+                    <option class="currency__option" value="GBP">GBP</option>
+                    <option class="currency__option" value="CAD">CAD</option>
+                    <option class="currency__option" value="AUD">AUD</option>
+                    <option class="currency__option" value="EUR">EUR</option>
+                    <option class="currency__option" value="JPY">JPY</option>
+                  </select>
+                </li>
+                <li class="actions__item cart">
+                  <div class="cart__container">
+                    <a href="./cart.html" class="cart__link">Cart</a>
+                    <div class="cart__counter">0</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </header>
+          <div class="promo__content">
+            <h1 class="promo__title">LIMITED EDITION PHOTOGRAPHY</h1>
+            <div class="promo__description">
+              exclusive contemporary & classic fine-art photography
+            </div>
+            <a href="./artworks.html">
+              <button class="promo__button button">
+                <span class="button__label">Explore</span>
+                <img
+                  src="./assets/icons/arrow__right.svg"
+                  alt="arrow__right"
+                  class="button__icon"
+                />
+              </button>
+            </a>
           </div>
-          <div class="actions">
-            <ul class="actions__list">
-              <li class="actions__item like">
-                <img src="./heart_black.svg" alt="like">
-              </li>
-              <li class="actions__item login">
-                <a href="./explore.html" class="login__link">Log in</a>
-              </li>
-              <li class="actions__item currency">
-                <select class="currency__select" name="currency-select" id="currency-select">
-                  <option class="currency__option" value="USD">USD</option>
-                  <option class="currency__option" value="INR">INR</option>
-                  <option class="currency__option" value="GBP">GBP</option>
-                  <option class="currency__option" value="CAD">CAD</option>
-                  <option class="currency__option" value="AUD">AUD</option>
-                  <option class="currency__option" value="EUR">EUR</option>
-                  <option class="currency__option" value="JPY">JPY</option>
-                </select>
-              </li>
-              <li class="actions__item cart">
-                <div class="cart__container">
-                  <a href="./explore.html" class="cart__link">Cart</a>
-                  <div class="cart__counter">0</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main">
+      <div class="wrapper">
+        <div class="home-page">
+          <div class="react" data-type="manage-panel"></div>
+
+          <div class="manage-panel">
+            <div class="manage-panel__buttons-bar">
+              <div class="manage-panel__filters" id="manage-panel__tabs">
+                <div class="manage-panel__tab manage-panel__filter-item manage-panel__filter-item--state_active">
+                    All
                 </div>
+                <div class="manage-panel__tab manage-panel__filter-item">
+                    Artwork
+                </div>
+                <div class="manage-panel__tab manage-panel__filter-item">
+                    Print
+                </div>
+            </div>
+                <div class="manage-panel__filters">
+                    <div class="manage-panel__filter-item">
+                        <div class="dropdown-menu">
+                            <button
+                                id="manage-panel__sort-btn"
+                                class="dropdown-menu__btn"
+                            >
+                                Sort by
+                            </button>
+                            <div
+                                id="manage-panel__sort-menu"
+                                class="dropdown-menu__content dropdown-menu__content--state_invisible"
+                            >
+                                <span class="dropdown-menu__item dropdown-menu__item--state_selected" >
+                                    A to Z
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Price from low to high
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Price from high to low
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Newest
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Popular
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="manage-panel__filter-btn"
+                        class="manage-panel__filter-item"
+                    >
+                        Filter
+                    </div>
+                    <div
+                        id="manage-panel__search-btn"
+                        class="manage-panel__filter-item manage-panel__search-btn"
+                    >
+                        Search
+                    </div>
+                </div>
+            </div>
+            <div class="manage-panel__search-bar">
+                <textarea
+                    id="manage-panel__search-field"
+                    class="manage-panel__search-field manage-panel__search-field--state_invisible"
+                    placeholder="Search"
+                ></textarea>
+            </div>
+        </div>
+
+          <div>
+            <div id="side-panel" class="side-panel side-panel--state_invisible">
+              <form action="" class="filters-list">
+                <div class="filter">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                  </div>
+                </div>
+
+                <hr class="filter__delimiter" />
+
+                <div class="filter">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                  </div>
+
+                  <div class="filter__tag-box">
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div
+              id="side-panel__backdrop"
+              class="side-panel__backdrop side-panel__backdrop--state_invisible"
+            />
+          </div>
+
+          <div class="home-page__products-list">
+            <div class="home-page__content">
+              <div class="card-list">
+                <div class="card-list__cards">
+                  <div class="product-cart">
+                    <div class="product-cart__like-container">
+                      <div class="product-card__like-button product-card__like-button--state_inactive"></div>
+                    </div>
+                    <div class="product-cart__container">
+                      <div class="product-card__image">
+                        <a href="./artwork.html">
+                          <img src="" alt="product1" />
+                        </a>
+                      </div>
+                      <div class="product-cart__name">
+                        <a href="./artwork.html">Product name</a>
+                      </div>
+                      <div class="product-cart__author">Author</div>
+                      <div class="product-cart__price">$100.00</div>
+                    </div>
+                  </div>
+                  <div class="product-cart">
+                    <div class="product-cart__like-container">
+                      <div class="product-card__like-button product-card__like-button--state_inactive"></div>
+                    </div>
+                    <div class="product-cart__container">
+                      <div class="product-card__image">
+                        <a href="./artwork.html">
+                          <img src="" alt="product1" />
+                        </a>
+                      </div>
+                      <div class="product-cart__name">
+                        <a href="./artwork.html">Product name</a>
+                      </div>
+                      <div class="product-cart__author">Author</div>
+                      <div class="product-cart__price">$100.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="action-btn">
+            <button class="button_bright_arrow">
+              <span>View all artwork</span>
+              <img
+                src="./assets/icons/arrow_right-black.svg"
+                alt="arrow__right"
+                class="button__icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__container">
+          <div class="footer__content">
+            <ul class="footer__column info">
+              <li class="info__item footer__list-item">
+                <a href="./about.html">About us</a>
+              </li>
+              <li class="info__item footer__list-item">
+                <a href="./contact.html">Contact</a>
+              </li>
+              <li class="info__item footer__list-item">
+                <a href="./faq.html">FAQs</a>
+              </li>
+            </ul>
+
+            <div class="footer__logo">
+              <a href="./">
+                <img
+                  src="./assets/icons/Logo-transparent__small.png"
+                  alt="Posterhaus"
+                />
+              </a>
+            </div>
+
+            <ul class="footer__column media">
+              <li class="media__item footer__list-item">
+                <a href="#"> Instagram </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#"> Facebook </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#"> Twitter </a>
               </li>
             </ul>
           </div>
-        </header>
-        <div class="promo__content">
-          <h1 class="promo__title">
-            LIMITED EDITION PHOTOGRAPHY
-          </h1>
-          <div class="promo__description">
-            exclusive contemporary & classic fine-art photography
+          <div class="copyright">
+            <div class="copyright__logo">Logo</div>
+            <div class="copyright__description">© All rights reserved.</div>
           </div>
-          <a href="./artworks.html">
-            <button class="promo__button button">
-              <span class="button__label">Explore</span>
-              <img src="./arrow__right.svg" alt="arrow__right" class="button__icon">
-            </button>
-          </a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="main main_home">
-    <div class="wrapper">
-      <div id="root" class="home-main__container">
-    </div>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="wrapper">
-      <div class="footer__container">
-        <div class="footer__content">
-          <ul class="footer__column info">
-            <li class="info__item footer__list-item">
-              <a href="#">About us</a>
-            </li>
-            <li class="info__item footer__list-item">
-              <a href="#">Contacts</a>
-            </li>
-            <li class="info__item footer__list-item">
-              <a href="#">FAQs</a>
-            </li>
-          </ul>
-          <div class="footer__logo">
-            <a href="#">Logo</a>
-          </div>
-          <ul class="footer__column media">
-            <li class="media__item footer__list-item">
-              <a href="#">
-                Instagram
-              </a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#">
-                Facebook
-              </a>
-            </li>
-            <li class="footer__list-item">
-              <a href="#">
-                Twitter
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <div class="copyright__logo">Logo</div>
-          <div class="copyright__description">© All rights reserved.</div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

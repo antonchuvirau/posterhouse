@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
-  <title>Document</title>
+  <title>Artwork</title>
 </head>
+
 <body>
   <section class="selection artwork">
     <div class="wrapper">
@@ -15,23 +16,27 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#">Artwork</a>
+                <a href="./artworks.html">Artwork</a>
               </li>
               <li class="nav__item">
-                <a href="#">Artists</a>
+                <a href="./artists.html">Artists</a>
               </li>
             </ul>
           </nav>
           <div class="logo">
-            <a href="#" class="logo__link">Logo</a>
+            <a href="./index.html" class="logo__link">
+              <img src="./assets/icons/Logo--transparent_big.png" alt="Posterhaus">
+            </a>
           </div>
           <div class="actions">
             <ul class="actions__list">
               <li class="actions__item like">
-                <img src="./heart_black.svg" alt="like">
+                <a href="./wishlist.html">
+                  <img src="./assets/icons/heart_black.svg" alt="like">
+                </a>
               </li>
               <li class="actions__item login">
-                <a href="#" class="login__link">Log in</a>
+                <a href="./login.html" class="login__link">Log in</a>
               </li>
 
               <li class="actions__item currency">
@@ -48,7 +53,7 @@
 
               <li class="actions__item cart">
                 <div class="cart__container">
-                  <a href="#" class="cart__link">Cart</a>
+                  <a href="./cart.html" class="cart__link">Cart</a>
                   <div class="cart__counter">0</div>
                 </div>
               </li>
@@ -68,34 +73,110 @@
   </section>
   <section class="address-bar">
     <div class="wrapper">
-      <div class="address-bar__container">
-        Home / Artwork
-      </div>
+
+
+
+
+          <div class="address-bar__container">
+            <a href="./" class="address-bar__item">Home</a>
+            &nbsp;/&nbsp;
+            <a href="./artworks.html" class="address-bar__item">Artwork</a>
+          </div>
+
+
+
     </div>
   </section>
+
   <section class="main main_selection">
     <div class="wrapper">
-      <div id="root" class="main__container">
+      <div class="product-list-page">
+        <div class="react" data-type="manage-panel"></div>
+        <div class="product-list-page__content">
+
+          <div class="card-list">
+            <div class="card-list__cards">
+
+              <div class="product-cart">
+                <div class="product-cart__like-container">
+                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                </div>
+                <div class="product-cart__container">
+                    <div class="product-card__image">
+                        <a href="./artwork.html">
+                          <img src="" alt="product1" />
+                        </a>
+                    </div>
+                    <div class="product-cart__name">
+                        <a href="./artwork.html">Product name</a>
+                    </div>
+                    <div class="product-cart__author">
+                        Author
+                    </div>
+                    <div class="product-cart__price">
+                        $100.00
+                    </div>
+                </div>
+            </div>
+              <div class="product-cart">
+                <div class="product-cart__like-container">
+                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                </div>
+                <div class="product-cart__container">
+                    <div class="product-card__image">
+                      <a href="./artwork.html">
+                        <img src="" alt="product1" />
+                      </a>
+                    </div>
+                    <div class="product-cart__name">
+                        <a href="./artwork.html">Product name</a>
+                    </div>
+                    <div class="product-cart__author">
+                        Author
+                    </div>
+                    <div class="product-cart__price">
+                        $100.00
+                    </div>
+                </div>
+            </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="action-btn">
+          <button class="button_bright_arrow">
+            <span>View all artwork</span>
+            <img src="./assets/icons/arrow_right-black.svg" alt="arrow__right" class="button__icon" />
+          </button>
+        </div>
+
+      </div>
+
     </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__container">
         <div class="footer__content">
           <ul class="footer__column info">
             <li class="info__item footer__list-item">
-              <a href="#">About us</a>
+              <a href="./about.html">About us</a>
             </li>
             <li class="info__item footer__list-item">
-              <a href="#">Contacts</a>
+              <a href="./contact.html">Contact</a>
             </li>
             <li class="info__item footer__list-item">
-              <a href="#">FAQs</a>
+              <a href="./faq.html">FAQs</a>
             </li>
           </ul>
           <div class="footer__logo">
-            <a href="#">Logo</a>
+            <a href="./index.html">
+              <img src="./assets/icons/Logo-transparent__small.png" alt="Posterhaus">
+            </a>
           </div>
           <ul class="footer__column media">
             <li class="media__item footer__list-item">
@@ -123,4 +204,5 @@
     </div>
   </footer>
 </body>
+
 </html>

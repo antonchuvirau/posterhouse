@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
-  <title>Document</title>
+  <title>Artist</title>
 </head>
+
 <body>
   <section class="product-page__header">
     <div class="wrapper">
@@ -14,15 +15,15 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#">Artwork</a>
+              <a href="./artworks.html">Artwork</a>
             </li>
             <li class="nav__item">
-              <a href="#">Artists</a>
+              <a href="./artists.html">Artists</a>
             </li>
           </ul>
         </nav>
         <div class="logo">
-          <a href="#" class="logo__link">Logo</a>
+          <a href="./index.html" class="logo__link">Logo</a>
         </div>
         <div class="actions">
           <ul class="actions__list">
@@ -30,7 +31,7 @@
               <img src="./heart_black.svg" alt="like">
             </li>
             <li class="actions__item login">
-              <a href="#" class="login__link">Log in</a>
+              <a href="./login.html" class="login__link">Log in</a>
             </li>
             <li class="actions__item currency">
               <select class="currency__select" name="currency-select" id="currency-select">
@@ -45,7 +46,7 @@
             </li>
             <li class="actions__item cart">
               <div class="cart__container">
-                <a href="#" class="cart__link">Cart</a>
+                <a href="./cart.html" class="cart__link">Cart</a>
                 <div class="cart__counter">0</div>
               </div>
             </li>
@@ -54,29 +55,188 @@
       </header>
     </div>
   </section>
+
+
+
   <section class="main">
     <div class="wrapper">
-      <div id="root" class="main__container">
-    </div>
+
+
+
+      <div class="artist-page">
+
+        <div class="address-bar">
+          <div class="address-bar__container">
+            <a href="./index.html" class="address-bar__item">Home</a>
+            &nbsp;/&nbsp;
+            <a href="./artists.html" class="address-bar__item">Artist</a>
+            &nbsp;/&nbsp;
+            <span class="address-bar__item">ANDRÉ KERTÉSZ</span>
+          </div>
+        </div>
+
+
+        <div class="artist-page-details">
+
+          <div class="artist-page-details__container">
+            <div class="artist-page-details__content">
+              <h2 class="artist-page-details__name">
+                ANDRÉ KERTÉSZ
+              </h2>
+              <div class="artist-page-details__country">
+                Hungary
+              </div>
+              <div class="artist-page-details__description">
+                In 1925, André moved to Paris to fulfill his dream of pursuing a career as a photographer. After
+                a short period of both artistic and personal struggle, his pioneering vision, brought him great success.
+                His approach to the medium helped to define the shape of photojournalism in Europe, and subsequently
+                America. During the next eleven years, Kertész built an extraordinary body of work, influenced by and
+                influencing the many Artists with whom he interacted in Paris between the wars.
+              </div>
+              <div class="artist-page-details__social-networks">
+                <div class="artist-page-details__social-networks-title">
+                  Social networks
+                </div>
+                <div class="media-links__list">
+                  <a href="#">
+                    <div class="media-links__item">
+                      <img src="./assets/icons/instagram.svg" alt="instagram" />
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="media-links__item">
+                      <img src="./assets/icons/twitter.svg" alt="twitter" />
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="media-links__item">
+                      <img src="./assets/icons/facebook.svg" alt="facebook" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="artist-page-details__image">
+              <img src="" alt="artist" />
+            </div>
+          </div>
+        </div>
+
+        <div class="artist-page-biography">
+
+          <div class="artist-page-biography__container">
+            <div class="artist-page-biography__title">
+              Biography
+            </div>
+            <div class="artist-page-biography__content">
+              In 1925, André moved to Paris to fulfill his dream of pursuing a career as a photographer. After a short
+              period of both artistic and personal struggle, his pioneering vision, brought him great success. His
+              approach to the medium helped to define the shape of photojournalism in Europe, and subsequently America.
+              During the next eleven years, Kertész built an extraordinary body of work, influenced by and influencing
+              the many Artists with whom he interacted in Paris between the wars.
+              In an increasingly competitive world, Kertész found his career began to fade in the mid 1930’s. With his
+              wife Elizabeth, he left
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="artist-page__products-list">
+          <div class="artist-page__title">
+            ARTWORK
+          </div>
+          <div class="artist-page__content">
+            <div class="react" data-type="manage-panel"></div>
+
+            <div class="card-list">
+              <div class="card-list__cards">
+
+                <div class="product-cart">
+                  <div class="product-cart__like-container">
+                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                  </div>
+                  <div class="product-cart__container">
+                    <div class="product-card__image">
+                      <a href="./artwork.html">
+                        <img src="" alt="product1" />
+                      </a>
+                    </div>
+                    <div class="product-cart__name">
+                      <a href="./artwork.html">Product name</a>
+                    </div>
+                    <div class="product-cart__author">
+                      Author
+                    </div>
+                    <div class="product-cart__price">
+                      $100.00
+                    </div>
+                  </div>
+                </div>
+                <div class="product-cart">
+                  <div class="product-cart__like-container">
+                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                  </div>
+                  <div class="product-cart__container">
+                    <div class="product-card__image">
+                      <a href="./artwork.html">
+                        <img src="" alt="product1" />
+                      </a>
+                    </div>
+                    <div class="product-cart__name">
+                      <a href="./artwork.html">Product name</a>
+                    </div>
+                    <div class="product-cart__author">
+                      Author
+                    </div>
+                    <div class="product-cart__price">
+                      $100.00
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="action-btn">
+          <button class="button_bright--width_small">
+            <span>Show more</span>
+          </button>
+        </div>
+
+
+
+      </div>
+
+
     </div>
   </section>
+
+
+
+
+
   <footer class="footer">
     <div class="wrapper">
       <div class="footer__container">
         <div class="footer__content">
           <ul class="footer__column info">
             <li class="info__item footer__list-item">
-              <a href="#">About us</a>
+              <a href="./about.html">About us</a>
             </li>
             <li class="info__item footer__list-item">
-              <a href="#">Contacts</a>
+              <a href="./contact.html">Contact</a>
             </li>
             <li class="info__item footer__list-item">
-              <a href="#">FAQs</a>
+              <a href="./faq.html">FAQs</a>
             </li>
           </ul>
           <div class="footer__logo">
-            <a href="#">Logo</a>
+            <a href="./index.html">Logo</a>
           </div>
           <ul class="footer__column media">
             <li class="media__item footer__list-item">
@@ -104,4 +264,5 @@
     </div>
   </footer>
 </body>
+
 </html>

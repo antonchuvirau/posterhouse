@@ -43,11 +43,8 @@ const FAQPage = () => {
     ))
 
     return (
-        <div className="faq-page">
-            <AddressBar address={'Home / FAQ'} />
-            <div className="faq-page__container">
-                {faqsComponents}
-            </div>
+        <div className="faq-page__container">
+            {faqsComponents}
         </div>
     )
 };

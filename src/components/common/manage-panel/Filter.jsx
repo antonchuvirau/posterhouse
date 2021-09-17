@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import CheckBox from '../inputs/CheckBox';
 
 const Filter = ({
-    hideLeftSubPanel,
     filterStructure,
 }) => {
     const {
@@ -47,11 +46,9 @@ const Filter = ({
 };
 
 Filter.propTypes = {
-    hideLeftSubPanel: PropTypes.bool,
 };
 
 Filter.defaultProps = {
-    hideLeftSubPanel: false,
 };
 
 export default Filter;

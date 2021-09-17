@@ -5,9 +5,7 @@ import SidePanelContext from '../../../contexts/SidePanelContext';
 import { useFiltersListStructure } from './useFiltersListStructure';
 import Filter from './Filter';
 
-const FiltersPanel = ({
-    hideLeftSubPanel,
-}) => {
+const FiltersPanel = () => {
     const { filtersListStructure } = useFiltersListStructure();
 
     const filtersList = filtersListStructure.map((filterStructure) => (
@@ -22,11 +20,9 @@ const FiltersPanel = ({
 };
 
 FiltersPanel.propTypes = {
-    hideLeftSubPanel: PropTypes.bool,
 };
 
 FiltersPanel.defaultProps = {
-    hideLeftSubPanel: false,
 };
 
 export default FiltersPanel;

@@ -6,8 +6,8 @@ import ProductToSellCard from '../components/product/ProductToSellCard';
 import heart__grey from '../assets/icons/heart__grey.png';
 
 const WhishlistPage = () => {
-    // const products = [{id: 1}, {id: 2}, {id: 3}];
-    const products = [];
+    const products = [{id: 1}, {id: 2}, {id: 3}];
+    // const products = [];
 
     const noProductsInListDescription = (
         <div className="no-products-in-list__description">
@@ -18,8 +18,6 @@ const WhishlistPage = () => {
     );
 
     return (
-        <div className="whishlist">
-            <AddressBar address={'Home / Wishlist'} />
             <section className="whishlist__container">
                 <h3 className="whishlist__title">Wishlist</h3>
                 {!products?.length && <NoProductInList
@@ -35,7 +33,6 @@ const WhishlistPage = () => {
                     </>
                 }
             </section>
-        </div>
     )
 };
 

@@ -17,6 +17,10 @@
     animation-delay: 5ms;
 }
 
+.side-panel--state_invisible {
+    display: none;
+}
+
 .side-panel__close-btn {
     position: absolute;
     right: 0;
@@ -34,5 +38,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border-color: transparent;
+    background-color: transparent;
+}
+
+.side-panel__backdrop--state_invisible {
+    display: none;
 }

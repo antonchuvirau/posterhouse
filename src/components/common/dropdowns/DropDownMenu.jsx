@@ -28,8 +28,10 @@ const DropDownMenu = ({
     return (
         <div className="dropdown-menu">
             <button
-                onClick={() => setIsOpen((prevState) => !prevState)}
-                className="dropdown-menu__btn"
+                onClick={() => {
+                    setIsOpen((prevState) => !prevState)}
+                }
+                className={`dropdown-menu__btn ${isOpen ? 'manage-panel__filter-item--state_active' : ''}`}
             >
                 {dropdownBtnLabel}
             </button>

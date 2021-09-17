@@ -66,7 +66,7 @@ const oneField = {
 const ShippingPaymentPage = () => {
     return (
         <div className="shipping-payment">
-            <PopUp />
+            {/* <PopUp /> */}
             <AddressBar address={'Home / Cart / Information / Shipping / Payment'} />
             <section className="shipping-payment__container">
                 <div className="shipping-payment__left-column">

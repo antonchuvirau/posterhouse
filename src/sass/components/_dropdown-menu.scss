@@ -33,6 +33,7 @@
 
 /* Links inside the dropdown */
 .dropdown-menu__item {
+  cursor: pointer;
   color: $color-neutral-50;
   font-size: 18px;
   line-height: 20px;

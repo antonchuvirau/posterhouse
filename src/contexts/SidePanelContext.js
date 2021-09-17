@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useRef } from 'react';
 
 const HIDE_TRANSITION_TIME = 200;
 
@@ -20,6 +20,7 @@ const SidePanelItem = ({
   closeButtonClassName = "",
   hasCloseButton = false,
   onClose,
+  setIsOpen,
   open,
 }) => {
   return (
@@ -28,7 +29,10 @@ const SidePanelItem = ({
             {body}
             {hasCloseButton && (
                 <div className={closeButtonClassName || "side-panel__close-btn"}>
-                    <button aria-label="close" onClick={() => onClose(id)}>
+                    <button aria-label="close" onClick={() => {
+                        onClose(id);
+                        setIsOpen(false);
+                    }}>
                         Close
                     </button>
                 </div>
@@ -83,9 +87,13 @@ export const AppWithSidePanel = ({ children }) => {
         setTimeout(() => removeSidePanel(sidePanelId), HIDE_TRANSITION_TIME);
     };
 
+    const onCloseHook = useRef(() => {});
+
     const showSidePanel = (sidePanel) => {
         // eslint-disable-next-line no-plusplus
         const id = currentSidePanelId++;
+
+        onCloseHook.current = sidePanel.setIsOpen;
 
         setSidePanels([...sidePanels, { ...sidePanel, open: true, id }]);
 
@@ -99,7 +107,10 @@ export const AppWithSidePanel = ({ children }) => {
         }}>
             <SidePanelPlaceholder
                 sidePanels={sidePanels}
-                onClose={(id) => hideSidePanel(id)}
+                onClose={(id) => {
+                    hideSidePanel(id);
+                    onCloseHook.current(false);
+                }}
             />
             {children}
         </SidePanelProvider>

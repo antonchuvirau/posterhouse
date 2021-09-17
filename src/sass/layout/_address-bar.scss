@@ -13,3 +13,9 @@
   flex-direction: row;
   align-items: flex-end;
 }
+
+.address-bar__item {
+  font-size: 22px;
+  line-height: 26px;
+  color: $color-neutral-60;
+}

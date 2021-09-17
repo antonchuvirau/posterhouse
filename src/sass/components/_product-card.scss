@@ -16,8 +16,16 @@
 
 .product-card__like-button {
     cursor: pointer;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 21px;
+}
+
+.product-card__like-button--state_active {
+    background-image: url('../../assets/icons/like_active.svg');
+}
+
+.product-card__like-button--state_inactive {
+    background-image: url('../../assets/icons/heart_white.svg');
 }
 
 .product-cart__container {

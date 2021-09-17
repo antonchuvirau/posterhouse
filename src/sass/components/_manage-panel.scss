@@ -23,6 +23,10 @@
     outline: none;
 }
 
+.manage-panel__search-field--state_invisible {
+    display: none;
+}
+
 .manage-panel__buttons-bar {
     width: 100%;
     display: flex;
