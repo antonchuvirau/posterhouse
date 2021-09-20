@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 
-const DropdownOptionsSelect = ({
+const DropdownOptionsSelect = ({ // ToDo remove
     selectOptions,
     selectActionType,
 }) => {

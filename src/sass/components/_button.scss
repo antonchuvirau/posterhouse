@@ -5,7 +5,7 @@
 
 .button_bright--width_small {
   @include bright-button;
-  padding: 15px 28px;
+  padding: 15px 39px;
 }
 
 .button_dark {
@@ -45,4 +45,5 @@
   background-color: transparent;
   align-items: center;
   justify-content: center;
+  background-image: url('../../assets/icons/close.svg');
 }

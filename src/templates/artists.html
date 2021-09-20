@@ -93,7 +93,189 @@
     <div class="wrapper">
 
       <div class="artists-page">
-        <div class="react" data-type="manage-panel" data-hideleft="hideleft" ></div>
+
+
+        <div class="react" data-type="manage-panel"></div>
+
+        <div class="manage-panel">
+          <div class="manage-panel__buttons-bar">
+            <div class="manage-panel__filters" id="manage-panel__tabs"></div>
+              <div class="manage-panel__filters">
+                  <div class="manage-panel__filter-item">
+                      <div class="dropdown-menu">
+                          <button
+                              id="manage-panel__sort-btn"
+                              class="dropdown-menu__btn"
+                          >
+                              Sort by
+                          </button>
+                          <div
+                              id="manage-panel__sort-menu"
+                              class="dropdown-menu__content dropdown-menu__content--state_invisible"
+                          >
+                              <span class="dropdown-menu__item dropdown-menu__item--state_selected" >
+                                  A to Z
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Price from low to high
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Price from high to low
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Newest
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Popular
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      id="manage-panel__filter-btn"
+                      class="manage-panel__filter-item"
+                  >
+                      Filter
+                  </div>
+                  <div
+                      id="manage-panel__search-btn"
+                      class="manage-panel__filter-item manage-panel__search-btn"
+                  >
+                      Search
+                  </div>
+              </div>
+          </div>
+          <div class="manage-panel__search-bar">
+              <textarea
+                  id="manage-panel__search-field"
+                  class="manage-panel__search-field manage-panel__search-field--state_invisible"
+                  placeholder="Search"
+              ></textarea>
+          </div>
+        </div>
+
+        <div>
+          <div id="side-panel" class="side-panel side-panel--state_invisible">
+            <form action="" class="filters-list">
+              <div class="filter">
+                <div class="filter__title">Filter Title</div>
+
+                <input
+                  type="text"
+                  class="filter__textarea"
+                  placeholder="Search"
+                />
+
+                <div class="filter__content">
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                    <span class="custom-checkbox__label">
+                      CheckBox label</span
+                    >
+                  </label>
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                    <span class="custom-checkbox__label">
+                      CheckBox label</span
+                    >
+                  </label>
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                    <span class="custom-checkbox__label">
+                      CheckBox label</span
+                    >
+                  </label>
+                </div>
+              </div>
+
+              <hr class="filter__delimiter" />
+
+              <div class="filter">
+                <div class="filter__title">Filter Title</div>
+
+                <input
+                  type="text"
+                  class="filter__textarea"
+                  placeholder="Search"
+                />
+
+                <div class="filter__content">
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                    <span class="custom-checkbox__label">
+                      CheckBox label</span
+                    >
+                  </label>
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                    <span class="custom-checkbox__label">
+                      CheckBox label
+                    </span>
+                  </label>
+                  <label class="filter__label custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="filter__checkbox custom-checkbox__input"
+                    />
+                      <span class="custom-checkbox__label">
+                        CheckBox label
+                      </span>
+                  </label>
+                </div>
+
+                <div class="filter__tag-box">
+                  <div class="tag">
+                    <div class="tag__content">Interior</div>
+                  </div>
+                  <div class="tag">
+                    <div class="tag__content">Interior</div>
+                  </div>
+                  <div class="tag">
+                    <div class="tag__content">Interior</div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div
+            id="side-panel__backdrop"
+            class="side-panel__backdrop side-panel__backdrop--state_invisible"
+          />
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="home-page__products-list">
           <div class="home-page__content">
 

@@ -1,36 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ManagePanel from './components/common/manage-panel/ManagePanel';
+import ManagePanelController from './controllers/ManagePanelController';
 import './sass/main.scss'
-// import App from './App';
 import { Provider } from 'react-redux'
 import store from './redux/store';
-import { BrowserRouter as Router } from "react-router-dom";
 import { AppWithSidePanel } from './contexts/SidePanelContext';
-import DropdownOptionsSelect from './components/common/dropdowns/DropdownOptionsSelect';
-import DropdownInfo from './components/common/dropdowns/DropdownInfo';
 import AuthorisationPage from './pages/AuthorisationPage';
 import CartInformationPage from './pages/CartInformationPage';
 import ShippingPaymentPage from './pages/ShippingPaymentPage';
 import WhishlistPage from './pages/WhishlistPage';
 import FAQPage from './pages/FAQPage';
-
-
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <Provider store={store}>
-//       <Router>
-//         <AppWithSidePanel>
-//           <App />
-//         </AppWithSidePanel>
-//       </Router>
-//     </Provider>
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-
+import AddToWhishListBtn from './components/common/buttons/AddToWhishListBtn';
+import DropdownOptionsSelectController from './components/common/dropdowns/DropdownOptionsSelectController';
+import DropdownInfoController from './components/common/dropdowns/DropdownInfoController';
+import WishListSidePanelController from './controllers/WishListSidePanelController';
+import PaperTypesModalController from './controllers/PaperTypesModalController';
 
 
 
@@ -39,34 +23,22 @@ function renderComponentInElement(el) {
 
   switch (props.type) {
     case 'manage-panel':
-      ReactDOM.render(
-        <AppWithSidePanel>
-          <ManagePanel hideLeftSubPanel={props.hideleft} {...props} />
-        </AppWithSidePanel>,
-        el
-      );
+      ReactDOM.render(<ManagePanelController />, el);
+      break;
+    case 'add-to-whish-list-btn':
+      ReactDOM.render(<AddToWhishListBtn />, el);
       break;
     case 'dropdown-options-select':
-      ReactDOM.render(
-        <Provider store={store}>
-          <AppWithSidePanel>
-            <DropdownOptionsSelect {...props} />
-          </AppWithSidePanel>
-        </Provider>,
-        el
-      );
+      ReactDOM.render(<DropdownOptionsSelectController />, el);
       break;
     case 'dropdown-info':
-      ReactDOM.render(
-        <AppWithSidePanel>
-          <DropdownInfo {...props}
-            classes="product-info__drop-down"
-            title="Shipping"
-            descriptionFields={[]}
-          />
-        </AppWithSidePanel>,
-        el
-      );
+      ReactDOM.render(<DropdownInfoController />, el);
+      break;
+    case 'wish-list-side-panel':
+      ReactDOM.render(<WishListSidePanelController />, el);
+      break;
+    case 'paper-types-modal':
+      ReactDOM.render(<PaperTypesModalController />, el);
       break;
     case 'login':
       ReactDOM.render(
@@ -124,31 +96,6 @@ function renderComponentInElement(el) {
   }
 }
 
-// const onProductLikeButtonClick = (element) => {
-//   element.addEventListener('click', (event) => {
-//     event.currentTarget.classList.toggle('product-card__like-button--state_active')
-//   })
-// };
-
 document
   .querySelectorAll('.react')
   .forEach(renderComponentInElement)
-
-
-// document
-//   .querySelectorAll('.product-card__like-button')
-//   .forEach()
-
-// document
-//   .getElementById('')
-
-{/* <div class="side-panel">
-<div class="side-panel__backdrop" />
-
-.side-panel__backdrop--state_invisible {
-  .side-panel--state_invisible {
-
-
-document
-  .getElementById('side-panel-filters')
-  .addEventListener('click', ) */}

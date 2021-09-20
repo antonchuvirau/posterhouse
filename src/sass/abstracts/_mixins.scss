@@ -37,6 +37,14 @@
   text-transform: capitalize;
 }
 
+@mixin h4-title {
+  font-family: $font-family-titles;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+}
+
 @mixin first-letter {
   font-family: $font-family-titles;
   font-style: normal;

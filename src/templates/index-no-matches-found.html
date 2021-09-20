@@ -33,16 +33,11 @@
             </div>
             <div class="actions">
               <ul class="actions__list">
-
-                <li id="open-wish-list-side-panel" class="actions__item like">
-
-                  <img src="./assets/icons/heart_black.svg" alt="like" />
-
-
+                <li class="actions__item like">
+                  <a href="./wishlist.html">
+                    <img src="./assets/icons/heart_black.svg" alt="like" />
+                  </a>
                 </li>
-
-
-
                 <li class="actions__item login">
                   <a href="./login.html" class="login__link">Log in</a>
                 </li>
@@ -160,7 +155,7 @@
                     placeholder="Search"
                 ></textarea>
             </div>
-          </div>
+        </div>
 
           <div>
             <div id="side-panel" class="side-panel side-panel--state_invisible">
@@ -267,61 +262,15 @@
             />
           </div>
 
-          <div class="home-page__products-list">
-            <div class="home-page__content">
-              <div class="card-list">
-                <div class="card-list__cards">
-
-                  <div class="product-cart">
-                    <div class="product-cart__like-container">
-                      <div class="product-card__like-button product-card__like-button--state_inactive"></div>
-                    </div>
-                    <div class="product-cart__container">
-                      <div class="product-card__image">
-                        <a href="./artwork.html">
-                          <img src="" alt="product1" />
-                        </a>
-                      </div>
-                      <div class="product-cart__name">
-                        <a href="./artwork.html">Product name</a>
-                      </div>
-                      <div class="product-cart__author">Author</div>
-                      <div class="product-cart__price">$100.00</div>
-                    </div>
-                  </div>
-
-                  <div class="product-cart">
-                    <div class="product-cart__like-container">
-                      <div class="product-card__like-button product-card__like-button--state_inactive"></div>
-                    </div>
-                    <div class="product-cart__container">
-                      <div class="product-card__image">
-                        <a href="./artwork.html">
-                          <img src="" alt="product1" />
-                        </a>
-                      </div>
-                      <div class="product-cart__name">
-                        <a href="./artwork.html">Product name</a>
-                      </div>
-                      <div class="product-cart__author">Author</div>
-                      <div class="product-cart__price">$100.00</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="action-btn">
-            <button class="button_bright_arrow">
+          <div class="no-matches-found">
+            <h3 class="no-matches-found__title">No matches found</h3>
+            <button class="no-matches-found__button button_dark_arrow">
               <span>View all artwork</span>
-              <img
-                src="./assets/icons/arrow_right-black.svg"
-                alt="arrow__right"
-                class="button__icon"
-              />
+              <img src="./assets/icons/arrow__right.svg" alt="arrow__right" class="button__icon" />
             </button>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -370,153 +319,5 @@
         </div>
       </div>
     </footer>
-
-    <div>
-      <div class="react" data-type="wish-list-side-panel"></div>
-
-      <div id="wish-list-side-panel" class="wish-list-side-panel wish-list-side-panel--state_invisible">
-          <div class="wish-list-side-panel__close-container">
-              <button id="wish-list-side-panel__close-btn" class="wish-list-side-panel__close-btn">Close</button>
-          </div>
-          <div class="wish-list-side-panel__content">
-              <section class="wish-list-side-panel__cadslist">
-
-
-
-                  <div class="wish-list-side-panel-card">
-                      <div class="wish-list-side-panel-card__container">
-                          <div class="wish-list-side-panel-card__image">
-                              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
-                          </div>
-                          <div class="wish-list-side-panel-card__content">
-                              <div class="wish-list-side-panel-card__name-container">
-                                  <div class="wish-list-side-panel-card__name">
-                                      "Buy", Long Island University
-                                  </div>
-                                  <button class="close-btn"></button>
-                              </div>
-                              <div class="wish-list-side-panel-card__info">
-                                  <div class="wish-list-side-panel-card__info-keys">
-                                      <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
-                                  </div>
-                                  <div class="wish-list-side-panel-card__info-values">
-                                      <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm  LexJet Sunset Photo eSatin — 300 gsm</span>
-                                      <span class="wish-list-side-panel-card__info-values-item">1” </span>
-                                      <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
-                                      <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
-                                  </div>
-                              </div>
-                              <div class="wish-list-side-panel-card__price-container">
-                                  <div class="wish-list-side-panel-card__counter-btn">
-                                      <div class="wish-list-side-panel-card__counter-btn-action">-</div>
-                                      <div class="wish-list-side-panel-card__count"><span>1</span></div>
-                                      <div class="wish-list-side-panel-card__counter-btn-action">+</div>
-                                  </div>
-                                  <div class="wish-list-side-panel-card__price">$ 100.00</div>
-                              </div>
-
-
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-                  <div class="wish-list-side-panel-card">
-                      <div class="wish-list-side-panel-card__container">
-                          <div class="wish-list-side-panel-card__image">
-                              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
-                          </div>
-                          <div class="wish-list-side-panel-card__content">
-                              <div class="wish-list-side-panel-card__name-container">
-                                  <div class="wish-list-side-panel-card__name">
-                                      "Buy", Long Island University
-                                  </div>
-                                  <button class="close-btn"></button>
-                              </div>
-                              <div class="wish-list-side-panel-card__info">
-                                  <div class="wish-list-side-panel-card__info-keys">
-                                      <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
-                                      <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
-                                  </div>
-                                  <div class="wish-list-side-panel-card__info-values">
-                                      <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm  LexJet Sunset Photo eSatin — 300 gsm</span>
-                                      <span class="wish-list-side-panel-card__info-values-item">1” </span>
-                                      <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
-                                      <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
-                                  </div>
-                              </div>
-                              <div class="wish-list-side-panel-card__price-container">
-                                  <div class="wish-list-side-panel-card__counter-btn">
-                                      <div class="wish-list-side-panel-card__counter-btn-action">-</div>
-                                      <div class="wish-list-side-panel-card__count"><span>1</span></div>
-                                      <div class="wish-list-side-panel-card__counter-btn-action">+</div>
-                                  </div>
-                                  <div class="wish-list-side-panel-card__price">$ 100.00</div>
-                              </div>
-
-
-                          </div>
-
-                      </div>
-
-
-                  </div>
-
-
-
-
-
-
-
-
-
-              </section>
-
-
-              <div class="wish-list-side-panel__subtotal">
-                  <div class="wish-list-side-panel__subtotal-item">
-                      Subtotal
-                  </div>
-                  <div class="wish-list-side-panel__subtotal-item">
-                      300.00 EUR
-                  </div>
-              </div>
-
-
-
-              <div class="wish-list-side-panel__action-btns">
-                  <button id="wish-list-side-panel__continue-shopping-btn" class="wish-list-side-panel__transparent-btn wish-list-side-panel__action-btn">
-                      <span>Continue shopping</span>
-                  </button>
-                  <a href="./wishlist.html">
-                      <button class="wish-list-side-panel__dark-btn wish-list-side-panel__action-btn">
-                          <span>Go to cart</span>
-                      </button>
-                  </a>
-              </div>
-
-
-
-
-          </div>
-
-
-
-
-
-      </div>
-
-      <div
-        id="wish-list-side-panel__backdrop"
-        class="wish-list-side-panel__backdrop wish-list-side-panel__backdrop--state-invisible"
-      />
-    </div>
   </body>
 </html>

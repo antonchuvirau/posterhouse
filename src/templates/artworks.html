@@ -73,72 +73,259 @@
   </section>
   <section class="address-bar">
     <div class="wrapper">
-
-
-
-
           <div class="address-bar__container">
             <a href="./" class="address-bar__item">Home</a>
             &nbsp;/&nbsp;
             <a href="./artworks.html" class="address-bar__item">Artwork</a>
           </div>
-
-
-
     </div>
   </section>
 
   <section class="main main_selection">
     <div class="wrapper">
       <div class="product-list-page">
+
+
+
         <div class="react" data-type="manage-panel"></div>
+
+
+        <div class="manage-panel">
+          <div class="manage-panel__buttons-bar">
+            <div class="manage-panel__filters" id="manage-panel__tabs">
+              <div class="manage-panel__tab manage-panel__filter-item manage-panel__filter-item--state_active">
+                  All
+              </div>
+              <div class="manage-panel__tab manage-panel__filter-item">
+                  Artwork
+              </div>
+              <div class="manage-panel__tab manage-panel__filter-item">
+                  Print
+              </div>
+          </div>
+              <div class="manage-panel__filters">
+                  <div class="manage-panel__filter-item">
+                      <div class="dropdown-menu">
+                          <button
+                              id="manage-panel__sort-btn"
+                              class="dropdown-menu__btn"
+                          >
+                              Sort by
+                          </button>
+                          <div
+                              id="manage-panel__sort-menu"
+                              class="dropdown-menu__content dropdown-menu__content--state_invisible"
+                          >
+                              <span class="dropdown-menu__item dropdown-menu__item--state_selected" >
+                                  A to Z
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Price from low to high
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Price from high to low
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Newest
+                              </span>
+                              <span class="dropdown-menu__item" >
+                                  Popular
+                              </span>
+                          </div>
+                      </div>
+                  </div>
+                  <div
+                      id="manage-panel__filter-btn"
+                      class="manage-panel__filter-item"
+                  >
+                      Filter
+                  </div>
+                  <div
+                      id="manage-panel__search-btn"
+                      class="manage-panel__filter-item manage-panel__search-btn"
+                  >
+                      Search
+                  </div>
+              </div>
+          </div>
+          <div class="manage-panel__search-bar">
+              <textarea
+                  id="manage-panel__search-field"
+                  class="manage-panel__search-field manage-panel__search-field--state_invisible"
+                  placeholder="Search"
+              ></textarea>
+          </div>
+
+
+
+
+
+
+          <div>
+            <div id="side-panel" class="side-panel side-panel--state_invisible">
+              <form action="" class="filters-list">
+                <div class="filter">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                  </div>
+                </div>
+
+                <hr class="filter__delimiter" />
+
+                <div class="filter">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label
+                      </span>
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                        <span class="custom-checkbox__label">
+                          CheckBox label
+                        </span>
+                    </label>
+                  </div>
+
+                  <div class="filter__tag-box">
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div
+              id="side-panel__backdrop"
+              class="side-panel__backdrop side-panel__backdrop--state_invisible"
+            />
+          </div>
+
+
+
+
+
+
+
+
+
+
+
         <div class="product-list-page__content">
 
           <div class="card-list">
             <div class="card-list__cards">
 
+
               <div class="product-cart">
                 <div class="product-cart__like-container">
-                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                  <div class="product-card__like-button product-card__like-button--state_inactive"></div>
                 </div>
                 <div class="product-cart__container">
-                    <div class="product-card__image">
-                        <a href="./artwork.html">
-                          <img src="" alt="product1" />
-                        </a>
-                    </div>
-                    <div class="product-cart__name">
-                        <a href="./artwork.html">Product name</a>
-                    </div>
-                    <div class="product-cart__author">
-                        Author
-                    </div>
-                    <div class="product-cart__price">
-                        $100.00
-                    </div>
+                  <div class="product-card__image">
+                    <a href="./artwork.html">
+                      <img src="" alt="product1" />
+                    </a>
+                  </div>
+                  <div class="product-cart__name">
+                    <a href="./artwork.html">Product name</a>
+                  </div>
+                  <div class="product-cart__author">Author</div>
+                  <div class="product-cart__price">$100.00</div>
                 </div>
+              </div>
+
+
+
+            <div class="product-cart">
+              <div class="product-cart__like-container">
+                <div class="product-card__like-button product-card__like-button--state_inactive"></div>
+              </div>
+              <div class="product-cart__container">
+                <div class="product-card__image">
+                  <a href="./artwork.html">
+                    <img src="" alt="product1" />
+                  </a>
+                </div>
+                <div class="product-cart__name">
+                  <a href="./artwork.html">Product name</a>
+                </div>
+                <div class="product-cart__author">Author</div>
+                <div class="product-cart__price">$100.00</div>
+              </div>
             </div>
-              <div class="product-cart">
-                <div class="product-cart__like-container">
-                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
-                </div>
-                <div class="product-cart__container">
-                    <div class="product-card__image">
-                      <a href="./artwork.html">
-                        <img src="" alt="product1" />
-                      </a>
-                    </div>
-                    <div class="product-cart__name">
-                        <a href="./artwork.html">Product name</a>
-                    </div>
-                    <div class="product-cart__author">
-                        Author
-                    </div>
-                    <div class="product-cart__price">
-                        $100.00
-                    </div>
-                </div>
-            </div>
+
+
+
+
+
+
+
 
             </div>
           </div>
@@ -146,9 +333,8 @@
         </div>
 
         <div class="action-btn">
-          <button class="button_bright_arrow">
-            <span>View all artwork</span>
-            <img src="./assets/icons/arrow_right-black.svg" alt="arrow__right" class="button__icon" />
+          <button class="button_bright--width_small">
+            <span>Show more</span>
           </button>
         </div>
 
