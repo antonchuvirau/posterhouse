@@ -21,16 +21,17 @@
   display: flex;
   flex-direction: column;
   gap: 45px;
-  padding-bottom: 30px;
 }
 
 .cart-information-product-list__subtotal {
   width: 100%;
-  font-weight: 500;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .cart-information-product-list__subtotal-item {
@@ -43,7 +44,6 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  padding-top: 67px;
 }
 
 .cart-information-product-list__action-button {

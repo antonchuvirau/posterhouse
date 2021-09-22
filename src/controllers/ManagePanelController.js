@@ -6,15 +6,20 @@ const ManagePanel = () => {
     const [isFilterPanelShown, setIsFilterPanelShown] = useState(false);
     const [isSortMenuOpen, setIsSortMenuOpen] = useState(false);
 
-    const filtersPanelComponent = useRef(null);
-    const backDropComponent = useRef(null);
-    const filterBtn = useRef(null);
-    const searchBtn = useRef(null);
-    const searchBarComponent = useRef(null);
-    const sortByBtn = useRef(null);
-    const sortByMenuComponent = useRef(null);
     const managePanelTabs = useRef(null);
-    const productCardLikeBtns = useRef(null);
+
+    // const sidePanelFilterItems = useRef(null);
+    const filtersPanel = useRef(null);
+
+    const filtersPanelBackdrop = useRef(null);
+    const openFiltersPanelBtn = useRef(null);
+
+    const openSearchBarBtn = useRef(null);
+    const searchBar = useRef(null);
+
+    const openSortByMenuBtn = useRef(null);
+    const sortByMenu = useRef(null);
+
 
     const onSortByBtnClick = useCallback(() => {
         setIsSortMenuOpen((prevState) => !prevState);
@@ -73,36 +78,31 @@ const ManagePanel = () => {
     }, []);
 
     const toggleFiltersPanelVisibility = useCallback(() => {
-        if (!filtersPanelComponent.current || !backDropComponent.current || !filterBtn.current) {
+        if (!filtersPanel.current || !filtersPanelBackdrop.current || !openFiltersPanelBtn.current) {
             return;
         }
 
-        filtersPanelComponent.current.classList.toggle('side-panel--state_invisible');
-        backDropComponent.current.classList.toggle('side-panel__backdrop--state_invisible');
-        filterBtn.current.classList.toggle('manage-panel__filter-item--state_active');
+        filtersPanel.current.classList.toggle('side-panel--state_invisible');
+        filtersPanelBackdrop.current.classList.toggle('side-panel__backdrop--state_invisible');
+        openFiltersPanelBtn.current.classList.toggle('manage-panel__filter-item--state_active');
     }, [])
 
-    const onProductCardLikeBtnClick = useCallback((e) => {
-        e.currentTarget.classList.toggle('product-card__like-button--state_inactive');
-        e.currentTarget.classList.toggle('product-card__like-button--state_active');
-    }, []);
-
     const togleSearchbarVisibility = useCallback(() => {
-        if (!searchBtn.current || !searchBarComponent.current) {
+        if (!openSearchBarBtn.current || !searchBar.current) {
             return;
         }
 
-        searchBtn.current.classList.toggle('manage-panel__filter-item--state_active');
-        searchBarComponent.current.classList.toggle('manage-panel__search-field--state_invisible');
+        openSearchBarBtn.current.classList.toggle('manage-panel__filter-item--state_active');
+        searchBar.current.classList.toggle('manage-panel__search-field--state_invisible');
     }, []);
 
     const toggleSortMenyVisibility = useCallback(() => {
-        if (!sortByBtn.current || !sortByMenuComponent.current) {
+        if (!openSortByMenuBtn.current || !sortByMenu.current) {
             return
         }
-        sortByBtn.current.classList.toggle('manage-panel__filter-item--state_active');
-        sortByMenuComponent.current.classList.toggle('dropdown-menu__content--state_invisible');
-        sortByMenuComponent.current.classList.toggle('dropdown-menu__content--state_visible');
+        openSortByMenuBtn.current.classList.toggle('manage-panel__filter-item--state_active');
+        sortByMenu.current.classList.toggle('dropdown-menu__content--state_invisible');
+        sortByMenu.current.classList.toggle('dropdown-menu__content--state_visible');
     }, []);
 
     useEffect(() => {
@@ -117,42 +117,39 @@ const ManagePanel = () => {
         toggleSortMenyVisibility();
     }, [isSortMenuOpen, toggleSortMenyVisibility])
 
-    useEffect(() => {
-        filtersPanelComponent.current = document.getElementById('side-panel');
-        backDropComponent.current = document.getElementById('side-panel__backdrop');
-        filterBtn.current = document.getElementById('manage-panel__filter-btn');
-        searchBtn.current = document.getElementById('manage-panel__search-btn');
-        searchBarComponent.current = document.getElementById('manage-panel__search-field');
-        sortByBtn.current = document.getElementById('manage-panel__sort-btn');
-        sortByMenuComponent.current = document.getElementById('manage-panel__sort-menu');
-        managePanelTabs.current = document.getElementById('manage-panel__tabs');
-        productCardLikeBtns.current = document.getElementsByClassName('product-card__like-button');
-
-        managePanelTabs.current.addEventListener('click', onTabClick);
-        sortByMenuComponent.current.addEventListener('click', onChooseSortOption)
-        sortByBtn.current.addEventListener('click', onSortByBtnClick);
-        filterBtn.current.addEventListener('click', onFiltersPanelOpen);
-        searchBtn.current.addEventListener('click', onSearchBtnClick)
-        backDropComponent.current.addEventListener('click', onBackdropClick)
-        window.addEventListener("click", handleClickOutsideSearchField);
-        window.addEventListener("click", handleClickOutsideSortMenu);
-
-        for (let i = 0; i < productCardLikeBtns.current.length; i += 1) {
-            productCardLikeBtns.current[i].addEventListener('click', onProductCardLikeBtnClick);
+    const addEventListeners = useCallback(() => {
+        if (managePanelTabs.current) {
+            managePanelTabs.current.addEventListener('click', onTabClick);
         }
 
-        return () => {
-            window.removeEventListener("click", handleClickOutsideSearchField);
-            backDropComponent.current.removeEventListener("click", onBackdropClick);
-            searchBtn.current.removeEventListener('click', onSearchBtnClick)
-            filterBtn.current.removeEventListener('click', onFiltersPanelOpen);
-            sortByBtn.current.removeEventListener('click', onSortByBtnClick);
-            sortByMenuComponent.current.removeEventListener('click', onChooseSortOption);
+        if (sortByMenu.current) {
+            sortByMenu.current.addEventListener('click', onChooseSortOption)
+        }
 
-            for (let i = 0; i < productCardLikeBtns.current.length; i += 1) {
-                productCardLikeBtns.current[i].removeEventListener('click', onProductCardLikeBtnClick);
-            }
-        };
+        if (openSortByMenuBtn.current) {
+            openSortByMenuBtn.current.addEventListener('click', onSortByBtnClick);
+        }
+
+        if (openFiltersPanelBtn.current) {
+            openFiltersPanelBtn.current.addEventListener('click', onFiltersPanelOpen);
+        }
+
+        if (openSearchBarBtn.current) {
+            openSearchBarBtn.current.addEventListener('click', onSearchBtnClick)
+        }
+
+        if (filtersPanelBackdrop.current) {
+            filtersPanelBackdrop.current.addEventListener('click', onBackdropClick)
+        }
+
+        // if (sidePanelFilterItems.current) {
+        //     for (let i = 0; i < sidePanelFilterItems.current.length; i += 1) {
+        //         sidePanelFilterItems.current[i].firstChild.nextSibling.addEventListener('click', onDropdownInfoClick);
+        //     }
+        // }
+
+        window.addEventListener("click", handleClickOutsideSearchField);
+        window.addEventListener("click", handleClickOutsideSortMenu);
     }, [
         handleClickOutsideSearchField,
         onBackdropClick,
@@ -162,10 +159,74 @@ const ManagePanel = () => {
         onChooseSortOption,
         handleClickOutsideSortMenu,
         onTabClick,
-        onProductCardLikeBtnClick,
+    ]);
+
+    const removeEventListeners = useCallback(() => {
+        if (managePanelTabs.current) {
+            managePanelTabs.current.removeEventListener('click', onTabClick);
+        }
+
+        if (sortByMenu.current) {
+            sortByMenu.current.removeEventListener('click', onChooseSortOption);
+        }
+
+        if (openSortByMenuBtn.current) {
+            openSortByMenuBtn.current.removeEventListener('click', onSortByBtnClick);
+        }
+
+        if (openFiltersPanelBtn.current) {
+            openFiltersPanelBtn.current.removeEventListener('click', onFiltersPanelOpen);
+        }
+
+        if (openSearchBarBtn.current) {
+            openSearchBarBtn.current.removeEventListener('click', onSearchBtnClick)
+        }
+
+        if (filtersPanelBackdrop.current) {
+            filtersPanelBackdrop.current.removeEventListener("click", onBackdropClick);
+        }
+
+        // if (sidePanelFilterItems.current) {
+        //     for (let i = 0; i < sidePanelFilterItems.current.length; i += 1) {
+        //         sidePanelFilterItems.current[i].firstChild.nextSibling.removeEventListener('click', onDropdownInfoClick);
+        //     }
+        // }
+
+        window.removeEventListener("click", handleClickOutsideSearchField);
+        window.removeEventListener("click", handleClickOutsideSortMenu);
+    }, [
+        handleClickOutsideSearchField,
+        onBackdropClick,
+        onSearchBtnClick,
+        onFiltersPanelOpen,
+        onSortByBtnClick,
+        onChooseSortOption,
+        handleClickOutsideSortMenu,
+        onTabClick,
+    ]);
+
+    useEffect(() => {
+        filtersPanel.current = document.getElementById('side-panel');
+        filtersPanelBackdrop.current = document.getElementById('side-panel__backdrop');
+        openFiltersPanelBtn.current = document.getElementById('manage-panel__filter-btn');
+        openSearchBarBtn.current = document.getElementById('manage-panel__search-btn');
+        searchBar.current = document.getElementById('manage-panel__search-field');
+        openSortByMenuBtn.current = document.getElementById('manage-panel__sort-btn');
+        sortByMenu.current = document.getElementById('manage-panel__sort-menu');
+        managePanelTabs.current = document.getElementById('manage-panel__tabs');
+        // sidePanelFilterItems.current = document.getElementsByClassName('side-panel__filter-item')
+
+        addEventListeners();
+
+        return () => {
+            removeEventListeners();
+        };
+    }, [
+        addEventListeners,
+        removeEventListeners,
     ])
 
-    return <div />;
+    return null;
 };
 
 export default ManagePanel;

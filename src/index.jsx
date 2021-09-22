@@ -10,11 +10,11 @@ import CartInformationPage from './pages/CartInformationPage';
 import ShippingPaymentPage from './pages/ShippingPaymentPage';
 import WhishlistPage from './pages/WhishlistPage';
 import FAQPage from './pages/FAQPage';
-import AddToWhishListBtn from './components/common/buttons/AddToWhishListBtn';
-import DropdownOptionsSelectController from './components/common/dropdowns/DropdownOptionsSelectController';
-import DropdownInfoController from './components/common/dropdowns/DropdownInfoController';
+import DropdownOptionsSelectController from './controllers/DropdownOptionsSelectController';
+import DropdownInfoController from './controllers/DropdownInfoController';
 import WishListSidePanelController from './controllers/WishListSidePanelController';
 import PaperTypesModalController from './controllers/PaperTypesModalController';
+import ProductCardLikeBtnsController from './controllers/AddToWhishListBtnsController';
 
 
 
@@ -26,7 +26,7 @@ function renderComponentInElement(el) {
       ReactDOM.render(<ManagePanelController />, el);
       break;
     case 'add-to-whish-list-btn':
-      ReactDOM.render(<AddToWhishListBtn />, el);
+      ReactDOM.render(<ProductCardLikeBtnsController />, el);
       break;
     case 'dropdown-options-select':
       ReactDOM.render(<DropdownOptionsSelectController />, el);
@@ -44,15 +44,6 @@ function renderComponentInElement(el) {
       ReactDOM.render(
         <AppWithSidePanel>
           <AuthorisationPage />
-        </AppWithSidePanel>,
-        el
-      );
-      break;
-
-    case 'cart':
-      ReactDOM.render(
-        <AppWithSidePanel>
-          <CartInformationPage />
         </AppWithSidePanel>,
         el
       );

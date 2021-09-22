@@ -1,7 +1,7 @@
 
 import React, { useCallback, useEffect, useRef } from 'react';
 
-const AddToWhishListBtn = () => {
+const ProductCardLikeBtnsController = () => {
     const productCardLikeBtns = useRef(null);
 
     const onProductCardLikeBtnClick = useCallback((e) => {
@@ -11,6 +11,10 @@ const AddToWhishListBtn = () => {
 
     useEffect(() => {
         productCardLikeBtns.current = document.getElementsByClassName('product-card__like-button');
+
+        if (!productCardLikeBtns.current) {
+            return;
+        }
 
         for (let i = 0; i < productCardLikeBtns.current.length; i += 1) {
             productCardLikeBtns.current[i].addEventListener('click', onProductCardLikeBtnClick);
@@ -23,7 +27,7 @@ const AddToWhishListBtn = () => {
         };
     }, [onProductCardLikeBtnClick]);
 
-    return <div />;
+    return null;
 };
 
-export default AddToWhishListBtn;
+export default ProductCardLikeBtnsController;

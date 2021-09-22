@@ -22,13 +22,20 @@
             </li>
           </ul>
         </nav>
+
         <div class="logo">
-          <a href="./index.html" class="logo__link">Logo</a>
+          <a href="./index.html" class="logo__link">
+            <img
+              src="./assets/icons/Logo--transparent_big.png"
+              alt="Posterhaus"
+            />
+          </a>
         </div>
+
         <div class="actions">
           <ul class="actions__list">
-            <li class="actions__item like">
-              <img src="./heart_black.svg" alt="like">
+            <li id="open-wish-list-side-panel" class="actions__item like">
+              <img src="./assets/icons/heart_black.svg" alt="like" />
             </li>
             <li class="actions__item login">
               <a href="./login.html" class="login__link">Log in</a>
@@ -148,14 +155,189 @@
             ARTWORK
           </div>
           <div class="artist-page__content">
+
+
+
             <div class="react" data-type="manage-panel"></div>
+          <div class="react" data-type="add-to-whish-list-btn"></div>
+
+          <div class="manage-panel">
+            <div class="manage-panel__buttons-bar">
+              <div class="manage-panel__filters" id="manage-panel__tabs">
+                <div class="manage-panel__tab manage-panel__filter-item manage-panel__filter-item--state_active">
+                    All
+                </div>
+                <div class="manage-panel__tab manage-panel__filter-item">
+                    Artwork
+                </div>
+                <div class="manage-panel__tab manage-panel__filter-item">
+                    Print
+                </div>
+            </div>
+                <div class="manage-panel__filters">
+                    <div class="manage-panel__filter-item">
+                        <div class="dropdown-menu">
+                            <button
+                                id="manage-panel__sort-btn"
+                                class="dropdown-menu__btn"
+                            >
+                                Sort by
+                            </button>
+                            <div
+                                id="manage-panel__sort-menu"
+                                class="dropdown-menu__content dropdown-menu__content--state_invisible"
+                            >
+                                <span class="dropdown-menu__item dropdown-menu__item--state_selected" >
+                                    A to Z
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Price from low to high
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Price from high to low
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Newest
+                                </span>
+                                <span class="dropdown-menu__item" >
+                                    Popular
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        id="manage-panel__filter-btn"
+                        class="manage-panel__filter-item"
+                    >
+                        Filter
+                    </div>
+                    <div
+                        id="manage-panel__search-btn"
+                        class="manage-panel__filter-item manage-panel__search-btn"
+                    >
+                        Search
+                    </div>
+                </div>
+            </div>
+            <div class="manage-panel__search-bar">
+                <textarea
+                    id="manage-panel__search-field"
+                    class="manage-panel__search-field manage-panel__search-field--state_invisible"
+                    placeholder="Search"
+                ></textarea>
+            </div>
+          </div>
+          <div>
+            <div id="side-panel" class="side-panel side-panel--state_invisible">
+              <form action="" class="filters-list">
+                <div class="filter side-panel__filter-item">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                  </div>
+                </div>
+
+                <hr class="filter__delimiter" />
+
+                <div class="filter">
+                  <div class="filter__title">Filter Title</div>
+
+                  <input
+                    type="text"
+                    class="filter__textarea"
+                    placeholder="Search"
+                  />
+
+                  <div class="filter__content">
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label</span
+                      >
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                      <span class="custom-checkbox__label">
+                        CheckBox label
+                      </span>
+                    </label>
+                    <label class="filter__label custom-checkbox">
+                      <input
+                        type="checkbox"
+                        class="filter__checkbox custom-checkbox__input"
+                      />
+                        <span class="custom-checkbox__label">
+                          CheckBox label
+                        </span>
+                    </label>
+                  </div>
+
+                  <div class="filter__tag-box">
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                    <div class="tag">
+                      <div class="tag__content">Interior</div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div
+              id="side-panel__backdrop"
+              class="side-panel__backdrop side-panel__backdrop--state_invisible"
+            />
+          </div>
 
             <div class="card-list">
               <div class="card-list__cards">
 
                 <div class="product-cart">
                   <div class="product-cart__like-container">
-                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                    <div class="product-card__like-button product-card__like-button--state_inactive"></div>
                   </div>
                   <div class="product-cart__container">
                     <div class="product-card__image">
@@ -166,17 +348,14 @@
                     <div class="product-cart__name">
                       <a href="./artwork.html">Product name</a>
                     </div>
-                    <div class="product-cart__author">
-                      Author
-                    </div>
-                    <div class="product-cart__price">
-                      $100.00
-                    </div>
+                    <div class="product-cart__author">Author</div>
+                    <div class="product-cart__price">$100.00</div>
                   </div>
                 </div>
+
                 <div class="product-cart">
                   <div class="product-cart__like-container">
-                    <img class="product-card__like-button" src="./assets/icons/heart_white.svg" alt="like" />
+                    <div class="product-card__like-button product-card__like-button--state_inactive"></div>
                   </div>
                   <div class="product-cart__container">
                     <div class="product-card__image">
@@ -187,12 +366,8 @@
                     <div class="product-cart__name">
                       <a href="./artwork.html">Product name</a>
                     </div>
-                    <div class="product-cart__author">
-                      Author
-                    </div>
-                    <div class="product-cart__price">
-                      $100.00
-                    </div>
+                    <div class="product-cart__author">Author</div>
+                    <div class="product-cart__price">$100.00</div>
                   </div>
                 </div>
 
@@ -235,9 +410,17 @@
               <a href="./faq.html">FAQs</a>
             </li>
           </ul>
+
           <div class="footer__logo">
-            <a href="./index.html">Logo</a>
+            <a href="./">
+              <img
+                src="./assets/icons/Logo-transparent__small.png"
+                alt="Posterhaus"
+              />
+            </a>
           </div>
+
+
           <ul class="footer__column media">
             <li class="media__item footer__list-item">
               <a href="#">
@@ -261,6 +444,153 @@
           <div class="copyright__description">© All rights reserved.</div>
         </div>
       </div>
+    </div>
+    <div>
+      <div class="react" data-type="wish-list-side-panel"></div>
+
+      <div id="wish-list-side-panel" class="wish-list-side-panel wish-list-side-panel--state_invisible">
+          <div class="wish-list-side-panel__close-container">
+              <button id="wish-list-side-panel__close-btn" class="wish-list-side-panel__close-btn">Close</button>
+          </div>
+          <div class="wish-list-side-panel__content">
+              <section class="wish-list-side-panel__cadslist">
+
+
+
+                  <div class="wish-list-side-panel-card">
+                      <div class="wish-list-side-panel-card__container">
+                          <div class="wish-list-side-panel-card__image">
+                              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+                          </div>
+                          <div class="wish-list-side-panel-card__content">
+                              <div class="wish-list-side-panel-card__name-container">
+                                  <div class="wish-list-side-panel-card__name">
+                                      "Buy", Long Island University
+                                  </div>
+                                  <button class="close-btn"></button>
+                              </div>
+                              <div class="wish-list-side-panel-card__info">
+                                  <div class="wish-list-side-panel-card__info-keys">
+                                      <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                                  </div>
+                                  <div class="wish-list-side-panel-card__info-values">
+                                      <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm  LexJet Sunset Photo eSatin — 300 gsm</span>
+                                      <span class="wish-list-side-panel-card__info-values-item">1” </span>
+                                      <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                                      <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                                  </div>
+                              </div>
+                              <div class="wish-list-side-panel-card__price-container">
+                                  <div class="wish-list-side-panel-card__counter-btn">
+                                      <div class="wish-list-side-panel-card__counter-btn-action">-</div>
+                                      <div class="wish-list-side-panel-card__count"><span>1</span></div>
+                                      <div class="wish-list-side-panel-card__counter-btn-action">+</div>
+                                  </div>
+                                  <div class="wish-list-side-panel-card__price">$ 100.00</div>
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+
+                  </div>
+
+                  <div class="wish-list-side-panel-card">
+                      <div class="wish-list-side-panel-card__container">
+                          <div class="wish-list-side-panel-card__image">
+                              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+                          </div>
+                          <div class="wish-list-side-panel-card__content">
+                              <div class="wish-list-side-panel-card__name-container">
+                                  <div class="wish-list-side-panel-card__name">
+                                      "Buy", Long Island University
+                                  </div>
+                                  <button class="close-btn"></button>
+                              </div>
+                              <div class="wish-list-side-panel-card__info">
+                                  <div class="wish-list-side-panel-card__info-keys">
+                                      <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                                      <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                                  </div>
+                                  <div class="wish-list-side-panel-card__info-values">
+                                      <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm  LexJet Sunset Photo eSatin — 300 gsm</span>
+                                      <span class="wish-list-side-panel-card__info-values-item">1” </span>
+                                      <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                                      <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                                  </div>
+                              </div>
+                              <div class="wish-list-side-panel-card__price-container">
+                                  <div class="wish-list-side-panel-card__counter-btn">
+                                      <div class="wish-list-side-panel-card__counter-btn-action">-</div>
+                                      <div class="wish-list-side-panel-card__count"><span>1</span></div>
+                                      <div class="wish-list-side-panel-card__counter-btn-action">+</div>
+                                  </div>
+                                  <div class="wish-list-side-panel-card__price">$ 100.00</div>
+                              </div>
+
+
+                          </div>
+
+                      </div>
+
+
+                  </div>
+
+
+
+
+
+
+
+
+
+              </section>
+
+
+              <div class="wish-list-side-panel__subtotal">
+                  <div class="wish-list-side-panel__subtotal-item">
+                      Subtotal
+                  </div>
+                  <div class="wish-list-side-panel__subtotal-item">
+                      300.00 EUR
+                  </div>
+              </div>
+
+
+
+              <div class="wish-list-side-panel__action-btns">
+                  <button id="wish-list-side-panel__continue-shopping-btn" class="wish-list-side-panel__transparent-btn wish-list-side-panel__action-btn">
+                      <span>Continue shopping</span>
+                  </button>
+                  <a href="./wishlist.html">
+                      <button class="wish-list-side-panel__dark-btn wish-list-side-panel__action-btn">
+                          <span>Go to cart</span>
+                      </button>
+                  </a>
+              </div>
+
+
+
+
+          </div>
+
+
+
+
+
+      </div>
+
+      <div
+        id="wish-list-side-panel__backdrop"
+        class="wish-list-side-panel__backdrop wish-list-side-panel__backdrop--state-invisible"
+      />
     </div>
   </footer>
 </body>
