@@ -47,26 +47,26 @@ const DropdownInfoController = () => {
             return;
         }
 
+        dropdownContent.current.classList.toggle('dropdown-info__content--state_visible');
+        dropdownContent.current.classList.toggle('dropdown-info__content--state_invisible');
+
+        dropdownBtn.current.classList.toggle('dropdown-info__btn--state_active');
+        dropdownBtn.current.classList.toggle('dropdown-info__btn--state_inactive');
+
         if (isOpen.value) {
-            dropdownContent.current.classList.add('dropdown-info__content--state_visible');
-            dropdownContent.current.classList.remove('dropdown-info__content--state_invisible');
-            dropdownBtn.current.classList.add('dropdown-info__btn--state_active');
-            dropdownBtn.current.classList.remove('dropdown-info__btn--state_inactive');
             dropdownSymbol.current.innerHTML = '-';
-            return;
+        } else {
+            dropdownSymbol.current.innerHTML = '+';
         }
-
-        dropdownContent.current.classList.remove('dropdown-select-info__content--state_visible');
-        dropdownContent.current.classList.add('dropdown-select-info__content--state_invisible');
-
-        dropdownBtn.current.classList.add('dropdown-info__btn--state_inactive');
-        dropdownBtn.current.classList.remove('dropdown-info__btn--state_active');
-        dropdownSymbol.current.innerHTML = '+';
     }, [isOpen])
 
 
     useEffect(() => {
         dropDownInfoComponents.current = document.getElementsByClassName('dropdown-info');
+
+        if (!dropDownInfoComponents.current) {
+            return;
+        }
 
         for (let i = 0; i < dropDownInfoComponents.current.length; i += 1) {
             dropDownInfoComponents.current[i].addEventListener('click', onDropdownInfoClick);
@@ -80,7 +80,7 @@ const DropdownInfoController = () => {
     }, [onDropdownInfoClick]);
 
 
-    return <div />
+    return null;
 };
 
 export default DropdownInfoController;
