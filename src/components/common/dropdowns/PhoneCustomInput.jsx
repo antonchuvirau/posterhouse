@@ -64,7 +64,7 @@ const PhoneCustomInput = () => {
                     onClick={() => setIsOpen((prevState) => !prevState)}
                     className={`dropdown-input-field__btn click-outside-handler${id} phone-custom-input__dropdown-button`}
                 >
-                    <div className={`dropdown-input-field__btn-selected click-outside-handler${id} phone-custom-input__btn-selected`}>
+                    <div className={`dropdown-input-field__btn-label click-outside-handler${id} phone-custom-input__btn-selected`}>
                         <img src={selected.label} alt="country" />
                     </div>
                     <div className={`click-outside-handler${id}`}>

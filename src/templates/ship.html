@@ -66,8 +66,6 @@
   <section class="main">
     <div class="wrapper">
 
-      <div class="react" data-type="ship"></div>
-
       <div class="shipping-payment">
         <div class="address-bar">
           <div class="address-bar__container">
@@ -90,35 +88,32 @@
                 </h3>
                 <div class="shipping-payment__input-list">
                   <div class="input-field">
-                    <div class="input-field__label">Town / City*</div>
+                    <div class="input-field__label">First name*</div>
                     <div class="input-field__inputs-set">
                       <input type="text" class="input-field__input" placeholder="" />
                     </div>
                   </div>
                   <div class="input-field">
-                    <div class="input-field__label">Town / City*</div>
+                    <div class="input-field__label">Last name*</div>
                     <div class="input-field__inputs-set">
                       <input type="text" class="input-field__input" placeholder="" />
                     </div>
                   </div>
                   <div class="input-field">
-                    <div class="input-field__label">Town / City*</div>
+                    <div class="input-field__label">E-mail address*</div>
                     <div class="input-field__inputs-set">
                       <input type="text" class="input-field__input" placeholder="" />
                     </div>
                   </div>
 
-
-
-
-                  <div class="dropdown-input-field">
+                  <div class="dropdown-input-field" data-type="dropdown-input-field">
                     <div class="dropdown-input-field__title">Phone number*</div>
                     <div class="phone-custom-input">
-                        <button class="dropdown-input-field__btn click-outside-handler phone-custom-input__dropdown-button">
-                            <div class="dropdown-input-field__btn-selected click-outside-handler phone-custom-input__btn-selected">
+                        <button class="dropdown-input-field__btn phone-custom-input__dropdown-button">
+                            <div class="dropdown-input-field__btn-label phone-custom-input__btn-selected">
                               <img src="./assets/icons/Canada.png" alt="option" />
                             </div>
-                            <div class="arrow-bottom-small click-outside-handler"></div>
+                            <div class="arrow-bottom-small"></div>
                         </button>
                         <div class="dropdown-input-field__content phone-custom-input__dropdown-content dropdown-input-field__content--state_invisible">
                             <div class="dropdown-input-field__options">
@@ -152,13 +147,14 @@
 
                   <div class="dropdown-input-field">
                     <div class="dropdown-input-field__title">Country / Region*</div>
-                    <button class="dropdown-input-field__btn click-outside-handler">
-                        <div class="dropdown-input-field__btn-selected click-outside-handler">
+                    <button class="dropdown-input-field__btn dropdown-input-field__btn--state_inactive">
+                        <div class="dropdown-input-field__btn-label">
                             United States
                         </div>
-                        <div class="click-outside-handler arrow-bottom"></div>
+                        <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
                     </button>
                     <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible">
+                        <input type="text" class="dropdown-input-field__search-field" placeholder="Search">
                         <div class="dropdown-input-field__options">
                           <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
                               <div class="dropdown-input-field__option-label">
@@ -170,19 +166,36 @@
                                   Poland
                               </div>
                           </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
                         </div>
                     </div>
+                    <div class="dropdown-input-field__backdrop dropdown-input-field__backdrop--state-invisible"></div>
                 </div>
 
                   <div class="dropdown-input-field">
-                    <div class="dropdown-input-field__title">Country / Region*</div>
-                    <button class="dropdown-input-field__btn click-outside-handler">
-                        <div class="dropdown-input-field__btn-selected click-outside-handler">
+                    <div class="dropdown-input-field__title">State*</div>
+                    <button class="dropdown-input-field__btn dropdown-input-field__btn--state_inactive">
+                        <div class="dropdown-input-field__btn-label">
                             United States
                         </div>
-                        <div class="click-outside-handler arrow-bottom"></div>
+                        <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
                     </button>
                     <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible">
+                        <input type="text" class="dropdown-input-field__search-field" placeholder="Search">
                         <div class="dropdown-input-field__options">
                           <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
                               <div class="dropdown-input-field__option-label">
@@ -194,9 +207,26 @@
                                   Poland
                               </div>
                           </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
+                          <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                              <div class="dropdown-input-field__option-label">
+                                  Poland
+                              </div>
+                          </div>
                         </div>
                     </div>
+                    <div class="dropdown-input-field__backdrop dropdown-input-field__backdrop--state-invisible"></div>
                 </div>
+
 
 
                 <div class="input-field">
@@ -206,13 +236,13 @@
                   </div>
                 </div>
                 <div class="input-field">
-                  <div class="input-field__label">Town / City*</div>
+                  <div class="input-field__label">Postal / ZIP code*</div>
                   <div class="input-field__inputs-set">
                     <input type="text" class="input-field__input" placeholder="" />
                   </div>
                 </div>
                 <div class="input-field">
-                  <div class="input-field__label">Town / City*</div>
+                  <div class="input-field__label">Street address*</div>
                   <div class="input-field__inputs-set">
                     <input type="text" class="input-field__input" placeholder="House number and street name" />
                     <input type="text" class="input-field__input" placeholder="Appartment, suite, unit, etc. (optional)" />
@@ -595,6 +625,7 @@
       class="wish-list-side-panel__backdrop wish-list-side-panel__backdrop--state-invisible"
     />
   </div>
+  <div class="react" data-type="dropdown-input-field">
 
 </body>
 </html>

@@ -15,8 +15,7 @@ import DropdownInfoController from './controllers/DropdownInfoController';
 import WishListSidePanelController from './controllers/WishListSidePanelController';
 import PaperTypesModalController from './controllers/PaperTypesModalController';
 import ProductCardLikeBtnsController from './controllers/AddToWhishListBtnsController';
-
-
+import DropdownInputFieldController from './controllers/DropdownInputFieldController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
@@ -30,6 +29,9 @@ function renderComponentInElement(el) {
       break;
     case 'dropdown-options-select':
       ReactDOM.render(<DropdownOptionsSelectController />, el);
+      break;
+    case 'dropdown-input-field':
+      ReactDOM.render(<DropdownInputFieldController />, el);
       break;
     case 'dropdown-info':
       ReactDOM.render(<DropdownInfoController />, el);
@@ -49,16 +51,16 @@ function renderComponentInElement(el) {
       );
       break;
 
-    case 'ship':
-      ReactDOM.render(
-        <Provider store={store}>
-          <AppWithSidePanel>
-            <ShippingPaymentPage />
-          </AppWithSidePanel>
-        </Provider>,
-        el
-      );
-      break;
+    // case 'ship':
+    //   ReactDOM.render(
+    //     <Provider store={store}>
+    //       <AppWithSidePanel>
+    //         <ShippingPaymentPage />
+    //       </AppWithSidePanel>
+    //     </Provider>,
+    //     el
+    //   );
+    //   break;
 
     case 'wishlist':
       ReactDOM.render(

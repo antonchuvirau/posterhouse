@@ -43,7 +43,7 @@ const DropdownInputField = ({
                 onClick={() => setIsOpen((prevState) => !prevState)}
                 className={`dropdown-input-field__btn click-outside-handler${id}`}
             >
-                <div className={`dropdown-input-field__btn-selected click-outside-handler${id}`}>
+                <div className={`dropdown-input-field__btn-label click-outside-handler${id}`}>
                     {selected.label}
                 </div>
                 <div className={`click-outside-handler${id}`}>
