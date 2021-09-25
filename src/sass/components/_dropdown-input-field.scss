@@ -35,6 +35,7 @@
   background-color: $color-neutral-100;
   width: 100%;
   z-index: 10;
+  top: 56px;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
@@ -163,6 +164,15 @@
   align-items: center;
 }
 
+.dropdown-input-field__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  align-items: center;
+  position: relative;
+}
+
 .phone-custom-input__dropdown-button {
   box-sizing: border-box;
   width: 32%;
@@ -176,9 +186,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.phone-custom-input__dropdown-button {
 }
 
 .dropdown-input-field__backdrop {

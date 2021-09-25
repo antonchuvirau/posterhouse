@@ -14,6 +14,8 @@ const DropdownInputFieldController = () => {
     const dropdownContent = useRef(null);
     const backdrop = useRef(null);
 
+    const input = useRef(null);
+
     const dropdownOptions = useRef(null);
     const dropdownSearch = useRef(null);
 
@@ -39,6 +41,7 @@ const DropdownInputFieldController = () => {
         dropdownBtnLabel.current = null;
         dropdownBtnIcon.current = null;
         dropdownContent.current = null;
+        input.current = null;
         backdrop.current = null;
         dropdownOptions.current = null;
         dropdownSearch.current = null;
@@ -55,6 +58,9 @@ const DropdownInputFieldController = () => {
         dropdownContent.current = e.currentTarget
             ?.querySelector('.dropdown-input-field__content');
 
+        input.current = e.currentTarget
+            ?.querySelector('.dropdown-input-field__content__input')
+
         backdrop.current = e.currentTarget
             ?.querySelector('.dropdown-input-field__backdrop');
 
@@ -69,12 +75,24 @@ const DropdownInputFieldController = () => {
         e.stopPropagation();
 
         const label = e.currentTarget
-            .querySelector('.dropdown-input-field__option-label')
+            .querySelector('.dropdown-input-field__label-to-replace')
             .innerHTML
             .trim();
 
         dropdownBtnLabel.current.innerHTML = label;
-        dropdownSearch.current.value = '';
+
+        const dialingCode = e.currentTarget
+            .querySelector('.dialing-code')
+            ?.innerHTML
+            ?.trim();
+
+        if (dialingCode) {
+            input.current.placeholder = dialingCode;
+        }
+
+        if (dropdownSearch.current) {
+            dropdownSearch.current.value = '';
+        }
 
         setIsOpen(false);
     }, []);
@@ -124,6 +142,11 @@ const DropdownInputFieldController = () => {
         e.stopPropagation();
         initialiseDropdownElements(e);
         addEventListenersOnElements();
+
+        if (e.target.classList.contains('input-field__input')) {
+            return;
+        }
+
         setIsOpen((prevState) => (prevState ? prevState : true));
     }, [
         addEventListenersOnElements,
@@ -131,7 +154,7 @@ const DropdownInputFieldController = () => {
     ])
 
     useEffect(() => {
-        dropdownInputFields.current = document.getElementsByClassName('dropdown-input-field');
+        dropdownInputFields.current = document.getElementsByClassName('dropdown-input-field__container');
 
         if (!dropdownInputFields.current) {
             return;
