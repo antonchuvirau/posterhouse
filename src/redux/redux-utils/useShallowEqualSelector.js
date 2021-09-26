@@ -1,5 +1,5 @@
-import { useSelector, shallowEqual } from 'react-redux'
+// import { useSelector, shallowEqual } from 'react-redux'
 
-export function useShallowEqualSelector(selector) {
-  return useSelector(selector, shallowEqual)
-}
+// export function useShallowEqualSelector(selector) {
+//   return useSelector(selector, shallowEqual)
+// }

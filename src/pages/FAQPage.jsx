@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
-import AddressBar from '../components/common/AddressBar';
-import ProductDetails from '../components/product/ProductDetails';
-import ArtistDetails from '../components/artist/ProductPageArtistDetails';
-import CardList from '../components/common/CardList';
-import ButtonBright from '../components/common/buttons/ButtonBright';
-import ProductCard from '../components/product/ProductCard';
-import { useDispatch } from 'react-redux';
-import { fetchProduct, SET_PRODUCT_PAGE_PRODUCTS } from '../redux/product-reducer';
+// import AddressBar from '../components/common/AddressBar';
+// import ProductDetails from '../components/product/ProductDetails';
+// import ArtistDetails from '../components/artist/ProductPageArtistDetails';
+// import CardList from '../components/common/CardList';
+// import ButtonBright from '../components/common/buttons/ButtonBright';
+// import ProductCard from '../components/product/ProductCard';
+// import { useDispatch } from 'react-redux';
+// import { fetchProduct, SET_PRODUCT_PAGE_PRODUCTS } from '../redux/product-reducer';
 import { useShallowEqualSelector } from '../redux/redux-utils/useShallowEqualSelector';
 import DropdownInfo from '../components/common/dropdowns/DropdownInfo';
 
 const FAQPage = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     const faqPageData = useShallowEqualSelector((state) => ({
         faqs: state.faq.faqs,

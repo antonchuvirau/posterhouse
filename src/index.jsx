@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ManagePanelController from './controllers/ManagePanelController';
 import './sass/main.scss'
-import { Provider } from 'react-redux'
+// import { Provider } from 'react-redux'
 import store from './redux/store';
 import { AppWithSidePanel } from './contexts/SidePanelContext';
 import AuthorisationPage from './pages/AuthorisationPage';
-import CartInformationPage from './pages/CartInformationPage';
-import ShippingPaymentPage from './pages/ShippingPaymentPage';
+// import CartInformationPage from './pages/CartInformationPage';
+// import ShippingPaymentPage from './pages/ShippingPaymentPage';
 import WhishlistPage from './pages/WhishlistPage';
 import FAQPage from './pages/FAQPage';
 import DropdownOptionsSelectController from './controllers/DropdownOptionsSelectController';
@@ -16,6 +16,7 @@ import WishListSidePanelController from './controllers/WishListSidePanelControll
 import PaperTypesModalController from './controllers/PaperTypesModalController';
 import ProductCardLikeBtnsController from './controllers/AddToWhishListBtnsController';
 import DropdownInputFieldController from './controllers/DropdownInputFieldController';
+import PhoneCustomInputController from './controllers/PhoneCustomInputController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
@@ -32,6 +33,9 @@ function renderComponentInElement(el) {
       break;
     case 'dropdown-input-field':
       ReactDOM.render(<DropdownInputFieldController />, el);
+      break;
+    case 'phone-custom-input':
+      ReactDOM.render(<PhoneCustomInputController />, el);
       break;
     case 'dropdown-info':
       ReactDOM.render(<DropdownInfoController />, el);
@@ -51,38 +55,27 @@ function renderComponentInElement(el) {
       );
       break;
 
-    // case 'ship':
+    // case 'wishlist':
     //   ReactDOM.render(
     //     <Provider store={store}>
     //       <AppWithSidePanel>
-    //         <ShippingPaymentPage />
+    //         <WhishlistPage />
     //       </AppWithSidePanel>
     //     </Provider>,
     //     el
     //   );
     //   break;
 
-    case 'wishlist':
-      ReactDOM.render(
-        <Provider store={store}>
-          <AppWithSidePanel>
-            <WhishlistPage />
-          </AppWithSidePanel>
-        </Provider>,
-        el
-      );
-      break;
-
-    case 'faq':
-      ReactDOM.render(
-        <Provider store={store}>
-          <AppWithSidePanel>
-            <FAQPage />
-          </AppWithSidePanel>
-        </Provider>,
-        el
-      );
-      break;
+    // case 'faq':
+    //   ReactDOM.render(
+    //     <Provider store={store}>
+    //       <AppWithSidePanel>
+    //         <FAQPage />
+    //       </AppWithSidePanel>
+    //     </Provider>,
+    //     el
+    //   );
+    //   break;
 
     default:
       break;

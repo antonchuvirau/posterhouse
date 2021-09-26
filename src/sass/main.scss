@@ -15,7 +15,8 @@
 
 // 3. Components
 @import
-  'components/_pop-up',
+  'components/order-steps',
+  'components/pop-up',
   'components/dropdown-input-field',
   'components/input-field',
   'components/product-to-sell-card',
@@ -54,6 +55,7 @@
 
 // 5. Page-specific styles
 @import
+  'pages/order-details',
   'pages/faq',
   'pages/about',
   'pages/shipping-payment',
