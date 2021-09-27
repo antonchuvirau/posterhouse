@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping and payment</title>
+</head>
+
+<body>
+  <section class="product-page__header">
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./artworks.html">Artwork</a>
+            </li>
+            <li class="nav__item">
+              <a href="./artists.html">Artists</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="logo">
+          <a href="./index.html" class="logo__link">
+            <img src="./assets/icons/Logo--transparent_big.png" alt="Posterhaus" />
+          </a>
+        </div>
+
+        <div class="actions">
+          <ul class="actions__list">
+            <li id="open-wish-list-side-panel" class="actions__item like">
+              <img src="./assets/icons/heart_black.svg" alt="like" />
+            </li>
+
+            <li class="actions__item login">
+              <a href="./login.html" class="login__link">Log in</a>
+            </li>
+
+            <li class="actions__item currency">
+              <select class="currency__select" name="currency-select" id="currency-select">
+                <option class="currency__option" value="USD">USD</option>
+                <option class="currency__option" value="INR">INR</option>
+                <option class="currency__option" value="GBP">GBP</option>
+                <option class="currency__option" value="CAD">CAD</option>
+                <option class="currency__option" value="AUD">AUD</option>
+                <option class="currency__option" value="EUR">EUR</option>
+                <option class="currency__option" value="JPY">JPY</option>
+              </select>
+            </li>
+
+            <li class="actions__item cart">
+              <div class="cart__container">
+                <a href="./cart.html" class="cart__link">Cart</a>
+                <div class="cart__counter">0</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <br />
+  </section>
+  <hr class="line" />
+  <section class="main">
+    <div class="wrapper">
+
+      <div class="super-admin-pages-artwork">
+        <div class="super-admin__layout">
+          <div class="admin-pages-list">
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Dashboard</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_active">Pages</div>
+
+            <div class="admin-pages-list__subitems">
+              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_active">Artwork</div>
+              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_inactive">Artists</div>
+            </div>
+
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Sales</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Orders</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Log out</div>
+          </div>
+          <div class="super-admin__content">
+            <div class="super-admin__title">Artwork</div>
+            <button class="add-artwork-btn">Add a new artwork</button>
+            <div class="super-admin-pages-artwork__container">
+              <div class="super-admin__title">All artwork (100 items)</div>
+
+
+
+              <div class="super-admin-pages-artwork__manage-panel">
+                <div class="manage-panel__buttons-bar">
+                  <div class="manage-panel__filters" id="manage-panel__tabs">
+                  </div>
+                  <div class="manage-panel__filters">
+                    <div class="manage-panel__filter-item">
+                      <div class="dropdown-menu">
+                        <button id="manage-panel__sort-btn" class="dropdown-menu__btn">
+                          Sort by
+                        </button>
+                        <div id="manage-panel__sort-menu"
+                          class="dropdown-menu__content dropdown-menu__content--state_invisible">
+                          <span class="dropdown-menu__item dropdown-menu__item--state_selected">
+                            A to Z
+                          </span>
+                          <span class="dropdown-menu__item">
+                            Newest
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="manage-panel__filter-btn" class="manage-panel__filter-item">
+                      Filter
+                    </div>
+                    <div id="manage-panel__search-btn" class="manage-panel__filter-item manage-panel__search-btn">
+                      Search
+                    </div>
+                  </div>
+                </div>
+                <div class="manage-panel__search-bar">
+                  <textarea id="manage-panel__search-field"
+                    class="manage-panel__search-field manage-panel__search-field--state_invisible"
+                    placeholder="Search"></textarea>
+                </div>
+              </div>
+
+              <div>
+                <div id="side-panel" class="side-panel side-panel--state_invisible">
+                  <form action="" class="filters-list">
+
+                    <div class="filter">
+                      <div class="filter__title">Artist</div>
+
+                      <input type="text" class="filter__textarea" placeholder="Search" />
+
+                      <div class="filter__content">
+                        <label class="filter__label custom-checkbox">
+                          <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
+                          <span class="custom-checkbox__label">
+                            Name Surname</span>
+                        </label>
+                        <label class="filter__label custom-checkbox">
+                          <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
+                          <span class="custom-checkbox__label">
+                            CheckBox label
+                          </span>
+                        </label>
+                        <label class="filter__label custom-checkbox">
+                          <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
+                          <span class="custom-checkbox__label">
+                            CheckBox label
+                          </span>
+                        </label>
+                      </div>
+
+
+                    </div>
+                  </form>
+                </div>
+
+                <div id="side-panel__backdrop" class="side-panel__backdrop side-panel__backdrop--state_invisible" />
+              </div>
+
+              <div class="super-admin-pages-artwork__cards-list">
+
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">1</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/Product-to-sell-mock.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description">
+                        <div class="super-admin-pages-artwork-card__name">"Buy", Long Island University</div>
+                        <div class="super-admin-pages-artwork-card__author">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">2</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/Product-to-sell-mock.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description">
+                        <div class="super-admin-pages-artwork-card__name">"Buy", Long Island University</div>
+                        <div class="super-admin-pages-artwork-card__author">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">3</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/Product-to-sell-mock.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description">
+                        <div class="super-admin-pages-artwork-card__name">"Buy", Long Island University</div>
+                        <div class="super-admin-pages-artwork-card__author">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">4</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/Product-to-sell-mock.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description">
+                        <div class="super-admin-pages-artwork-card__name">"Buy", Long Island University</div>
+                        <div class="super-admin-pages-artwork-card__author">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+
+
+
+            </div>
+
+
+
+          </div>
+          <button class="show-more-btn">Show more</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__content">
+          <ul class="footer__column info">
+            <li class="info__item footer__list-item">
+              <a href="./about.html">About us</a>
+            </li>
+            <li class="info__item footer__list-item">
+              <a href="./contact.html">Contact</a>
+            </li>
+            <li class="info__item footer__list-item">
+              <a href="./faq.html">FAQs</a>
+            </li>
+          </ul>
+          <div class="footer__logo">
+            <a href="./">
+              <img src="./assets/icons/Logo-transparent__small.png" alt="Posterhaus" />
+            </a>
+          </div>
+          <ul class="footer__column media">
+            <li class="media__item footer__list-item">
+              <a href="#"> Instagram </a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#"> Facebook </a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#"> Twitter </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <div class="copyright__logo">Logo</div>
+          <div class="copyright__description">© All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="wish-list-side-panel" class="wish-list-side-panel wish-list-side-panel--state_invisible">
+    <div class="wish-list-side-panel__close-container">
+      <button id="wish-list-side-panel__close-btn" class="wish-list-side-panel__close-btn">
+        Close
+      </button>
+    </div>
+
+    <div class="wish-list-side-panel__content">
+      <section class="wish-list-side-panel__cadslist">
+        <div class="wish-list-side-panel-card">
+          <div class="wish-list-side-panel-card__container">
+            <div class="wish-list-side-panel-card__image">
+              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+            </div>
+            <div class="wish-list-side-panel-card__content">
+              <div class="wish-list-side-panel-card__name-container">
+                <div class="wish-list-side-panel-card__name">
+                  "Buy", Long Island University
+                </div>
+                <button class="close-btn"></button>
+              </div>
+              <div class="wish-list-side-panel-card__info">
+                <div class="wish-list-side-panel-card__info-keys">
+                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                </div>
+                <div class="wish-list-side-panel-card__info-values">
+                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
+                    Sunset Photo
+                    eSatin — 300 gsm</span>
+                  <span class="wish-list-side-panel-card__info-values-item">1”
+                  </span>
+                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                </div>
+              </div>
+              <div class="wish-list-side-panel-card__price-container">
+                <div class="wish-list-side-panel-card__counter-btn">
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    -
+                  </div>
+                  <div class="wish-list-side-panel-card__count">
+                    <span>1</span>
+                  </div>
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    +
+                  </div>
+                </div>
+                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wish-list-side-panel-card">
+          <div class="wish-list-side-panel-card__container">
+            <div class="wish-list-side-panel-card__image">
+              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+            </div>
+            <div class="wish-list-side-panel-card__content">
+              <div class="wish-list-side-panel-card__name-container">
+                <div class="wish-list-side-panel-card__name">
+                  "Buy", Long Island University
+                </div>
+                <button class="close-btn"></button>
+              </div>
+              <div class="wish-list-side-panel-card__info">
+                <div class="wish-list-side-panel-card__info-keys">
+                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                </div>
+                <div class="wish-list-side-panel-card__info-values">
+                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
+                    Sunset Photo
+                    eSatin — 300 gsm</span>
+                  <span class="wish-list-side-panel-card__info-values-item">1”
+                  </span>
+                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                </div>
+              </div>
+              <div class="wish-list-side-panel-card__price-container">
+                <div class="wish-list-side-panel-card__counter-btn">
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    -
+                  </div>
+                  <div class="wish-list-side-panel-card__count">
+                    <span>1</span>
+                  </div>
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    +
+                  </div>
+                </div>
+                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wish-list-side-panel__subtotal">
+        <div class="wish-list-side-panel__subtotal-item">Subtotal</div>
+        <div class="wish-list-side-panel__subtotal-item">300.00 EUR</div>
+      </div>
+
+      <div class="wish-list-side-panel__action-btns">
+        <button id="wish-list-side-panel__continue-shopping-btn" class="
+              wish-list-side-panel__transparent-btn
+              wish-list-side-panel__action-btn
+            ">
+          <span>Continue shopping</span>
+        </button>
+        <a href="./wishlist.html">
+          <button class="wish-list-side-panel__dark-btn wish-list-side-panel__action-btn">
+            <span>Go to cart</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wish-list-side-panel__backdrop" class="
+        wish-list-side-panel__backdrop
+        wish-list-side-panel__backdrop--state-invisible
+      " />
+
+  <div class="react" data-type="dropdown-input-field" />
+  <div class="react" data-type="phone-custom-input" />
+  <div class="react" data-type="wish-list-side-panel" />
+  <div class="react" data-type="manage-panel"></div>
+</body>
+
+</html>

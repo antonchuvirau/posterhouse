@@ -251,7 +251,7 @@ const PhoneCustomInputController = () => {
         getData();
     }, [getData]);
 
-    return null;
+    return <div />;
 };
 
 export default PhoneCustomInputController;

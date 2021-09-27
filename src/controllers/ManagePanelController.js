@@ -226,7 +226,7 @@ const ManagePanel = () => {
         removeEventListeners,
     ])
 
-    return null;
+    return <div />;
 };
 
 export default ManagePanel;

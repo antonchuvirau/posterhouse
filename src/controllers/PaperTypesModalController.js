@@ -71,7 +71,7 @@ const PaperTypesModalController = () => {
         onModalOpen,
     ]);
 
-    return null;
+    return <div />;
 };
 
 export default PaperTypesModalController;

@@ -27,7 +27,7 @@ const ProductCardLikeBtnsController = () => {
         };
     }, [onProductCardLikeBtnClick]);
 
-    return null;
+    return <div />;
 };
 
 export default ProductCardLikeBtnsController;

@@ -80,7 +80,7 @@ const DropdownInfoController = () => {
     }, [onDropdownInfoClick]);
 
 
-    return null;
+    return <div />;
 };
 
 export default DropdownInfoController;
