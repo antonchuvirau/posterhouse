@@ -1,0 +1,136 @@
+.super-admin-sales {
+    padding-top: 30px;
+    padding-bottom: 105px;
+}
+
+.super-admin-sales__manage-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid $color-neutral-80;
+}
+
+.super-admin-sales__info-container {
+    padding-top: 34px;
+    padding-bottom: 71px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.super-admin-sales__info-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-neutral-60;
+    font-weight: 500;
+    width: 100%;
+}
+
+.super-admin-sales__info-count {
+    color: $color-neutral-20;
+}
+
+
+
+
+
+
+
+
+.super-admin-pages-artwork__container {
+    padding-top: 113px;
+    padding-bottom: 100px;
+}
+
+.super-admin-pages-artwork__manage-panel {
+    width: 100%;
+}
+
+.super-admin-pages-artwork__cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+}
+
+.super-admin-pages-artwork-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.super-admin-pages-artwork-card__number {
+    width: 28px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-neutral-30;
+}
+
+.super-admin-pages-artwork-card__container {
+    border-bottom: 1px solid $color-line;
+    width: 100%;
+}
+
+.super-admin-pages-artwork-card__content {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.super-admin-pages-artwork-card__image {
+    width: 100px;
+    height: 120px;
+}
+
+.super-admin-pages-artwork-card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-description__artist {
+    height: 120px;
+}
+
+.super-admin-pages-artwork-card__name {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.super-admin-pages-artwork-card__author {
+    color: $color-neutral-70;
+}
+
+.super-admin-pages-artwork-card__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+    padding-bottom: 4px;
+}
+
+.super-admin-pages-artwork-card__edit-btn {
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-neutral-40;
+}
+
+.super-admin-pages-artwork-card__delete-btn {
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-neutral-70;
+}
+
+.show-more-btn {
+    @include bright-button;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}

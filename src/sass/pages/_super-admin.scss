@@ -1,0 +1,20 @@
+.super-admin {}
+
+.super-admin__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 23px;
+}
+
+.super-admin__currency-select {
+    border:none;
+    display:inline;
+    cursor: pointer;
+    padding: 5px;
+    background-color: $color-neutral-30;
+    outline: none;
+    color: $color-neutral-100;
+}

@@ -90,7 +90,7 @@ const DropdownOptionsSelectController = () => {
         };
     }, [onDropdownSelectInfoClick, onOptionChoose]);
 
-    return <div />;
+    return null;
 };
 
 export default DropdownOptionsSelectController;

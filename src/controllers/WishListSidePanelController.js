@@ -64,7 +64,7 @@ const WishListSidePanelController = () => {
         };
     }, [onWishSidePanelClose, onWishSidePanelOpen]);
 
-    return <div />;
+    return null;
 };
 
 export default WishListSidePanelController;

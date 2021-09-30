@@ -1,0 +1,19 @@
+.super-admin-period {
+  display: flex;
+  flex-direction: row;
+}
+
+.super-admin-period__item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.super-admin-period__item--state_active {
+  color: $color-neutral-100;
+  background-color: $color-neutral-30;
+}
+
+.super-admin-period__item--state_inactive {
+  color: $color-neutral-50;
+  background-color: $background-color-primary-grey-87;
+}

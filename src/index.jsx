@@ -2,31 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ManagePanelController from './controllers/ManagePanelController';
 import './sass/main.scss'
-// import { Provider } from 'react-redux'
-import store from './redux/store';
-import { AppWithSidePanel } from './contexts/SidePanelContext';
-import AuthorisationPage from './pages/AuthorisationPage';
-// import CartInformationPage from './pages/CartInformationPage';
-// import ShippingPaymentPage from './pages/ShippingPaymentPage';
-import WhishlistPage from './pages/WhishlistPage';
-import FAQPage from './pages/FAQPage';
 import DropdownOptionsSelectController from './controllers/DropdownOptionsSelectController';
 import DropdownInfoController from './controllers/DropdownInfoController';
 import WishListSidePanelController from './controllers/WishListSidePanelController';
 import PaperTypesModalController from './controllers/PaperTypesModalController';
-import ProductCardLikeBtnsController from './controllers/AddToWhishListBtnsController';
 import DropdownInputFieldController from './controllers/DropdownInputFieldController';
 import PhoneCustomInputController from './controllers/PhoneCustomInputController';
+import CustomSelectController from './controllers/CustomSelectController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
 
   switch (props.type) {
+    case 'custom-select':
+      ReactDOM.render(<CustomSelectController />, el);
+      break;
     case 'manage-panel':
       ReactDOM.render(<ManagePanelController />, el);
-      break;
-    case 'add-to-whish-list-btn':
-      ReactDOM.render(<ProductCardLikeBtnsController />, el);
       break;
     case 'dropdown-options-select':
       ReactDOM.render(<DropdownOptionsSelectController />, el);
@@ -46,37 +38,6 @@ function renderComponentInElement(el) {
     case 'paper-types-modal':
       ReactDOM.render(<PaperTypesModalController />, el);
       break;
-    case 'login':
-      ReactDOM.render(
-        <AppWithSidePanel>
-          <AuthorisationPage />
-        </AppWithSidePanel>,
-        el
-      );
-      break;
-
-    // case 'wishlist':
-    //   ReactDOM.render(
-    //     <Provider store={store}>
-    //       <AppWithSidePanel>
-    //         <WhishlistPage />
-    //       </AppWithSidePanel>
-    //     </Provider>,
-    //     el
-    //   );
-    //   break;
-
-    // case 'faq':
-    //   ReactDOM.render(
-    //     <Provider store={store}>
-    //       <AppWithSidePanel>
-    //         <FAQPage />
-    //       </AppWithSidePanel>
-    //     </Provider>,
-    //     el
-    //   );
-    //   break;
-
     default:
       break;
   }

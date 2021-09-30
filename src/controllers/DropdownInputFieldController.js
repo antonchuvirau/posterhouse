@@ -171,7 +171,7 @@ const DropdownInputFieldController = () => {
         }
     }, [onDropdownInputFieldClick])
 
-    return <div />;
+    return null;
 };
 
 export default DropdownInputFieldController;
