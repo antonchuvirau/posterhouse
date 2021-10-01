@@ -8,15 +8,11 @@ import WishListSidePanelController from './controllers/WishListSidePanelControll
 import PaperTypesModalController from './controllers/PaperTypesModalController';
 import DropdownInputFieldController from './controllers/DropdownInputFieldController';
 import PhoneCustomInputController from './controllers/PhoneCustomInputController';
-import CustomSelectController from './controllers/CustomSelectController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
 
   switch (props.type) {
-    case 'custom-select':
-      ReactDOM.render(<CustomSelectController />, el);
-      break;
     case 'manage-panel':
       ReactDOM.render(<ManagePanelController />, el);
       break;
