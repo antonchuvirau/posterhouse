@@ -15,6 +15,8 @@
 
 // 3. Components
 @import
+  'components/backdrop',
+  'components/notification-icon',
   'components/order-steps',
   'components/pop-up',
   'components/dropdown-input-field',
@@ -37,6 +39,8 @@
 
 // 4. Layout-related sections
 @import
+'layout/add-artwork-modal',
+'layout/status-modal',
 'layout/super-admin-period',
 'layout/admin-pages-list',
 'layout/no-product-in-list',

@@ -210,20 +210,6 @@
     border: none;
 }
 
-.wish-list-side-panel__backdrop {
-    z-index: 6;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.wish-list-side-panel__backdrop--state-invisible {
-    display: none;
-}
-
 .wish-list-side-panel__no-products-container {
     height: calc(100% - 90px);
     display: flex;

@@ -1,0 +1,70 @@
+.status-modal {
+    position: absolute;
+    top: 230px;
+    right: calc(50vw - 215px);
+    width: 430px;
+    height: 430px;
+    opacity: 1;
+    z-index: 107;
+    background-color: $background-color-main;
+    overflow: auto;
+    animation-name: 'samplePreviewIn';
+    animation-duration: .40s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-delay: 5ms;
+    overflow: auto;
+    padding: 20px;
+}
+
+.status-modal--state-visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.status-modal--state-invisible {
+    display: none;
+}
+
+.status-modal__close-btn {
+    position: absolute;
+    right: 20px;
+}
+
+.status-modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.status-modal__actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-modal__action-btn {
+    width: 50%;
+}
+
+.status-modal__cancel-btn {
+
+}
+
+.status-modal__title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.status-modal__description {
+    text-align: center;
+    color: $color-neutral-50;
+}

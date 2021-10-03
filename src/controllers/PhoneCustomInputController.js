@@ -35,7 +35,7 @@ const PhoneCustomInputController = () => {
     //     toggleElementsClasses(dropdownBtnIcon.current, 'arrow-up', 'arrow-bottom');
 
     //     toggleElementsClasses(dropdownContent.current, 'dropdown-input-field__content--state_visible', 'dropdown-input-field__content--state_invisible');
-    //     toggleElementsClasses(backdrop.current, 'dropdown-input-field__backdrop--state-invisible')
+    //     toggleElementsClasses(backdrop.current, 'backdrop--state_invisible')
     // }, [isOpen])
 
     // const onBackdropClick = useCallback((e) => {
@@ -69,7 +69,7 @@ const PhoneCustomInputController = () => {
     //         ?.querySelector('.dropdown-input-field__content__input')
 
     //     backdrop.current = e.currentTarget
-    //         ?.querySelector('.dropdown-input-field__backdrop');
+    //         ?.querySelector('.backdrop');
 
     //     dropdownOptions.current = dropdownContent.current
     //         ?.querySelectorAll('.dropdown-input-field__option');

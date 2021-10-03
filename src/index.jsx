@@ -8,11 +8,16 @@ import WishListSidePanelController from './controllers/WishListSidePanelControll
 import PaperTypesModalController from './controllers/PaperTypesModalController';
 import DropdownInputFieldController from './controllers/DropdownInputFieldController';
 import PhoneCustomInputController from './controllers/PhoneCustomInputController';
+import StatusModalController from './controllers/StatusModalController';
+import AddArtworkModalController from './controllers/AddArtworkModalController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
 
   switch (props.type) {
+    case 'status-modal':
+      ReactDOM.render(<StatusModalController />, el);
+      break;
     case 'manage-panel':
       ReactDOM.render(<ManagePanelController />, el);
       break;
@@ -33,6 +38,9 @@ function renderComponentInElement(el) {
       break;
     case 'paper-types-modal':
       ReactDOM.render(<PaperTypesModalController />, el);
+      break;
+    case 'add-artwork-modal':
+      ReactDOM.render(<AddArtworkModalController />, el);
       break;
     default:
       break;

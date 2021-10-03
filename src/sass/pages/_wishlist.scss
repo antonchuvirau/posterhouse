@@ -22,3 +22,58 @@
   gap: 19px;
   padding-bottom: 62px;
 }
+
+.whishlist-card {
+  width: 100%;
+  border-bottom: 1px solid $color-neutral-70;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-bottom: 26px;
+}
+
+.whishlist-card__image {
+  width: 100px;
+  height: 120px;
+  margin-top: 20px;
+}
+
+.whishlist-card__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.whishlist-card__name-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.whishlist-card__name {
+  padding-top: 20px;
+  line-height: 25px;
+  text-decoration: underline;
+}
+
+.whishlist-card__author {
+  padding-top: 10px;
+  color: $color-neutral-60;
+}
+
+.whishlist-card__price-container {
+  margin-top: 45px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.whishlist-card__price {
+  line-height: 25px;
+}

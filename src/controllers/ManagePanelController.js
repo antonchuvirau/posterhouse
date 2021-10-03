@@ -1,5 +1,5 @@
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const ManagePanel = () => {
     const [isSearchBarShown, setIsSearchBarShown] = useState(false);
@@ -7,8 +7,6 @@ const ManagePanel = () => {
     const [isSortMenuOpen, setIsSortMenuOpen] = useState(false);
 
     const managePanelTabs = useRef(null);
-
-    // const sidePanelFilterItems = useRef(null);
     const filtersPanel = useRef(null);
 
     const filtersPanelBackdrop = useRef(null);
@@ -19,7 +17,6 @@ const ManagePanel = () => {
 
     const openSortByMenuBtn = useRef(null);
     const sortByMenu = useRef(null);
-
 
     const onSortByBtnClick = useCallback(() => {
         setIsSortMenuOpen((prevState) => !prevState);
@@ -82,10 +79,17 @@ const ManagePanel = () => {
             return;
         }
 
-        filtersPanel.current.classList.toggle('side-panel--state_invisible');
-        filtersPanelBackdrop.current.classList.toggle('side-panel__backdrop--state_invisible');
-        openFiltersPanelBtn.current.classList.toggle('manage-panel__filter-item--state_active');
-    }, [])
+        if (isFilterPanelShown) {
+            filtersPanel.current.classList.remove('side-panel--state_invisible');
+            filtersPanelBackdrop.current.classList.remove('backdrop--state_invisible');
+            openFiltersPanelBtn.current.classList.add('manage-panel__filter-item--state_active');
+            return;
+        }
+
+        filtersPanel.current.classList.add('side-panel--state_invisible');
+        filtersPanelBackdrop.current.classList.add('backdrop--state_invisible');
+        openFiltersPanelBtn.current.classList.remove('manage-panel__filter-item--state_active');
+    }, [isFilterPanelShown])
 
     const togleSearchbarVisibility = useCallback(() => {
         if (!openSearchBarBtn.current || !searchBar.current) {
@@ -100,10 +104,18 @@ const ManagePanel = () => {
         if (!openSortByMenuBtn.current || !sortByMenu.current) {
             return
         }
-        openSortByMenuBtn.current.classList.toggle('manage-panel__filter-item--state_active');
-        sortByMenu.current.classList.toggle('dropdown-menu__content--state_invisible');
-        sortByMenu.current.classList.toggle('dropdown-menu__content--state_visible');
-    }, []);
+
+        if (isSortMenuOpen) {
+            openSortByMenuBtn.current.classList.add('manage-panel__filter-item--state_active');
+            sortByMenu.current.classList.remove('dropdown-menu__content--state_invisible');
+            sortByMenu.current.classList.add('dropdown-menu__content--state_visible');
+            return;
+        }
+
+        openSortByMenuBtn.current.classList.remove('manage-panel__filter-item--state_active');
+        sortByMenu.current.classList.add('dropdown-menu__content--state_invisible');
+        sortByMenu.current.classList.remove('dropdown-menu__content--state_visible');
+    }, [isSortMenuOpen]);
 
     useEffect(() => {
         toggleFiltersPanelVisibility();
@@ -141,12 +153,6 @@ const ManagePanel = () => {
         if (filtersPanelBackdrop.current) {
             filtersPanelBackdrop.current.addEventListener('click', onBackdropClick)
         }
-
-        // if (sidePanelFilterItems.current) {
-        //     for (let i = 0; i < sidePanelFilterItems.current.length; i += 1) {
-        //         sidePanelFilterItems.current[i].firstChild.nextSibling.addEventListener('click', onDropdownInfoClick);
-        //     }
-        // }
 
         window.addEventListener("click", handleClickOutsideSearchField);
         window.addEventListener("click", handleClickOutsideSortMenu);
@@ -186,12 +192,6 @@ const ManagePanel = () => {
             filtersPanelBackdrop.current.removeEventListener("click", onBackdropClick);
         }
 
-        // if (sidePanelFilterItems.current) {
-        //     for (let i = 0; i < sidePanelFilterItems.current.length; i += 1) {
-        //         sidePanelFilterItems.current[i].firstChild.nextSibling.removeEventListener('click', onDropdownInfoClick);
-        //     }
-        // }
-
         window.removeEventListener("click", handleClickOutsideSearchField);
         window.removeEventListener("click", handleClickOutsideSortMenu);
     }, [
@@ -214,17 +214,13 @@ const ManagePanel = () => {
         openSortByMenuBtn.current = document.getElementById('manage-panel__sort-btn');
         sortByMenu.current = document.getElementById('manage-panel__sort-menu');
         managePanelTabs.current = document.getElementById('manage-panel__tabs');
-        // sidePanelFilterItems.current = document.getElementsByClassName('side-panel__filter-item')
 
         addEventListeners();
 
         return () => {
             removeEventListeners();
         };
-    }, [
-        addEventListeners,
-        removeEventListeners,
-    ])
+    }, [addEventListeners, removeEventListeners]);
 
     return null;
 };

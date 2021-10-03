@@ -5,23 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shipping and payment</title>
+  <title>Pages / Artists</title>
 </head>
 
 <body>
-  <section class="product-page__header">
+  <section class="super-admin">
     <div class="wrapper">
-      <header class="header">
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./artworks.html">Artwork</a>
-            </li>
-            <li class="nav__item">
-              <a href="./artists.html">Artists</a>
-            </li>
-          </ul>
-        </nav>
+      <header class="super-admin__header">
 
         <div class="logo">
           <a href="./index.html" class="logo__link">
@@ -29,41 +19,12 @@
           </a>
         </div>
 
-        <div class="actions">
-          <ul class="actions__list">
-            <li id="open-wish-list-side-panel" class="actions__item like">
-              <img src="./assets/icons/heart_black.svg" alt="like" />
-            </li>
-
-            <li class="actions__item login">
-              <a href="./login.html" class="login__link">Log in</a>
-            </li>
-
-            <li class="actions__item currency">
-              <select class="currency__select" name="currency-select" id="currency-select">
-                <option class="currency__option" value="USD">USD</option>
-                <option class="currency__option" value="INR">INR</option>
-                <option class="currency__option" value="GBP">GBP</option>
-                <option class="currency__option" value="CAD">CAD</option>
-                <option class="currency__option" value="AUD">AUD</option>
-                <option class="currency__option" value="EUR">EUR</option>
-                <option class="currency__option" value="JPY">JPY</option>
-              </select>
-            </li>
-
-            <li class="actions__item cart">
-              <div class="cart__container">
-                <a href="./cart.html" class="cart__link">Cart</a>
-                <div class="cart__counter">0</div>
-              </div>
-            </li>
-          </ul>
-        </div>
       </header>
     </div>
     <br />
   </section>
   <hr class="line" />
+
   <section class="main">
     <div class="wrapper">
 
@@ -74,8 +35,8 @@
             <div class="admin-pages-list__item admin-pages-list__item--state_active">Pages</div>
 
             <div class="admin-pages-list__subitems">
-              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_active">Artwork</div>
-              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_inactive">Artists</div>
+              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_inactive">Artwork</div>
+              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_active">Artists</div>
             </div>
 
             <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Sales</div>
@@ -84,7 +45,121 @@
           </div>
           <div class="super-admin__content">
             <div class="super-admin__title">Artists</div>
-            <button class="add-artwork-btn">Add a new artist</button>
+            <button id="add-artwork-modal__open-btn" class="add-artwork-btn">Add a new artist</button>
+
+            <div>
+              <div id="add-artwork-modal" class="add-artwork-modal add-artwork-modal--state-invisible">
+
+
+                <div id="add-artwork-modal__close-btn" class="close-btn add-artwork-modal__close-btn"></div>
+
+                <div class="add-artwork-modal__input-field-list">
+
+
+
+
+                  <div class="input-field">
+                    <div class="input-field__label">Name*</div>
+                    <div class="input-field__inputs-set">
+                      <input type="text" class="input-field__input" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Surname*</div>
+                    <div class="input-field__inputs-set">
+                      <input type="text" class="input-field__input" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="dropdown-input-field">
+                    <div class="dropdown-input-field__title">Country*</div>
+
+                    <div class="dropdown-input-field__container">
+                      <button class="dropdown-input-field__btn dropdown-input-field__btn--state_inactive">
+                        <div class="dropdown-input-field__btn-label"></div>
+                        <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+                      </button>
+
+                      <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible add-artwork-modal__filter">
+
+                        <div class="filter__content add-artwork-modal__filter-container">
+                          <input type="text" class="filter__search-field add-artwork-modal__search-field" placeholder="Search">
+
+                          <label class="filter__label custom-checkbox">
+                            <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
+                            <span class="custom-checkbox__label">Name Surname</span>
+                          </label>
+                          <label class="filter__label custom-checkbox">
+                            <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
+                            <span class="custom-checkbox__label">Name Surname</span>
+                          </label>
+                          <label class="filter__label custom-checkbox">
+                            <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
+                            <span class="custom-checkbox__label">Name Surname</span>
+                          </label>
+                        </div>
+
+                      </div>
+
+
+                      <div class="backdrop backdrop--state_invisible"></div>
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Short biography (100 symbols max)*</div>
+                    <div class="input-field__inputs-set">
+                      <textarea class="input-field__input textarea" placeholder=""></textarea>
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Full biography*</div>
+                    <div class="input-field__inputs-set">
+                      <textarea class="input-field__input textarea" placeholder=""></textarea>
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Instagram</div>
+                    <div class="input-field__inputs-set">
+                      <input type="text" class="input-field__input" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Twitter</div>
+                    <div class="input-field__inputs-set">
+                      <input type="text" class="input-field__input" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="input-field">
+                    <div class="input-field__label">Artist image*</div>
+                    <div class="input-field__inputs-set">
+                      <textarea class="input-field__input textarea" placeholder=""></textarea>
+                    </div>
+                    <button class="input-field__button button--bright__wide">Add a new image</button>
+                  </div>
+
+
+
+                </div>
+
+                <button id="add-artwork-modal__submit-btn" class="button_dark">
+                  <span>Submit</span>
+                </button>
+
+              </div>
+
+              <div id="add-artwork-modal__backdrop" class="backdrop backdrop--state_invisible"></div>
+              <div class="react" data-type="add-artwork-modal" ></div>
+            </div>
+
+
+
+
             <div class="super-admin-pages-artwork__container">
               <div class="super-admin__title">All artists (100 persons)</div>
 
@@ -134,7 +209,41 @@
                         <img src="./assets/images/author-mock-little.png" alt="artwork">
                       </div>
                       <div class="super-admin-pages-artwork-card__description card-description__artist">
-                        <div class="super-admin-pages-artwork-card__name">"Buy", Long Island University</div>
+                        <div class="super-admin-pages-artwork-card__artist">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">2</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/author-mock-little.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description card-description__artist">
+                        <div class="super-admin-pages-artwork-card__artist">André Kertész</div>
+                      </div>
+                    </div>
+                    <div class="super-admin-pages-artwork-card__actions">
+                      <button class="super-admin-pages-artwork-card__edit-btn">Edit</button>
+                      <button class="super-admin-pages-artwork-card__delete-btn">Delete</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="super-admin-pages-artwork-card">
+                  <div class="super-admin-pages-artwork-card__number">3</div>
+                  <div class="super-admin-pages-artwork-card__container">
+                    <div class="super-admin-pages-artwork-card__content">
+                      <div class="super-admin-pages-artwork-card__image">
+                        <img src="./assets/images/author-mock-little.png" alt="artwork">
+                      </div>
+                      <div class="super-admin-pages-artwork-card__description card-description__artist">
+                        <div class="super-admin-pages-artwork-card__artist">André Kertész</div>
                       </div>
                     </div>
                     <div class="super-admin-pages-artwork-card__actions">
@@ -198,139 +307,63 @@
     </div>
   </footer>
 
-  <div id="wish-list-side-panel" class="wish-list-side-panel wish-list-side-panel--state_invisible">
-    <div class="wish-list-side-panel__close-container">
-      <button id="wish-list-side-panel__close-btn" class="wish-list-side-panel__close-btn">
-        Close
-      </button>
-    </div>
-
-    <div class="wish-list-side-panel__content">
-      <section class="wish-list-side-panel__cadslist">
-        <div class="wish-list-side-panel-card">
-          <div class="wish-list-side-panel-card__container">
-            <div class="wish-list-side-panel-card__image">
-              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
-            </div>
-            <div class="wish-list-side-panel-card__content">
-              <div class="wish-list-side-panel-card__name-container">
-                <div class="wish-list-side-panel-card__name">
-                  "Buy", Long Island University
-                </div>
-                <button class="close-btn"></button>
-              </div>
-              <div class="wish-list-side-panel-card__info">
-                <div class="wish-list-side-panel-card__info-keys">
-                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
-                </div>
-                <div class="wish-list-side-panel-card__info-values">
-                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
-                    Sunset Photo
-                    eSatin — 300 gsm</span>
-                  <span class="wish-list-side-panel-card__info-values-item">1”
-                  </span>
-                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
-                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
-                </div>
-              </div>
-              <div class="wish-list-side-panel-card__price-container">
-                <div class="wish-list-side-panel-card__counter-btn">
-                  <div class="wish-list-side-panel-card__counter-btn-action">
-                    -
-                  </div>
-                  <div class="wish-list-side-panel-card__count">
-                    <span>1</span>
-                  </div>
-                  <div class="wish-list-side-panel-card__counter-btn-action">
-                    +
-                  </div>
-                </div>
-                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+        <!-- ToDo add "Saved!" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible super-admin-pages-artwork__saved-modal">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__success"></div>
+              <div class="status-modal__title">Saved!</div>
+              <div class="status-modal__description">
+                The artist was successfully saved
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="wish-list-side-panel-card">
-          <div class="wish-list-side-panel-card__container">
-            <div class="wish-list-side-panel-card__image">
-              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
-            </div>
-            <div class="wish-list-side-panel-card__content">
-              <div class="wish-list-side-panel-card__name-container">
-                <div class="wish-list-side-panel-card__name">
-                  "Buy", Long Island University
-                </div>
-                <button class="close-btn"></button>
-              </div>
-              <div class="wish-list-side-panel-card__info">
-                <div class="wish-list-side-panel-card__info-keys">
-                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
-                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
-                </div>
-                <div class="wish-list-side-panel-card__info-values">
-                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
-                    Sunset Photo
-                    eSatin — 300 gsm</span>
-                  <span class="wish-list-side-panel-card__info-values-item">1”
-                  </span>
-                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
-                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
-                </div>
-              </div>
-              <div class="wish-list-side-panel-card__price-container">
-                <div class="wish-list-side-panel-card__counter-btn">
-                  <div class="wish-list-side-panel-card__counter-btn-action">
-                    -
-                  </div>
-                  <div class="wish-list-side-panel-card__count">
-                    <span>1</span>
-                  </div>
-                  <div class="wish-list-side-panel-card__counter-btn-action">
-                    +
-                  </div>
-                </div>
-                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+          <div class="backdrop"></div>
+        </div> -->
+
+
+        <!-- ToDo add "Deleted!" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible super-admin-pages-artwork__deleted-modal">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__delete"></div>
+              <div class="status-modal__title">Deleted!</div>
+              <div class="status-modal__description">
+                The artist was successfully deleted
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <div class="wish-list-side-panel__subtotal">
-        <div class="wish-list-side-panel__subtotal-item">Subtotal</div>
-        <div class="wish-list-side-panel__subtotal-item">300.00 EUR</div>
-      </div>
+          <div class="backdrop"></div>
+        </div> -->
 
-      <div class="wish-list-side-panel__action-btns">
-        <button id="wish-list-side-panel__continue-shopping-btn" class="
-              wish-list-side-panel__transparent-btn
-              wish-list-side-panel__action-btn
-            ">
-          <span>Continue shopping</span>
-        </button>
-        <a href="./wishlist.html">
-          <button class="wish-list-side-panel__dark-btn wish-list-side-panel__action-btn">
-            <span>Go to cart</span>
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
 
-  <div id="wish-list-side-panel__backdrop" class="
-        wish-list-side-panel__backdrop
-        wish-list-side-panel__backdrop--state-invisible
-      " />
+      <!-- ToDo add "Are you sure you want to delete this artist?" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible super-admin-pages-artwork__deleted-modal">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__attention"></div>
+              <div class="status-modal__title">Are you sure you want to delete this artist?</div>
+            </div>
 
-  <div class="react" data-type="dropdown-input-field" />
-  <div class="react" data-type="phone-custom-input" />
-  <div class="react" data-type="wish-list-side-panel" />
+            <div class="status-modal__actions">
+
+              <button class="status-modal__cancel-btn status-modal__action-btn button--bright__wide">Cancel</button>
+              <button class="status-modal__action-btn button_dark">Delete</button>
+
+            </div>
+          </div>
+
+          <div class="backdrop"></div>
+        </div> -->
+
+  <div class="react" data-type="status-modal"></div>
+  <div class="react" data-type="dropdown-input-field"></div>
+  <div class="react" data-type="phone-custom-input"></div>
   <div class="react" data-type="manage-panel"></div>
 </body>
 

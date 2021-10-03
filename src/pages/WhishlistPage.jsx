@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import AddressBar from '../components/common/AddressBar';
+import React from 'react';
 import MediaLinks from '../components/common/media-links/MediaLinks';
 import NoProductInList from '../components/product/NoProductInList';
 import ProductToSellCard from '../components/product/ProductToSellCard';

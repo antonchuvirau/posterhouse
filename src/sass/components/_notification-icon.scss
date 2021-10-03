@@ -1,0 +1,14 @@
+.notification-icon {
+    width: 116px;
+    height: 116px;
+}
+
+.notification-icon__success {
+    background-image: url('../../assets/icons/success_big.svg');
+}
+.notification-icon__delete {
+    background-image: url('../../assets/icons/trash.svg');
+}
+.notification-icon__attention {
+    background-image: url('../../assets/icons/attention.svg');
+}

@@ -1,3 +1,1 @@
-export default class Utils {
-
-}
+export const toggleElementsClasses = (element, ...classes) => classes.map((className) => element.classList.toggle(className));

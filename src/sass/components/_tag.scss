@@ -1,8 +1,31 @@
 .tag {
-    background-color: $background-color-primary-grey-87;
     border-radius: 55px;
     height: 30px;
     padding: 5px 15px;
+}
+
+.tag--grey {
+    background-color: $background-color-primary-grey-87;
+}
+
+.tag--green {
+    background-color: #C2EFD2;
+    color: #16502C;
+}
+
+.tag--pink {
+    background-color: #FCCFCF;
+    color: #6A1A15;
+}
+
+.tag--yellow {
+    background-color: #EEEBA6;
+    color: #4B2C10;
+}
+
+.tag--blue {
+    color: #1C4E7D;
+    background-color: #DAE9F7;
 }
 
 .tag__content {

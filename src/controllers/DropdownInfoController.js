@@ -2,13 +2,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useRef } from 'react';
 
 const DropdownInfoController = () => {
+    const [isOpen, setIsOpen] = useState({ value: false });
+
     const dropDownInfoComponents = useRef(null);
     const dropdown = useRef(null);
     const dropdownSymbol = useRef(null);
     const dropdownContent = useRef(null);
     const dropdownBtn = useRef(null);
-
-    const [isOpen, setIsOpen] = useState({ value: false });
 
     const onDropdownInfoClick = useCallback((e) => {
         dropdown.current = e.currentTarget;
@@ -60,7 +60,6 @@ const DropdownInfoController = () => {
         }
     }, [isOpen])
 
-
     useEffect(() => {
         dropDownInfoComponents.current = document.getElementsByClassName('dropdown-info');
 
@@ -78,7 +77,6 @@ const DropdownInfoController = () => {
             }
         };
     }, [onDropdownInfoClick]);
-
 
     return null;
 };

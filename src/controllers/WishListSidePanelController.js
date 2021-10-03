@@ -1,5 +1,5 @@
 
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const WishListSidePanelController = () => {
     const [isWishSidePanelOpen, setIsWishSidePanelOpen] = useState(false);
@@ -15,9 +15,15 @@ const WishListSidePanelController = () => {
             return;
         }
 
-        wishListSidePanel.current.classList.toggle('wish-list-side-panel--state_invisible');
-        backDropComponent.current.classList.toggle('wish-list-side-panel__backdrop--state-invisible');
-    }, [])
+        if (isWishSidePanelOpen) {
+            wishListSidePanel.current.classList.remove('wish-list-side-panel--state_invisible');
+            backDropComponent.current.classList.remove('backdrop--state_invisible');
+            return;
+        }
+
+        wishListSidePanel.current.classList.add('wish-list-side-panel--state_invisible');
+        backDropComponent.current.classList.add('backdrop--state_invisible');
+    }, [isWishSidePanelOpen])
 
     const onWishSidePanelClose = useCallback((e) => {
         e.stopPropagation();

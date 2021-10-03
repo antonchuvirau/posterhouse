@@ -1,0 +1,54 @@
+.add-artwork-modal {
+    position: absolute;
+    top: 50px;
+    right: calc(50vw - 495px);
+    width: 990px;
+    opacity: 1;
+    z-index: 107;
+    background-color: $background-color-main;
+    overflow: auto;
+    display: block;
+    animation-name: 'samplePreviewIn';
+    animation-duration: .40s;
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-delay: 5ms;
+    overflow: auto;
+    padding: 50px 40px 54px 40px;
+}
+
+.add-artwork-modal--state-invisible {
+    display: none;
+}
+
+.add-artwork-modal__input-field-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 90px;
+}
+
+.add-artwork-modal__close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.add-artwork-modal__filter {
+    background-color: $background-color-primary-grey-87 !important;
+}
+
+.add-artwork-modal__filter-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.add-artwork-modal__search-field {
+    color: $color-neutral-30 !important;
+    margin-top: 10px;
+}
+
+.add-artwork-modal__currency-dropdown {
+    width: 20% !important;
+}
