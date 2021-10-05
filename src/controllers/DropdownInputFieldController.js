@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-
-const toggleElementsClasses = (element, ...classes) => classes.map((className) => element.classList.toggle(className));
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { toggleElementsClasses } from '../services/Utils'
 
 const DropdownInputFieldController = () => {
     const [isOpen, setIsOpen] = useState(false);
