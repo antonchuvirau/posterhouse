@@ -1,15 +1,28 @@
 import { useEffect, useCallback, useRef, useState } from 'react';
 
-const FilterSearchOptionController = () => {
-    const [searchQuery, setsearchQuery] = useState('');
+export const useFilterSearchOptionController = () => {
+    const [searchQuery, setSearchQuery] = useState('');
 
     const filters = useRef(null);
+    const searchBars = useRef(null);
     const searchBar = useRef(null);
     const optionLabels = useRef(null);
 
     const initialiseFilterElements = useCallback((e) => {
-        searchBar.current = e.currentTarget?.querySelector('.filter__search-field');
-        optionLabels.current = e.currentTarget?.querySelectorAll('.filter__label');
+        searchBar.current = e.currentTarget?.querySelector('.search-container__input');
+        optionLabels.current = e.currentTarget?.querySelectorAll('.search-container__option');
+    }, []);
+
+    const clearAllSearchBars = useCallback(() => {
+        setSearchQuery('');
+
+        if (!searchBars.current) {
+            return;
+        }
+
+        for (let searchBarItem of searchBars.current) {
+            searchBarItem.value = '';
+        }
     }, []);
 
     useEffect(() => {
@@ -19,14 +32,14 @@ const FilterSearchOptionController = () => {
 
         for (let optionLabel of optionLabels.current) {
             const label = optionLabel
-                .querySelector('.custom-checkbox__label')
+                .querySelector('.search-container__option-label')
                 .innerHTML
                 .toLowerCase();
 
             if (searchQuery === '' || label.includes(searchQuery)) {
-                optionLabel.classList.remove('filter__label--state_invisible');
+                optionLabel.classList.remove('search-container__option--state_invisible');
             } else {
-                optionLabel.classList.add('filter__label--state_invisible');
+                optionLabel.classList.add('search-container__option--state_invisible');
             }
         }
 
@@ -34,7 +47,7 @@ const FilterSearchOptionController = () => {
 
     const onSearch = useCallback((e) => {
         const searchValue = e.currentTarget.value.toLowerCase();
-        setsearchQuery(searchValue);
+        setSearchQuery(searchValue);
     }, []);
 
     const onSearchClick = useCallback((e) => {
@@ -60,7 +73,8 @@ const FilterSearchOptionController = () => {
     ])
 
     useEffect(() => {
-        filters.current = document.getElementsByClassName('filter');
+        filters.current = document.getElementsByClassName('search-container');
+        searchBars.current = document.getElementsByClassName('search-container__input');
 
         if (!filters.current) {
             return;
@@ -77,7 +91,9 @@ const FilterSearchOptionController = () => {
         }
     }, [onFilterClick])
 
-    return null;
+    return {
+        searchQuery,
+        setSearchQuery,
+        clearAllSearchBars,
+    };
 };
-
-export default FilterSearchOptionController;

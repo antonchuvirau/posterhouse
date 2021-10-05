@@ -14,11 +14,9 @@
     <div class="wrapper">
       <header class="super-admin__header">
 
-        <div class="logo">
-          <a href="./index.html" class="logo__link">
-            <img src="./assets/icons/Logo--transparent_big.png" alt="Posterhaus" />
-          </a>
-        </div>
+        <a href="./index.html">
+          <div class="logo logo--big_transparent_beige-frame"></div>
+        </a>
 
       </header>
     </div>
@@ -79,22 +77,41 @@
                         <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
                       </button>
 
-                      <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible add-artwork-modal__filter">
+                      <div class="
+                        search-container
+                        dropdown-input-field__content
+                        dropdown-input-field__content--state_invisible
+                        add-artwork-modal__filter
+                      ">
 
-                        <input type="text" class="filter__search-field add-artwork-modal__search-field" placeholder="Search">
-                        <div class="filter__content add-artwork-modal__filter-container">
+                        <input
+                          placeholder="Search"
+                          type="text"
+                          class="
+                            search-container__input
+                            filter__search-field
+                            add-artwork-modal__search-field
+                          "
+                        >
 
-                          <label class="filter__label custom-checkbox">
+                        <div
+                          class="
+                            filter__content
+                            add-artwork-modal__filter-container
+                          "
+                        >
+
+                          <label class="filter__label custom-checkbox search-container__option">
                             <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
-                            <span class="custom-checkbox__label">Name Surname</span>
+                            <span class="custom-checkbox__label search-container__option-label">First</span>
                           </label>
-                          <label class="filter__label custom-checkbox">
+                          <label class="filter__label custom-checkbox search-container__option">
                             <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
-                            <span class="custom-checkbox__label">Name Surname</span>
+                            <span class="custom-checkbox__label search-container__option-label">Second</span>
                           </label>
-                          <label class="filter__label custom-checkbox">
+                          <label class="filter__label custom-checkbox search-container__option">
                             <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
-                            <span class="custom-checkbox__label">Name Surname</span>
+                            <span class="custom-checkbox__label search-container__option-label">Name Surname</span>
                           </label>
                         </div>
 
@@ -553,7 +570,7 @@
 
               </div>
 
-              <div id="add-artwork-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible"></div>
+              <div id="add-artwork-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible add-artwork-modal__backdrop"></div>
               <div class="react" data-type="add-artwork-modal" ></div>
             </div>
 
@@ -618,27 +635,27 @@
                 <div id="side-panel" class="side-panel side-panel--state_invisible">
                   <form action="" class="filters-list">
 
-                    <div class="filter">
+                    <div class="filter search-container">
                       <div class="filter__title">Artist</div>
 
-                      <input type="text" class="filter__search-field" placeholder="Search" />
+                      <input type="text" class="filter__search-field search-container__input" placeholder="Search" />
 
                       <div class="filter__content">
-                        <label class="filter__label custom-checkbox">
+                        <label class="filter__label custom-checkbox search-container__option">
                           <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
-                          <span class="custom-checkbox__label">
+                          <span class="custom-checkbox__label search-container__option-label">
                             Name Surname
                           </span>
                         </label>
-                        <label class="filter__label custom-checkbox">
+                        <label class="filter__label custom-checkbox search-container__option">
                           <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
-                          <span class="custom-checkbox__label">
+                          <span class="custom-checkbox__label search-container__option-label">
                             CheckBox label
                           </span>
                         </label>
-                        <label class="filter__label custom-checkbox">
+                        <label class="filter__label custom-checkbox search-container__option">
                           <input type="checkbox" class="filter__checkbox custom-checkbox__input" />
-                          <span class="custom-checkbox__label">
+                          <span class="custom-checkbox__label search-container__option-label">
                             CheckBox label
                           </span>
                         </label>
@@ -760,11 +777,9 @@
               <a href="./faq.html">FAQs</a>
             </li>
           </ul>
-          <div class="footer__logo">
-            <a href="./">
-              <img src="./assets/icons/Logo-transparent__small.png" alt="Posterhaus" />
-            </a>
-          </div>
+          <a href="./index.html">
+            <div class="logo--small_transparent_beige-frame"></div>
+          </a>
           <ul class="footer__column media">
             <li class="media__item footer__list-item">
               <a href="#"> Instagram </a>
@@ -778,7 +793,11 @@
           </ul>
         </div>
         <div class="copyright">
-          <div class="copyright__logo">Logo</div>
+          <div class="copyright__logo">
+            <a href="./index.html">
+              <div class="logo--small_transparent_beige-frame"></div>
+            </a>
+          </div>
           <div class="copyright__description">© All rights reserved.</div>
         </div>
       </div>
@@ -836,8 +855,6 @@
 
           <div class="backdrop backdrop--grey"></div>
         </div> -->
-
-
 
   <div class="react" data-type="status-modal"></div>
   <div class="react" data-type="dropdown-input-field" />

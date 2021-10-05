@@ -1,6 +1,8 @@
 .copyright {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 18px;
 }
 
 .copyright__logo {
@@ -8,6 +10,7 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 30px;
+  padding-bottom: 10px;
 }
 
 .copyright__description {

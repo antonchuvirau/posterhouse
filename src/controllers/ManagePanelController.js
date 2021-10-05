@@ -1,5 +1,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useFilterSearchOptionController } from '../hooks/useFilterSearchOptionController';
 
 const ManagePanel = () => {
     const [isSearchBarShown, setIsSearchBarShown] = useState(false);
@@ -17,6 +18,8 @@ const ManagePanel = () => {
 
     const openSortByMenuBtn = useRef(null);
     const sortByMenu = useRef(null);
+
+    const { clearAllSearchBars } = useFilterSearchOptionController();
 
     const onSortByBtnClick = useCallback(() => {
         setIsSortMenuOpen((prevState) => !prevState);
@@ -119,7 +122,12 @@ const ManagePanel = () => {
 
     useEffect(() => {
         toggleFiltersPanelVisibility();
-    }, [isFilterPanelShown, toggleFiltersPanelVisibility])
+        clearAllSearchBars();
+    }, [
+        isFilterPanelShown,
+        toggleFiltersPanelVisibility,
+        clearAllSearchBars,
+    ])
 
     useEffect(() => {
         togleSearchbarVisibility();

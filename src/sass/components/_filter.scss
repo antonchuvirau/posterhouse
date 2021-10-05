@@ -64,17 +64,13 @@
     height: 35px;
     font-size: 15px;
     line-height: 18px;
-    color: $color-neutral-70;
+    color: $color-neutral-30;
     border-color: $color-neutral-100;
     border: 1px solid $color-neutral-70;
     outline: none;
 }
 
 .filter__label {
-}
-
-.filter__label--state_invisible {
-    display: none;
 }
 
 .filter__checkbox {

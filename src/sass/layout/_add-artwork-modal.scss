@@ -17,6 +17,10 @@
     padding: 50px 40px 54px 40px;
 }
 
+.add-artwork-modal__backdrop {
+    z-index: 5 !important;
+}
+
 .add-artwork-modal--state-invisible {
     display: none;
 }

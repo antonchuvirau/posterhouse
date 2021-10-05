@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { toggleElementsClasses } from '../services/Utils'
+import { useFilterSearchOptionController } from '../hooks/useFilterSearchOptionController';
 
 const DropdownInputFieldController = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,17 +18,54 @@ const DropdownInputFieldController = () => {
     const dropdownOptions = useRef(null);
     const dropdownSearch = useRef(null);
 
+    const { clearAllSearchBars } = useFilterSearchOptionController();
+
+    const openDropDrownInput = useCallback(() => {
+        dropdownBtn.current.classList.add('dropdown-input-field__btn--state_active')
+        dropdownBtn.current.classList.remove('dropdown-input-field__btn--state_inactive')
+
+        dropdownBtnIcon.current.classList.add('arrow-up')
+        dropdownBtnIcon.current.classList.remove('arrow-bottom')
+
+        dropdownContent.current.classList.add('dropdown-input-field__content--state_visible')
+        dropdownContent.current.classList.remove('dropdown-input-field__content--state_invisible')
+
+        backdrop.current.classList.remove('backdrop--state_invisible')
+    }, []);
+
+    const closeDropDrownInput = useCallback(() => {
+        dropdownBtn.current.classList.add('dropdown-input-field__btn--state_inactive')
+        dropdownBtn.current.classList.remove('dropdown-input-field__btn--state_active')
+
+        dropdownBtnIcon.current.classList.add('arrow-bottom')
+        dropdownBtnIcon.current.classList.remove('arrow-up')
+
+        dropdownContent.current.classList.add('dropdown-input-field__content--state_invisible')
+        dropdownContent.current.classList.remove('dropdown-input-field__content--state_visible')
+
+        backdrop.current.classList.add('backdrop--state_invisible')
+    }, []);
+
     useEffect(() => {
+        clearAllSearchBars();
+
         if (!dropdownBtn.current || !dropdownBtnIcon.current || !dropdownContent.current || !backdrop.current) {
             return;
         }
 
-        toggleElementsClasses(dropdownBtn.current, 'dropdown-input-field__btn--state_active', 'dropdown-input-field__btn--state_inactive');
-        toggleElementsClasses(dropdownBtnIcon.current, 'arrow-up', 'arrow-bottom');
+        if (isOpen) {
+            openDropDrownInput();
 
-        toggleElementsClasses(dropdownContent.current, 'dropdown-input-field__content--state_visible', 'dropdown-input-field__content--state_invisible');
-        toggleElementsClasses(backdrop.current, 'backdrop--state_invisible')
-    }, [isOpen])
+            return;
+        }
+
+        closeDropDrownInput();
+    }, [
+        isOpen,
+        clearAllSearchBars,
+        openDropDrownInput,
+        closeDropDrownInput,
+    ])
 
     const onBackdropClick = useCallback((e) => {
         e.stopPropagation();
