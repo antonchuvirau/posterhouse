@@ -2,6 +2,14 @@
     border-radius: 55px;
     height: 30px;
     padding: 5px 15px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.tag--transparent {
+    border-color: transparent;
 }
 
 .tag--grey {
@@ -29,7 +37,7 @@
 }
 
 .tag__content {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 20px;
 }
 
@@ -41,4 +49,50 @@
     gap: 5px;
     flex-wrap: wrap;
     row-gap: 5px;
+}
+
+.tag__arrow {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.tag__arrow--blue {
+    background-image: url('../../assets/icons/tag__arrow--blue.svg');
+}
+.tag__arrow--green {
+    background-image: url('../../assets/icons/tag__arrow--green.svg');
+}
+.tag__arrow--yellow {
+    background-image: url('../../assets/icons/tag__arrow--yellow.svg');
+}
+.tag__arrow--pink {
+    background-image: url('../../assets/icons/tag__arrow--pink.svg');
+}
+
+.tag__arrow--grey {
+    background-image: url('../../assets/icons/tag__arrow--grey.svg');
+}
+
+
+.status-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.status-icon {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.status-icon--successs {
+    background-image: url('../../assets/icons/status-icon--successs.svg');
+}
+
+.status-icon--close {
+    background-image: url('../../assets/icons/status-icon--close.svg');
 }

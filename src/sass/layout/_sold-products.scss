@@ -1,0 +1,79 @@
+.sold-products {
+    padding-bottom: 100px;
+}
+
+.sold-products__title {
+}
+
+.sold-products__cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.sold-products-card {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    align-items: flex-start;
+    padding-bottom: 7px;
+    border-bottom: 1px solid $color-neutral-70;
+    position: relative;
+}
+
+.sold-products-card__image {
+    width: 68px;
+    height: 80px;
+    padding-bottom: 20px;
+}
+
+.sold-products-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 80%;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 20px;
+}
+
+.sold-products-card__name-author-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.sold-products-card__name {
+    text-decoration: underline;
+}
+
+.sold-products-card__author {
+    color: $color-neutral-60;
+}
+
+.sold-products-card__status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sold-products-card__price-container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+}
+
+.sold-products-card__price {
+
+}
+
+.sold-products-card__details-btn {
+    color: $color-neutral-70;
+}
