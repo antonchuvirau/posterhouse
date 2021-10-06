@@ -10,6 +10,7 @@ import DropdownInputFieldController from './controllers/DropdownInputFieldContro
 import PhoneCustomInputController from './controllers/PhoneCustomInputController';
 import StatusModalController from './controllers/StatusModalController';
 import AddArtworkModalController from './controllers/AddArtworkModalController';
+import LoginController from './controllers/LoginController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
@@ -17,6 +18,9 @@ function renderComponentInElement(el) {
   switch (props.type) {
     case 'status-modal':
       ReactDOM.render(<StatusModalController />, el);
+      break;
+    case 'login':
+      ReactDOM.render(<LoginController />, el);
       break;
     case 'manage-panel':
       ReactDOM.render(<ManagePanelController />, el);

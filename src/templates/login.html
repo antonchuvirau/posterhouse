@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log in</title>
 </head>
+
 <body>
   <section class="product-page__header">
     <div class="wrapper">
@@ -89,70 +91,134 @@
 
           <!-- ToDo show for "Please, enter a new password below." page render -->
 
-          <!-- <div class="authorisation__description authorisation__enter-new-password">
-            Please, enter a new password below.
-          </div> -->
+          <div class="enter-new-password authorisation-component--invisible">
+            <div class="authorisation__description authorisation__enter-new-password">
+              Please, enter a new password below.
+            </div>
+          </div>
 
           <!-- ToDo show for "Forgot your password?" page render -->
-          <!-- <div class="authorisation__header">
-            Forgot your password?
+          <div class="forgot-password-component authorisation-component--invisible">
+            <div class="authorisation__header">
+              Forgot your password?
+            </div>
+            <div class="authorisation__description authorisation__enter-new-email">
+              Please, enter your e-mail address. You will receive the link to create a new password via email.
+            </div>
           </div>
-          <div class="authorisation__description authorisation__enter-new-email">
-            Please, enter your e-mail address. You will receive the link to create a new password via email.
-          </div> -->
 
           <!-- ToDo show for initial page render -->
-          <div class="authorisation-tabs">
-            <div class="authorisation-tabs__item authorisation-tabs__item--state_active">
-                <h3 class="authorisation-tabs__label">
-                    Log in
-                </h3>
+          <div class="login-component">
+
+            <div class="authorisation-tabs">
+              <div class="authorisation-tabs__login authorisation-tabs__item authorisation-tabs__item--state_active">
+                <h3 class="authorisation-tabs__label">Log in</h3>
+              </div>
+              <div class="authorisation-tabs__create-account authorisation-tabs__item authorisation-tabs__item--state_inactive">
+                <h3 class="authorisation-tabs__label">Create an account</h3>
+              </div>
             </div>
-            <div class="authorisation-tabs__item authorisation-tabs__item--state_inactive">
-                <h3 class="authorisation-tabs__label">
-                    Create an account
-                </h3>
-            </div>
-          </div>
 
 
-          <div class="authorisation__login-container">
+            <div class="authorisation__login-container">
 
-            <!-- ToDo show for initial page render -->
-            <div class="authorisation-form">
+
+              <!-- ToDo show for initial page render -->
+              <div class="authorisation-form">
                 <div class="authorisation-field">
-                    <div class="authorisation-field__label">E-mail address*</div>
-                    <input type="text" class="authorisation-field__input"></input>
+                  <div class="authorisation-field__label">E-mail address*</div>
+                  <input type="text" class="authorisation-field__input"></input>
                 </div>
                 <div class="authorisation-field">
-                    <div class="authorisation-field__label">Password*</div>
-                    <input type="text" class="authorisation-field__input"></input>
-                    <div class="authorisation-field__actions">
+                  <div class="authorisation-field__label">Password*</div>
+                  <input type="text" class="authorisation-field__input"></input>
+                  <div class="authorisation-field__actions">
 
-                        <label class="custom-checkbox">
-                          <input type="checkbox" class="custom-checkbox__input" />
-                          <span class="custom-checkbox__label">Remember me</span>
-                        </label>
+                    <label class="custom-checkbox">
+                      <input type="checkbox" class="custom-checkbox__input" />
+                      <span class="custom-checkbox__label">Remember me</span>
+                    </label>
 
-                        <span class="authorisation-field__action-button">Forgot your password?</span>
-                    </div>
+                    <span id="authorisation-field__forgot-password-btn" class="authorisation-field__action-button">Forgot your password?</span>
+                  </div>
                 </div>
-            </div>
-            <div class="authorisation__btn">
+              </div>
+              <div class="authorisation__btn">
                 <div class="authorisation__btn-container">
                   <button class="button_dark authorisation__btn">
                     <span>Log in</span>
                   </button>
                 </div>
+              </div>
             </div>
 
-            <!-- ToDo show for "Forgot your password?" page render -->
-              <!-- <div class="authorisation-form">
-                <div class="authorisation-field">
-                    <div class="authorisation-field__label">E-mail address*</div>
-                    <input type="text" class="authorisation-field__input"></input>
-                </div>
+          </div>
+
+          <!-- ToDo show for create account page -->
+      <div class="create-account-component authorisation-component--invisible">
+
+        <div class="authorisation-tabs">
+          <div class="authorisation-tabs__login authorisation-tabs__item authorisation-tabs__item--state_inactive">
+            <h3 class="authorisation-tabs__label">Log in</h3>
+          </div>
+          <div class="authorisation-tabs__create-account authorisation-tabs__item authorisation-tabs__item--state_active">
+            <h3 class="authorisation-tabs__label">Create an account</h3>
+          </div>
+        </div>
+
+        <form class="create-account">
+          <div class="authorisation-form">
+            <div class="authorisation-field">
+              <div class="authorisation-field__label">First name*</div>
+              <input type="text" class="authorisation-field__input"></input>
+            </div>
+            <div class="authorisation-field">
+              <div class="authorisation-field__label">Last name*</div>
+              <input type="text" class="authorisation-field__input"></input>
+            </div>
+            <div class="authorisation-field">
+              <div class="authorisation-field__label">E-mail address*</div>
+              <input type="text" class="authorisation-field__input"></input>
+            </div>
+            <div class="authorisation-field">
+              <div class="authorisation-field__label">Password*</div>
+              <input type="text" class="authorisation-field__input"></input>
+            </div>
+          </div>
+
+          <div class="select-role">
+            <div class="select-role__label">Please select your role*</div>
+            <div class="select-role__options">
+              <label class="select-role__container">
+                <input class="select-role__input" name="role" type="radio">
+                <span class="select-role__label">Customer</span>
+              </label>
+              <label class="select-role__container">
+                <input class="select-role__input" name="role" type="radio">
+                <span class="select-role__label">Photographer</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="authorisation__btn">
+            <div class="authorisation__btn-container">
+              <button class="button_dark authorisation__btn">
+                <span>Create an account</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+          <!-- ToDo show for "Forgot your password?" page render -->
+          <div class="forgot-password-component authorisation-component--invisible">
+            <div class="authorisation-form">
+              <div class="authorisation-field">
+                <div class="authorisation-field__label">E-mail address*</div>
+                <input type="text" class="authorisation-field__input"></input>
               </div>
+            </div>
 
             <div class="authorisation__btn">
               <div class="authorisation__btn-container">
@@ -160,10 +226,13 @@
                   <span>Reset password</span>
                 </button>
               </div>
-            </div> -->
+            </div>
+          </div>
 
-            <!-- ToDo show for "Please, enter a new password below." page render -->
-              <!-- <div class="authorisation-form">
+          <!-- ToDo show for "Please, enter a new password below." page render -->
+          <div class="enter-new-password">
+
+            <!-- <div class="authorisation-form">
                 <div class="authorisation-field">
                     <div class="authorisation-field__label">New password*</div>
                     <input type="text" class="authorisation-field__input"></input>
@@ -182,18 +251,24 @@
               </div>
             </div> -->
 
-
-
           </div>
 
 
 
-        </section>
+
+      </div>
 
 
 
-        <!-- ToDo add "Reset e-mail modal" -->
-        <!-- <div>
+
+
+
+  </section>
+
+
+
+    <!-- ToDo add "Reset e-mail modal" -->
+    <!-- <div>
           <div class="status-modal status-modal--state-visible">
             <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
             <div class="status-modal__content">
@@ -210,8 +285,8 @@
         </div>
          -->
 
-         <!-- ToDo add "New password modal" -->
-        <!-- <div>
+    <!-- ToDo add "New password modal" -->
+    <!-- <div>
           <div class="status-modal status-modal--state-visible">
             <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
             <div class="status-modal__content">
@@ -227,13 +302,48 @@
           <div class="react" data-type="status-modal"></div>
         </div> -->
 
+        <!-- ToDo add "Registration e-mail has been sent" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__success"></div>
+              <div class="status-modal__title">Registration e-mail has been sent</div>
+              <div class="status-modal__description">
+                Please, click on the link that has just been sent to your e-mail address to verify e-mail and continue the registration process.
+              </div>
+            </div>
+          </div>
 
-    </div>
+          <div class="backdrop"></div>
+          <div class="react" data-type="status-modal"></div>
+        </div> -->
+
+
+         <!-- ToDo add "New password modal" -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__success"></div>
+              <div class="status-modal__title">Your registration was successfull.</div>
+              <div class="status-modal__description">
+                Please, log in now.
+              </div>
+            </div>
+          </div>
+
+          <div class="backdrop"></div>
+          <div class="react" data-type="status-modal"></div>
+        </div> -->
+
+
+  </div>
 
 
 
 
-    </div>
+  </div>
   </section>
   <footer class="footer">
     <div class="wrapper">
@@ -286,5 +396,7 @@
       </div>
     </div>
   </footer>
+  <div class="react" data-type="login"></div>
 </body>
+
 </html>
