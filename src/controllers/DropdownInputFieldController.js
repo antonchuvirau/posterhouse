@@ -204,8 +204,28 @@ const DropdownInputFieldController = () => {
             for (let dropdownInputField of dropdownInputFields.current) {
                 dropdownInputField.removeEventListener('click', onDropdownInputFieldClick);
             }
+
+            if (backdrop.current) {
+                backdrop.current.removeEventListener('click', onBackdropClick);
+            }
+
+            if (dropdownOptions.current) {
+                dropdownOptions.current.forEach((element) => element.removeEventListener('click', onDropdownOptionClick));
+            }
+
+            if (dropdownSearch.current) {
+                dropdownSearch.current.removeEventListener('input', onSearch);
+                dropdownSearch.current.removeEventListener('click', onSearchClick);
+            }
+
         }
-    }, [onDropdownInputFieldClick])
+    }, [
+        onDropdownInputFieldClick,
+        onBackdropClick,
+        onSearchClick,
+        onSearch,
+        onDropdownOptionClick,
+    ])
 
     return null;
 };

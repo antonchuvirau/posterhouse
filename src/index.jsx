@@ -11,11 +11,15 @@ import PhoneCustomInputController from './controllers/PhoneCustomInputController
 import StatusModalController from './controllers/StatusModalController';
 import AddArtworkModalController from './controllers/AddArtworkModalController';
 import LoginController from './controllers/LoginController';
+import TagDropDownController from './controllers/TagDropDownController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
 
   switch (props.type) {
+    case 'tag-dropdown':
+      ReactDOM.render(<TagDropDownController />, el);
+      break;
     case 'status-modal':
       ReactDOM.render(<StatusModalController />, el);
       break;

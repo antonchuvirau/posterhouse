@@ -1,0 +1,73 @@
+.super-admin-orders {
+    padding-top: 30px;
+    padding-bottom: 125px;
+}
+
+.super-admin-orders__manage-panel {
+    padding-top: 45px;
+    padding-bottom: 29px !important;
+    border-bottom: none !important;
+}
+
+.super-admin-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+}
+
+.super-admin-orders-table__head {
+    background-color: $background-color-primary-grey-87;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.super-admin-orders-table__head-cell {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: end;
+}
+
+.super-admin-orders-table__row {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid $color-neutral-70;
+}
+
+.super-admin-orders-table__row-cell {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: end;
+}
+
+.super-admin-orders-table__details-btn {
+    text-decoration: underline;
+}
+
+.super-admin-orders-table__column-number {
+    width: 41px;
+}
+
+.super-admin-orders-table__column-data {
+    width: 89px;
+}
+
+.super-admin-orders-table__column-name {
+    width: 167px;
+}
+
+.super-admin-orders-table__column-total {
+    width: 110px;
+}
+
+.super-admin-orders-table__column-payment {
+    width: 110px;
+}
+
+.super-admin-orders-table__column-status {
+    width: 142px;
+}
+
+.super-admin-orders-table__column-details {
+    width: 98px;
+}
