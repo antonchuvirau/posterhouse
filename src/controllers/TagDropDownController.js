@@ -1,6 +1,13 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+const ORDER_STATUSES = {
+    CANCELLED: 'Cancelled',
+    FINISHED: 'Finished',
+    NEW: 'New',
+    RETURNED: 'Returned',
+};
+
 const TagDropDownController = () => {
     const [isOpen, setIsOpen] = useState(false);
 
