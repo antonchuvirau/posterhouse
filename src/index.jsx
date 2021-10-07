@@ -12,6 +12,7 @@ import StatusModalController from './controllers/StatusModalController';
 import AddArtworkModalController from './controllers/AddArtworkModalController';
 import LoginController from './controllers/LoginController';
 import TagDropDownController from './controllers/TagDropDownController';
+import OrderDetailsModalController from './controllers/OrderDetailsModalController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
@@ -43,6 +44,9 @@ function renderComponentInElement(el) {
       break;
     case 'wish-list-side-panel':
       ReactDOM.render(<WishListSidePanelController />, el);
+      break;
+    case 'order-details-modal':
+      ReactDOM.render(<OrderDetailsModalController />, el);
       break;
     case 'paper-types-modal':
       ReactDOM.render(<PaperTypesModalController />, el);
