@@ -10,11 +10,14 @@ const ORDER_STATUSES = {
 
 const TagDropDownController = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [orderStatus, setOrderStatus] = useState(ORDER_STATUSES.NEW);
 
     const dropdowns = useRef(null);
     const dropdownBtn = useRef(null);
+    const dropdownBtnTag = useRef(null);
+    const dropdownBtnIcon = useRef(null);
+
     const dropdownBtnLabel = useRef(null);
-    // const dropdownBtnIcon = useRef(null);
     const dropdownContent = useRef(null);
     const backdrop = useRef(null);
     const dropdownOptions = useRef(null);
@@ -36,19 +39,98 @@ const TagDropDownController = () => {
         backdrop.current.classList.add('backdrop--state_invisible')
     }, [isOpen]);
 
+
+    const addClassForTag = (className) => {
+        if (!dropdownBtnTag.current) {
+            return;
+        }
+
+        dropdownBtnTag.current.classList.add(className);
+    }
+
+    const addClassForArrow = (className) => {
+        if (!dropdownBtnIcon.current) {
+            return;
+        }
+
+        dropdownBtnIcon.current.classList.add(className);
+    }
+
+    const removeColorClassesFromTag = useCallback(() => {
+        if (!dropdownBtnTag.current || !dropdownBtnIcon.current) {
+            return;
+        }
+
+        dropdownBtnTag.current.className = "";
+        dropdownBtnIcon.current.className = "";
+    }, []);
+
+
+    const changeOrderStatusView = useCallback(() => {
+        if (!dropdownBtnTag.current || !dropdownBtnIcon.current || !dropdownBtnLabel.current) {
+            return;
+        }
+
+        dropdownBtnLabel.current.innerHTML = orderStatus;
+
+        switch (orderStatus) {
+            case ORDER_STATUSES.CANCELLED:
+                removeColorClassesFromTag();
+                ['tag', 'tag--pink'].forEach(addClassForTag);
+                ['tag__arrow', 'tag__arrow--pink'].forEach(addClassForArrow);
+                return;
+
+            case ORDER_STATUSES.FINISHED:
+                removeColorClassesFromTag();
+                ['tag', 'tag--blue'].forEach(addClassForTag);
+                ['tag__arrow', 'tag__arrow--blue'].forEach(addClassForArrow);
+                return;
+
+            case ORDER_STATUSES.RETURNED:
+                removeColorClassesFromTag();
+                ['tag', 'tag--yellow'].forEach(addClassForTag);
+                ['tag__arrow', 'tag__arrow--yellow'].forEach(addClassForArrow);
+                return;
+
+            case ORDER_STATUSES.NEW:
+                removeColorClassesFromTag();
+                ['tag', 'tag--green'].forEach(addClassForTag);
+                ['tag__arrow', 'tag__arrow--green'].forEach(addClassForArrow);
+                return;
+
+            default:
+                return;
+        }
+    }, [orderStatus, removeColorClassesFromTag]);
+
     useEffect(() => {
         toggleDropdownContentVisibility();
     }, [isOpen, toggleDropdownContentVisibility])
 
+    useEffect(() => {
+        changeOrderStatusView();
+    }, [orderStatus, changeOrderStatusView])
+
+    const changeDropdownMenuItemState = useCallback((element) => {
+        if (!dropdownOptions.current) {
+            return;
+        }
+
+        for (let i = 0; i < dropdownOptions.current.length; i += 1) {
+            dropdownOptions.current[i].classList.remove('tag-dropdown-menu__item--state_selected');
+        }
+
+        element.classList.add('tag-dropdown-menu__item--state_selected');
+    }, []);
 
     const onDropdownOptionClick = useCallback((e) => {
         e.stopPropagation();
-
         const label = e.currentTarget.innerHTML.trim();
-        dropdownBtnLabel.current.innerHTML = label;
 
+        changeDropdownMenuItemState(e.currentTarget)
+        setOrderStatus(label)
         setIsOpen(false);
-    }, []);
+    }, [changeDropdownMenuItemState]);
 
     const onBackdropClick = useCallback((e) => {
         e.stopPropagation();
@@ -71,14 +153,20 @@ const TagDropDownController = () => {
     const initialiseDropdownElements = useCallback((e) => {
         dropdownBtn.current = null;
         dropdownBtnLabel.current = null;
-        // dropdownBtnIcon.current = null;
+
+        dropdownBtnTag.current = null;
         dropdownContent.current = null;
+
         backdrop.current = null;
         dropdownOptions.current = null;
+        dropdownBtnIcon.current = null;
 
         dropdownBtn.current = e.currentTarget?.querySelector('.tag-dropdown-menu__btn');
         dropdownBtnLabel.current = dropdownBtn.current?.querySelector('.tag__content');
-        // dropdownBtnIcon.current = dropdownBtn.current?.querySelector('.tag__arrow');
+
+        dropdownBtnIcon.current = dropdownBtn.current?.querySelector('.tag__arrow');
+        dropdownBtnTag.current = dropdownBtn.current?.querySelector('.tag');
+
         dropdownContent.current = e.currentTarget?.querySelector('.tag-dropdown-menu__content');
         backdrop.current = e.currentTarget?.querySelector('.backdrop');
         dropdownOptions.current = dropdownContent.current?.querySelectorAll('.tag-dropdown-menu__item');

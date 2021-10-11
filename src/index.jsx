@@ -11,15 +11,15 @@ import PhoneCustomInputController from './controllers/PhoneCustomInputController
 import StatusModalController from './controllers/StatusModalController';
 import AddArtworkModalController from './controllers/AddArtworkModalController';
 import LoginController from './controllers/LoginController';
-import TagDropDownController from './controllers/TagDropDownController';
 import OrderDetailsModalController from './controllers/OrderDetailsModalController';
+import EditOrderModalController from './controllers/EditOrderModalController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
 
   switch (props.type) {
-    case 'tag-dropdown':
-      ReactDOM.render(<TagDropDownController />, el);
+    case 'edit-order-modal':
+      ReactDOM.render(<EditOrderModalController />, el);
       break;
     case 'status-modal':
       ReactDOM.render(<StatusModalController />, el);
@@ -59,6 +59,10 @@ function renderComponentInElement(el) {
   }
 }
 
-document
-  .querySelectorAll('.react')
-  .forEach(renderComponentInElement)
+const init = () => {
+  document
+    .querySelectorAll('.react')
+    .forEach(renderComponentInElement)
+}
+
+init();

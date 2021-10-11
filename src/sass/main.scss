@@ -15,6 +15,7 @@
 
 // 3. Components
 @import
+  'components/custom-file-input',
   'components/tag-dropdown-menu',
   'components/logo',
   'components/search-container',
@@ -42,6 +43,8 @@
 
 // 4. Layout-related sections
 @import
+'layout/order-details-modal',
+'layout/edit-order-modal',
 'layout/sold-products',
 'layout/add-artwork-modal',
 'layout/status-modal',

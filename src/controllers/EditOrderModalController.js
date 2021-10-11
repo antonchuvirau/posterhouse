@@ -1,11 +1,11 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-const OrderDetailsModalController = () => {
+const EditOrderModalController = () => {
     const [isModalOpened, setIsModalOpened] = useState(false);
 
     const openBtns = useRef(null);
-    const closeBtns = useRef(null);
+    const closeBtn = useRef(null);
     const backDrop = useRef(null);
     const modal = useRef(null);
 
@@ -24,12 +24,12 @@ const OrderDetailsModalController = () => {
         }
 
         if (isModalOpened) {
-            modal.current.classList.remove('order-details-modal--state-invisible');
+            modal.current.classList.remove('edit-order-modal--state-invisible');
             backDrop.current.classList.remove('backdrop--state_invisible');
             return;
         }
 
-        modal.current.classList.add('order-details-modal--state-invisible');
+        modal.current.classList.add('edit-order-modal--state-invisible');
         backDrop.current.classList.add('backdrop--state_invisible');
     }, [isModalOpened])
 
@@ -38,11 +38,10 @@ const OrderDetailsModalController = () => {
     }, [isModalOpened, toggleModalVisibility])
 
     useEffect(() => {
-        openBtns.current = document.getElementsByClassName('order-details-modal-btn');
-        closeBtns.current = document.getElementsByClassName('order-details-modal-close');
-
-        backDrop.current = document.getElementById('order-details-modal__backdrop');
-        modal.current = document.getElementById('order-details-modal');
+        openBtns.current = document.getElementsByClassName('edit-order-modal__open-btn');
+        closeBtn.current = document.getElementById('edit-order-modal__close-btn');
+        backDrop.current = document.getElementById('edit-order-modal__backdrop');
+        modal.current = document.getElementById('edit-order-modal');
 
         if (openBtns.current) {
             for (let i = 0; i < openBtns.current.length; i += 1) {
@@ -50,10 +49,8 @@ const OrderDetailsModalController = () => {
             }
         }
 
-        if (closeBtns.current) {
-            for (let i = 0; i < closeBtns.current.length; i += 1) {
-                closeBtns.current[i].addEventListener('click', onModalClose);
-            }
+        if (closeBtn.current) {
+            closeBtn.current.addEventListener('click', onModalClose);
         }
 
         if (backDrop.current) {
@@ -61,10 +58,8 @@ const OrderDetailsModalController = () => {
         }
 
         return () => {
-            if (closeBtns.current) {
-                for (let i = 0; i < closeBtns.current.length; i += 1) {
-                    closeBtns.current[i].removeEventListener('click', onModalClose);
-                }
+            if (closeBtn.current) {
+                closeBtn.current.removeEventListener('click', onModalClose);
             }
 
             if (openBtns.current) {
@@ -82,4 +77,4 @@ const OrderDetailsModalController = () => {
     return null;
 };
 
-export default OrderDetailsModalController;
+export default EditOrderModalController;

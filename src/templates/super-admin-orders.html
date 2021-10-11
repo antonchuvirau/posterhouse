@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales</title>
+  <title>Orders</title>
 </head>
 
 <body>
@@ -251,7 +251,11 @@
 
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
               <tr class="super-admin-orders-table__row">
@@ -315,7 +319,11 @@
 
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
               <tr class="super-admin-orders-table__row">
@@ -381,7 +389,11 @@
 
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
               <tr class="super-admin-orders-table__row">
@@ -444,7 +456,11 @@
 
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
               <tr class="super-admin-orders-table__row">
@@ -506,7 +522,11 @@
 
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
               <tr class="super-admin-orders-table__row">
@@ -569,7 +589,11 @@
                   </div>
                 </td>
                 <td class="super-admin-orders-table__row-cell">
-                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">Details</button>
+                  <button class="sold-products-card__details-btn super-admin-orders-table__details-btn">
+
+                    <span class="order-details-modal-btn">Details</span>
+
+                  </button>
                 </td>
               </tr>
             </table>
@@ -761,58 +785,58 @@
 
   <div>
     <div id="order-details-modal" class="order-details-modal order-details-modal--state-invisible">
-      <div id="order-details-modal__close-btn" class="close-btn order-details-modal__close-btn"></div>
+      <div class="close-btn order-details-modal__close-btn order-details-modal-close"></div>
 
 
 
-      <div class="order-details__content">
-        <div class="order-details__header">
-          <div class="order-details__number">
+      <div class="order-details-modal__content">
+        <div class="order-details-modal__header">
+          <div class="order-details-modal__number">
             Order № 1
           </div>
-          <div class="order-details__date-and-time">
-            <span class="order-details__date">09-06-2021</span>
-            <span class="order-details__time">12:30</span>
+          <div class="order-details-modal__date-and-time">
+            <span class="order-details-modal__date">09-06-2021</span>
+            <span class="order-details-modal__time">12:30</span>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">Status</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">Status</div>
+          <div class="order-details-modal__table-row-content">
             <div>To be shipped</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">Name</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">Name</div>
+          <div class="order-details-modal__table-row-content">
             <div>Name Surname</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">E-mail</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">E-mail</div>
+          <div class="order-details-modal__table-row-content">
             <div>12355@gmail.com</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">Phone</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">Phone</div>
+          <div class="order-details-modal__table-row-content">
             <div>+2345678990</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">
             Items
           </div>
-          <div class="order-details__table-row-content">
-            <div class="order-details__product-cards">
+          <div class="order-details-modal__table-row-content">
+            <div class="order-details-modal__product-cards">
 
-              <div class="order-details__product-card">
-                <div class="order-details__product-card-main">
-                  <div class="order-details__product-name">"Buy", Long Island University</div>
-                  <div class="order-details__product-author">André Kertész</div>
+              <div class="order-details-modal__product-card">
+                <div class="order-details-modal__product-card-main">
+                  <div class="order-details-modal__product-name">"Buy", Long Island University</div>
+                  <div class="order-details-modal__product-author">André Kertész</div>
                 </div>
-                <div class="order-details__product-card-info">
-                  <div class="order-details__product-card-info-container">
+                <div class="order-details-modal__product-card-info">
+                  <div class="order-details-modal__product-card-info-container">
 
                     <div class="product-to-sell-card__info-item">
                       <div class="product-to-sell-card__info-item-key">Paper:</div>
@@ -836,20 +860,20 @@
 
                   </div>
                 </div>
-                <div class="order-details__product-card-footer">
-                  <span class="order-details__product-card-price">$ 100.00</span>
+                <div class="order-details-modal__product-card-footer">
+                  <span class="order-details-modal__product-card-price">$ 100.00</span>
                   <div class="close--little"></div>
-                  <span class="order-details__product-card-count">1</span>
+                  <span class="order-details-modal__product-card-count">1</span>
                 </div>
               </div>
 
-              <div class="order-details__product-card">
-                <div class="order-details__product-card-main">
-                  <div class="order-details__product-name">"Buy", Long Island University</div>
-                  <div class="order-details__product-author">André Kertész</div>
+              <div class="order-details-modal__product-card">
+                <div class="order-details-modal__product-card-main">
+                  <div class="order-details-modal__product-name">"Buy", Long Island University</div>
+                  <div class="order-details-modal__product-author">André Kertész</div>
                 </div>
-                <div class="order-details__product-card-info">
-                  <div class="order-details__product-card-info-container">
+                <div class="order-details-modal__product-card-info">
+                  <div class="order-details-modal__product-card-info-container">
 
                     <div class="product-to-sell-card__info-item">
                       <div class="product-to-sell-card__info-item-key">Paper:</div>
@@ -873,10 +897,10 @@
 
                   </div>
                 </div>
-                <div class="order-details__product-card-footer">
-                  <span class="order-details__product-card-price">$ 100.00</span>
+                <div class="order-details-modal__product-card-footer">
+                  <span class="order-details-modal__product-card-price">$ 100.00</span>
                   <div class="close--little"></div>
-                  <span class="order-details__product-card-count">1</span>
+                  <span class="order-details-modal__product-card-count">1</span>
                 </div>
               </div>
 
@@ -884,36 +908,36 @@
 
 
             </div>
-            <div class="order-details__price">$ 300.00</div>
+            <div class="order-details-modal__price">$ 300.00</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">
             Shipping
           </div>
-          <div class="order-details__table-row-content">
-            <div class="order-details__shipping-details">
+          <div class="order-details-modal__table-row-content">
+            <div class="order-details-modal__shipping-details">
               <p>Name Surname</p>
               <p>442 Bloor St W</p>
               <p>Toronto, ON M5S 1X8</p>
               <p>+2345678900</p>
             </div>
-            <div class="order-details__price">$ 10.00</div>
+            <div class="order-details-modal__price">$ 10.00</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">Payment</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">Payment</div>
+          <div class="order-details-modal__table-row-content">
             <div>Paid</div>
           </div>
         </div>
-        <div class="oder-details__table-row">
-          <div class="order-details__table-row-title">Notes</div>
-          <div class="order-details__table-row-content">
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title">Notes</div>
+          <div class="order-details-modal__table-row-content">
             <div>Delivery time 12:00 - 14:00</div>
           </div>
         </div>
-        <div class="order-details__subtotal">
+        <div class="order-details-modal__subtotal">
           <span>Subtotal</span>
           <span>$ 310.00</span>
         </div>
@@ -921,7 +945,7 @@
 
       <div class="order-details-modal__edit-order-btn-container">
 
-        <button class="button_dark">
+        <button class="button_dark edit-order-modal__open-btn order-details-modal-close">
           Edit order
         </button>
 
@@ -929,7 +953,7 @@
 
 
     </div>
-    <div id="order-details-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible" />
+    <div id="order-details-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible order-details-modal-close" />
 </div>
 
 
@@ -941,8 +965,683 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+    <div id="edit-order-modal" class="edit-order-modal edit-order-modal--state-invisible">
+
+
+      <div id="edit-order-modal__close-btn" class="close-btn edit-order-modal__close-btn"></div>
+
+
+      <div class="order-details-modal__header">
+        <div class="order-details-modal__number">
+          Order № 1
+        </div>
+        <div class="order-details-modal__date-and-time">
+          <span class="order-details-modal__date">09-06-2021</span>
+          <span class="order-details-modal__time">12:30</span>
+        </div>
+      </div>
+
+      <div class="edit-order-modal__title">
+        Status
+      </div>
+
+      <div class="edit-order-modal__content">
+        <div class="edit-order-modal__input-field-list">
+
+          <div class="dropdown-input-field">
+            <!-- <div class="dropdown-input-field__title">Artist*</div> -->
+
+            <div class="dropdown-input-field__container">
+              <button class="dropdown-input-field__btn dropdown-input-field__btn--state_inactive">
+                <div class="dropdown-input-field__btn-label">Finished</div>
+                <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+              </button>
+
+              <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible">
+                <div class="dropdown-input-field__options">
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      Finished
+                    </div>
+                  </div>
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      New
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                        Returned
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Cancelled
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="backdrop backdrop--transparent backdrop--state_invisible"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="edit-order-modal__title">
+        Contact information
+      </div>
+
+      <div class="edit-order-modal__content">
+        <div class="edit-order-modal__input-field-list">
+
+          <div class="input-field">
+            <div class="input-field__label">First name*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="" />
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="input-field__label">Last name*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="" />
+            </div>
+          </div>
+          <div class="input-field">
+            <div class="input-field__label">E-mail address*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="dropdown-input-field" data-type="dropdown-input-field">
+            <div class="dropdown-input-field__title">Phone number*</div>
+            <div class="dropdown-input-field__container">
+              <button class="
+                    dropdown-input-field__btn
+                    dropdown-input-field__btn--state_inactive
+                    phone-custom-input__dropdown-button
+                  ">
+                <div class="
+                      dropdown-input-field__btn-label
+                      phone-custom-input__btn-selected
+                    ">
+                  <img src="./assets/icons/Canada.png" alt="option" />
+                </div>
+                <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+              </button>
+              <input type="text" class="
+                    dropdown-input-field__content__input
+                    input-field__input
+                  " placeholder="(+1)" />
+              <div class="
+                    dropdown-input-field__content
+                    dropdown-input-field__content--state_invisible
+                  ">
+                <div id="dialing-code-options" class="dropdown-input-field__options">
+                  <div class="dropdown-input-field__option">
+                    <div class="dropdown-input-field__label-to-replace">
+                      <img src="./assets/icons/Canada.png" alt="flag" />
+                    </div>
+                    <div class="dropdown-input-field__option-label">
+                      Canada
+                    </div>
+                    <div class="dialing-code">(+1)</div>
+                  </div>
+                  <div class="dropdown-input-field__option">
+                    <div class="dropdown-input-field__label-to-replace">
+                      <img src="" alt="flag" />
+                    </div>
+                    <div class="dropdown-input-field__option-label">
+                      Belarus
+                    </div>
+                    <div class="dialing-code">(+2)</div>
+                  </div>
+                  <div class="dropdown-input-field__option">
+                    <div class="dropdown-input-field__label-to-replace">
+                      <img src="" alt="flag" />
+                    </div>
+                    <div class="dropdown-input-field__option-label">
+                      Canada
+                    </div>
+                    <div class="dialing-code">(+3)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="backdrop backdrop--state_invisible"></div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <div class="edit-order-modal__title">
+        Shipping address
+      </div>
+
+      <div class="edit-order-modal__content">
+        <div class="edit-order-modal__input-field-list">
+
+          <div class="dropdown-input-field">
+            <div class="dropdown-input-field__title">
+              Country / Region*
+            </div>
+
+            <div class="dropdown-input-field__container">
+              <button class="
+                    dropdown-input-field__btn
+                    dropdown-input-field__btn--state_inactive
+                  ">
+                <div class="dropdown-input-field__btn-label">
+                  United States
+                </div>
+                <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+              </button>
+              <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible">
+                <input type="text" class="dropdown-input-field__search-field" placeholder="Search">
+                <div class="dropdown-input-field__options">
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      Belarus
+                    </div>
+                  </div>
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="backdrop backdrop--state_invisible"></div>
+            </div>
+          </div>
+
+
+          <div class="dropdown-input-field">
+            <div class="dropdown-input-field__title">State*</div>
+
+            <div class="dropdown-input-field__container">
+              <button class="
+                    dropdown-input-field__btn
+                    dropdown-input-field__btn--state_inactive
+                  ">
+                <div class="dropdown-input-field__btn-label">
+                  United States
+                </div>
+                <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+              </button>
+              <div class="
+                    dropdown-input-field__content
+                    dropdown-input-field__content--state_invisible
+                  ">
+                <input type="text" class="dropdown-input-field__search-field" placeholder="Search" />
+                <div class="dropdown-input-field__options">
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Belarus
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                  <div class="
+                        dropdown-input-field__option
+                        dropdown-input-field__option--state_selected
+                      ">
+                    <div class="
+                          dropdown-input-field__option-label
+                          dropdown-input-field__label-to-replace
+                        ">
+                      Poland
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="backdrop backdrop--state_invisible"></div>
+            </div>
+          </div>
+
+
+
+
+          <div class="input-field">
+            <div class="input-field__label">Town / City*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="" />
+            </div>
+          </div>
+
+          <div class="input-field">
+            <div class="input-field__label">Postal / ZIP code*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="" />
+            </div>
+          </div>
+
+
+          <div class="input-field">
+            <div class="input-field__label">Street address*</div>
+            <div class="input-field__inputs-set">
+              <input type="text" class="input-field__input" placeholder="House number and street name" />
+              <input type="text" class="input-field__input"
+                placeholder="Appartment, suite, unit, etc. (optional)" />
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div class="edit-order-modal__title">
+        Shopping cart
+      </div>
+
+
+      <div class="edit-order-modal__content">
+        <section class="edit-order-modal__cards-list">
+          <div class="edit-order-modal-product-card">
+            <div class="edit-order-modal-product-card__container">
+              <div class="edit-order-modal-product-card__number">
+                1
+              </div>
+              <div class="edit-order-modal-product-card__image">
+                <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+              </div>
+              <div class="edit-order-modal-product-card__content">
+                <div class="edit-order-modal-product-card__name-container">
+                  <div class="edit-order-modal-product-card__name">
+                    "Buy", Long Island University
+                  </div>
+                  <button class="close-btn"></button>
+                </div>
+                <div class="edit-order-modal-product-card__info">
+                  <div class="edit-order-modal-product-card__info-keys">
+                    <span class="edit-order-modal-product-card__info-keys-item">Paper:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Matte:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Size:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Frame:</span>
+                  </div>
+                  <div class="edit-order-modal-product-card__info-values">
+                    <span class="edit-order-modal-product-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm
+                      LexJet Sunset Photo eSatin — 300 gsm</span>
+                    <span class="edit-order-modal-product-card__info-values-item">1” </span>
+                    <span class="edit-order-modal-product-card__info-values-item">8 x 10</span>
+                    <span class="edit-order-modal-product-card__info-values-item">Classic Black</span>
+                  </div>
+                </div>
+                <div class="edit-order-modal-product-card__price-container">
+                  <div class="edit-order-modal-product-card__counter-btn">
+                    <div class="edit-order-modal-product-card__counter-btn-action">-</div>
+                    <div class="edit-order-modal-product-card__count"><span>1</span></div>
+                    <div class="edit-order-modal-product-card__counter-btn-action">+</div>
+                  </div>
+                  <div class="edit-order-modal-product-card__price">$ 100.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="edit-order-modal-product-card">
+            <div class="edit-order-modal-product-card__container">
+              <div class="edit-order-modal-product-card__number">
+                1
+              </div>
+
+              <div class="edit-order-modal-product-card__image">
+                <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+              </div>
+
+              <div class="edit-order-modal-product-card__content">
+                <div class="edit-order-modal-product-card__name-container">
+                  <div class="edit-order-modal-product-card__name">
+                    "Buy", Long Island University
+                  </div>
+                  <button class="close-btn"></button>
+                </div>
+                <div class="edit-order-modal-product-card__info">
+                  <div class="edit-order-modal-product-card__info-keys">
+                    <span class="edit-order-modal-product-card__info-keys-item">Paper:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Matte:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Size:</span>
+                    <span class="edit-order-modal-product-card__info-keys-item">Frame:</span>
+                  </div>
+                  <div class="edit-order-modal-product-card__info-values">
+                    <span class="edit-order-modal-product-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm
+                      LexJet Sunset Photo eSatin — 300 gsm</span>
+                    <span class="edit-order-modal-product-card__info-values-item">1” </span>
+                    <span class="edit-order-modal-product-card__info-values-item">8 x 10</span>
+                    <span class="edit-order-modal-product-card__info-values-item">Classic Black</span>
+                  </div>
+                </div>
+                <div class="edit-order-modal-product-card__price-container">
+                  <div class="edit-order-modal-product-card__counter-btn">
+                    <div class="edit-order-modal-product-card__counter-btn-action">-</div>
+                    <div class="edit-order-modal-product-card__count"><span>1</span></div>
+                    <div class="edit-order-modal-product-card__counter-btn-action">+</div>
+                  </div>
+                  <div class="edit-order-modal-product-card__price">$ 100.00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+      </div>
+
+      <div class="edit-order-modal__content">
+        <div class="edit-order-modal__input-field-list">
+
+          <div class="dropdown-input-field">
+            <div class="dropdown-input-field__title">Payment</div>
+
+            <div class="dropdown-input-field__container">
+              <button class="dropdown-input-field__btn dropdown-input-field__btn--state_inactive">
+                <div class="dropdown-input-field__btn-label">Paid</div>
+                <div class="dropdown-input-field__btn-icon arrow-bottom"></div>
+              </button>
+
+              <div class="dropdown-input-field__content dropdown-input-field__content--state_invisible">
+                <div class="dropdown-input-field__options">
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      Paid
+                    </div>
+                  </div>
+                  <div class="dropdown-input-field__option dropdown-input-field__option--state_selected">
+                    <div class="dropdown-input-field__option-label dropdown-input-field__label-to-replace">
+                      Unpaid
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="backdrop backdrop--transparent backdrop--state_invisible"></div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="edit-order-modal__content">
+        <div class="input-field">
+          <div class="input-field__label">Order notes</div>
+          <div class="input-field__inputs-set">
+            <textarea class="input-field__input textarea"
+              placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="edit-order-modal__content">
+        <div class="edit-order-modal__price-info">
+          <div class="edit-order-modal__estimate">
+            <div class="edit-order-modal__estimate-item">
+              <div>Subtotal</div>
+              <div>$ 300.00</div>
+            </div>
+            <div class="edit-order-modal__estimate-item">
+              <div>Shipping</div>
+              <div>$ 10.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="edit-order-modal__price-info">
+          <div class="edit-order-modal__total">
+            <div>Total</div>
+            <div>$ 310.00</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="edit-order-modal__action-btns">
+        <button class="button_bright--width_small edit-order-modal__action-button">
+          <span>Save order</span>
+        </button>
+        <button class="button_dark edit-order-modal__action-button">
+          <span>Delete order</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div id="edit-order-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible edit-order-modal__backdrop"></div>
+    <div class="react" data-type="edit-order-modal" ></div>
+  </div>
+
+
+
+
+      <!-- ToDo add "Saved!" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__success"></div>
+              <div class="status-modal__title">Saved!</div>
+              <div class="status-modal__description">
+                <p>
+                  Order № 1
+                </p>
+                <p>
+                  was successfully saved
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="backdrop backdrop--grey"></div>
+          <div class="react" data-type="status-modal"></div>
+        </div> -->
+
+
+      <!-- ToDo add "Deleted!" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__delete"></div>
+              <div class="status-modal__title">Deleted!</div>
+              <div class="status-modal__description">
+                <p>
+                  Order № 1
+                </p>
+                <p>
+                  was successfully deleted
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="backdrop backdrop--grey"></div>
+          <div class="react" data-type="status-modal"></div>
+        </div> -->
+
+      <!-- ToDo add "Deleted  -  any!" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__delete"></div>
+              <div class="status-modal__title">Deleted!</div>
+              <div class="status-modal__description">
+
+                <p>
+                  The order
+                </p>
+                <p>
+                  was successfully deleted
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="backdrop backdrop--grey"></div>
+          <div class="react" data-type="status-modal"></div>
+        </div> -->
+
+
+        <!-- ToDo add "Are you sure you want to delete this order?" modal -->
+        <!-- <div>
+          <div class="status-modal status-modal--state-visible super-admin-pages-artwork__deleted-modal">
+            <div id="paper-types-modal__close-btn" class="close-btn status-modal__close-btn"></div>
+            <div class="status-modal__content">
+              <div class="notification-icon notification-icon__attention"></div>
+              <div class="status-modal__title">Are you sure you want to delete this order?</div>
+            </div>
+
+            <div class="status-modal__actions">
+
+              <button class="status-modal__cancel-btn status-modal__action-btn button--bright__wide">Cancel</button>
+              <button class="status-modal__action-btn button_dark">Delete</button>
+
+            </div>
+          </div>
+
+          <div class="backdrop backdrop--grey"></div>
+        </div> -->
+
+
+
+
+
   <div class="react" data-type="order-details-modal"></div>
-  <div class="react" data-type="tag-dropdown" ></div>
+  <div class="react" data-type="edit-order-modal" ></div>
   <div class="react" data-type="dropdown-input-field" ></div>
   <div class="react" data-type="phone-custom-input" ></div>
   <div class="react" data-type="wish-list-side-panel" ></div>

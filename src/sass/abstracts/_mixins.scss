@@ -69,6 +69,7 @@
 
 @mixin bright-button {
   @include button;
+  color: $color-neutral-20;
   background-color: transparent;
   border: 1px solid $color-neutral-20;
 }
