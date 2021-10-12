@@ -1,0 +1,44 @@
+.contact {
+}
+
+.contact__header {
+  background-image: url('../../assets/images/Contact.png');
+  background-size: cover;
+}
+
+.contact-page {}
+
+.contact-page__container {
+  padding-top: 68px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 108px;
+}
+
+.contact-page__content {
+  width: 690px;
+}
+
+.contact-page__title {
+  @include h3-title;
+}
+
+.contact-page__description {
+  color: $color-neutral-40;
+  padding-top: 10px;
+  padding-bottom: 6px;
+}
+
+.contact-page__input-list {
+  padding-top: 34px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.contact-page__textarea {
+  min-height: 240px;
+}
