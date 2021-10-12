@@ -59,10 +59,6 @@ function renderComponentInElement(el) {
   }
 }
 
-const init = () => {
-  document
+document
     .querySelectorAll('.react')
     .forEach(renderComponentInElement)
-}
-
-init();
