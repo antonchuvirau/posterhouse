@@ -15,6 +15,9 @@
 
 .super-admin__title {
     @include h3-title;
+}
+
+.super-admin__title-container {
     padding-bottom: 25px;
 }
 

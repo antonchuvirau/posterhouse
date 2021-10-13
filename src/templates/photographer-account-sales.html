@@ -5,35 +5,99 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales</title>
+  <title> Account / Sales</title>
 </head>
 
 <body>
-  <section class="super-admin">
+
+  <section class="header-container">
     <div class="wrapper">
-      <header class="super-admin__header">
+
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./artworks.html">Artwork</a>
+            </li>
+            <li class="nav__item">
+              <a href="./artists.html">Artists</a>
+            </li>
+          </ul>
+        </nav>
 
         <a href="./index.html">
           <div class="logo logo--big_transparent_beige-frame"></div>
         </a>
 
+        <div class="actions">
+          <ul class="actions__list">
+
+            <li id="open-wish-list-side-panel" class="actions__item like">
+              <img src="./assets/icons/heart_black.svg" alt="like" />
+            </li>
+
+            <li class="actions__item login">
+              <a href="./login.html" class="login__link">Log in</a>
+            </li>
+
+            <li class="actions__item currency">
+              <select class="currency__select" name="currency-select" id="currency-select">
+                <option class="currency__option" value="USD">USD</option>
+                <option class="currency__option" value="INR">INR</option>
+                <option class="currency__option" value="GBP">GBP</option>
+                <option class="currency__option" value="CAD">CAD</option>
+                <option class="currency__option" value="AUD">AUD</option>
+                <option class="currency__option" value="EUR">EUR</option>
+                <option class="currency__option" value="JPY">JPY</option>
+              </select>
+            </li>
+
+
+
+            <li class="actions__item cart">
+              <div class="cart__container">
+                <a href="./cart.html" class="cart__link">Cart</a>
+                <div class="cart__counter">0</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </header>
+
     </div>
     <br />
   </section>
   <hr class="line" />
+
+  <section class="address-bar">
+    <div class="wrapper">
+      <div class="address-bar__container">
+
+            <a href="./index.html" class="address-bar__item">Home</a>
+            &nbsp;/&nbsp;
+            <a href="./photographer-account-sales.html" class="address-bar__item">Account</a>
+            &nbsp;/&nbsp;
+            <a href="./photographer-account-sales.html" class="address-bar__item">Sales</a>
+
+      </div>
+    </div>
+  </section>
+
   <section class="main">
     <div class="wrapper">
 
-      <div class="super-admin-pages-artwork">
+      <div class="photographer-dashboard">
+
         <div class="super-admin__layout">
           <div class="admin-pages-list">
+            <h3 class="super-admin__title">Hello, Name</h3>
             <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Dashboard</div>
-            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Pages</div>
-            <div class="admin-pages-list__item admin-pages-list__item--state_active">Sales</div>
-            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Orders</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_active ">Sales</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Account details</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Security</div>
             <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Log out</div>
           </div>
+
           <div class="super-admin__content">
             <div class="super-admin__title-container">
               <h3 class="super-admin__title">Sales</h3>
@@ -192,8 +256,34 @@
 
             <button class="show-more-btn">Show more</button>
           </div>
+
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </div>
   </section>
@@ -369,7 +459,6 @@
   <div class="react" data-type="dropdown-input-field" />
   <div class="react" data-type="phone-custom-input" />
   <div class="react" data-type="wish-list-side-panel" />
-  <div class="react" data-type="manage-panel"></div>
 </body>
 
 </html>
