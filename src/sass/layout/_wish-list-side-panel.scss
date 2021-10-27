@@ -19,7 +19,6 @@
     animation-fill-mode: backwards;
     animation-delay: 5ms;
     overflow: auto;
-    height: 100vh;
 }
 
 .wish-list-side-panel--state_invisible {
@@ -31,7 +30,7 @@
     padding: 35px 23px;
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid $color-neutral-40;
+    border-bottom: 1px solid $color-neutral-30;
 }
 
 .wish-list-side-panel__close-btn {
@@ -40,7 +39,7 @@
 }
 
 .wish-list-side-panel__content {
-    padding: 25px 26px 48px 26px;
+    padding: 25px 26px 38px 26px;
     width: 100%;
 }
 
@@ -49,6 +48,8 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $color-neutral-30;
 }
 
 .wish-list-side-panel-card {
@@ -65,14 +66,13 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 12px;
+    gap: 15px;
 }
 
 .wish-list-side-panel-card__image {
     margin-top: 20px;
     width: 100px;
     height: 120px;
-    margin-right: 12px;
 }
 
 .wish-list-side-panel-card__content {
@@ -92,6 +92,7 @@
 
 .wish-list-side-panel-card__name {
     padding-top: 20px;
+    max-width: 240px;
 }
 
 .wish-list-side-panel-card__info {
@@ -147,6 +148,7 @@
     height: 40px;
     background-color: $color-neutral-20;
     border: 1px solid $color-neutral-80;
+    margin-bottom: 6px;
 }
 
 .wish-list-side-panel-card__count {
@@ -173,8 +175,8 @@
 }
 
 .wish-list-side-panel__subtotal {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -188,8 +190,7 @@
 
 .wish-list-side-panel__action-btns {
     width: 100%;
-    padding-top: 60px;
-    padding-bottom: 13px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -211,11 +212,11 @@
 }
 
 .wish-list-side-panel__no-products-container {
-    height: calc(100% - 90px);
+    height: 1112px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px 26px 48px 26px;
+    padding: 25px 26px 53px 26px;
 }
 
 .wish-list-side-panel__no-products-label {

@@ -34,6 +34,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    line-height: 25px;
 }
 
 .product-card__image {
@@ -41,20 +42,14 @@
 
 .product-cart__name {
     margin-top: 15px;
-    font-size: 22px;
-    line-height: 30px;
     color: $color-neutral-30;
 }
 
 .product-cart__author {
-    font-size: 22px;
-    line-height: 30px;
     color: $color-neutral-60;
 }
 
 .product-cart__price {
-    font-size: 22px;
-    line-height: 30px;
     color: $color-neutral-20;
     margin-top: 20px;
 }
