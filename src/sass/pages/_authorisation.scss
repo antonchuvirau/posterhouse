@@ -39,6 +39,17 @@
   width: 100%;
   font-size: 18px;
   line-height: 20px;
+  position: relative;
+}
+
+.authorisation-field__show-hidden-btn {
+  position: absolute;
+  margin-left: auto;
+  margin-right: 0;
+  bottom: 55px;
+  right: 17px;
+  visibility: hidden;
+  cursor: pointer;
 }
 
 .authorisation-field__label {
@@ -57,6 +68,14 @@
 .authorisation-field__input:active, .authorisation-field__input:focus {
   background: $color-neutral-100;
   border: 1px solid $color-neutral-20;
+}
+
+.authorisation-field__input:active, .authorisation-field__input:focus ~ .authorisation-field__show-hidden-btn {
+  visibility: visible !important;
+}
+
+.authorisation-field__input:active .show-hidden-value-btn {
+  display: block !important;
 }
 
 .authorisation-field__actions {

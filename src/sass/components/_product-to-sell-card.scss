@@ -45,22 +45,34 @@
   color: $color-neutral-60;
   font-size: 16px;
   gap: 5px;
+}
+
+.cart-information-product-list__card-info-wrapper {
   padding-bottom: 22px;
   padding-top: 15px;
+}
+
+.shipping-payment__card-info-wrapper {
+  padding-top: 10px;
 }
 
 .product-to-sell-card__info-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px;
+  max-width: 100%;
 }
 
 .product-to-sell-card__info-item-key {
-  width: 100px;
+  width: 70px;
 }
 
-.product-to-sell-card__info-item-value {}
+.product-to-sell-card__info-item-value {
+  max-width: calc(100% - 70px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .product-to-sell-card__price-container {
   width: 100%;

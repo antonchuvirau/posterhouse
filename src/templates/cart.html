@@ -85,7 +85,15 @@
 
         <div class="cart-information-product-list__container">
           <h3 class="cart-information-product-list__title">Shopping cart (3 items)</h3>
-          <!-- {!products?.length && <NoProductInList title="No products in the cart" />} -->
+
+          <div class="order-steps">
+            <div class="order-steps__item order-steps__item--state_active">Step 1: Items</div>
+            <div class="order-steps__arrow-container"></div>
+            <div class="order-steps__item order-steps__item--state_inactive">Step 2: Information</div>
+            <div class="order-steps__arrow-container"></div>
+            <div class="order-steps__item order-steps__item--state_inactive">Step 3: Order details</div>
+          </div>
+
           <div class="cart-information-product-list__content">
             <div class="cart-information-product-list__cardslist">
 
@@ -107,29 +115,32 @@
                     André Kertész
                   </div>
 
-                  <div class="product-to-sell-card__info-container">
+                  <div class="cart-information-product-list__card-info-wrapper">
+                    <div class="product-to-sell-card__info-container">
 
-                    <div class="product-to-sell-card__info-item">
-                      <div class="product-to-sell-card__info-item-key">Paper:</div>
-                      <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Paper:</div>
+                        <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Matte:</div>
+                        <div class="product-to-sell-card__info-item-value">1”</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Size:</div>
+                        <div class="product-to-sell-card__info-item-value">8 x 10</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Frame:</div>
+                        <div class="product-to-sell-card__info-item-value">Classic Black</div>
+                      </div>
+
                     </div>
-
-                    <div class="product-to-sell-card__info-item">
-                      <div class="product-to-sell-card__info-item-key">Matte:</div>
-                      <div class="product-to-sell-card__info-item-value">1”</div>
-                    </div>
-
-                    <div class="product-to-sell-card__info-item">
-                      <div class="product-to-sell-card__info-item-key">Size:</div>
-                      <div class="product-to-sell-card__info-item-value">8 x 10</div>
-                    </div>
-
-                    <div class="product-to-sell-card__info-item">
-                      <div class="product-to-sell-card__info-item-key">Frame:</div>
-                      <div class="product-to-sell-card__info-item-value">Classic Black</div>
-                    </div>
-
                   </div>
+
 
                   <div class="product-to-sell-card__price-container">
 
@@ -333,12 +344,7 @@
           </ul>
         </div>
         <div class="copyright">
-          <div class="copyright__logo">
-            <a href="./index.html">
-              <div class="logo--small_transparent_beige-frame"></div>
-            </a>
-          </div>
-          <div class="copyright__description">© All rights reserved.</div>
+          <div class="copyright__description">Copyright © 2021 Posterhaus. All rights reserved.</div>
         </div>
       </div>
     </div>

@@ -81,7 +81,24 @@
 
         <div class="shipping-payment__container">
           <div class="shipping-payment__left-column">
-            <h3 class="shipping-payment__title">Contact information</h3>
+            <div class="shipping-payment__title-line">
+              <h3 class="shipping-payment__title">Contact information</h3>
+              <div class="shipping-payment__login">
+                <span class="shipping-payment__login-label">Already have an account?</span>
+                <a href="" class="shipping-payment__login-link">Log in</a>
+              </div>
+            </div>
+
+            <div class="shipping-payment__order-steps-container">
+              <div class="order-steps">
+                <div class="order-steps__item order-steps__item--state_inactive">Step 1: Items</div>
+                <div class="order-steps__arrow-container"></div>
+                <div class="order-steps__item order-steps__item--state_active">Step 2: Information</div>
+                <div class="order-steps__arrow-container"></div>
+                <div class="order-steps__item order-steps__item--state_inactive">Step 3: Order details</div>
+              </div>
+            </div>
+
             <div class="shipping-payment__input-list">
               <div class="input-field">
                 <div class="input-field__label">First name*</div>
@@ -364,14 +381,52 @@
                   <img class="order-card__image" src="./assets/images/order-card-mock.jpg" alt="order-card" />
                 </div>
 
-                <div class="order-card__description">
-                  <div class="order-card__product-name">
-                    "Buy", Long Island University
-                  </div>
-                  <div class="order-card__author">André Kertész</div>
-                </div>
+                <div class="order-card__content">
+                  <div class="order-card__main-info">
+                    <div class="order-card__description">
+                      <div class="order-card__product-name">
+                        "Buy", Long Island University
+                      </div>
+                      <div class="order-card__author">André Kertész</div>
+                    </div>
 
-                <div class="order-card__price">$ 100.00</div>
+                    <div class="order-card__price">$ 100.00</div>
+                  </div>
+
+
+                  <div class="shipping-payment__card-info-wrapper">
+
+                    <div class="product-to-sell-card__info-container">
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Paper:</div>
+                        <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Matte:</div>
+                        <div class="product-to-sell-card__info-item-value">1”</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Size:</div>
+                        <div class="product-to-sell-card__info-item-value">8 x 10</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Frame:</div>
+                        <div class="product-to-sell-card__info-item-value">Classic Black</div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
+                </div>
               </div>
               <div class="order-card">
                 <div class="order-card__image-container">
@@ -379,14 +434,54 @@
                   <img class="order-card__image" src="./assets/images/order-card-mock.jpg" alt="order-card" />
                 </div>
 
-                <div class="order-card__description">
-                  <div class="order-card__product-name">
-                    "Buy", Long Island University
+                <div class="order-card__content">
+                  <div class="order-card__main-info">
+                    <div class="order-card__description">
+                      <div class="order-card__product-name">
+                        "Buy", Long Island University
+                      </div>
+                      <div class="order-card__author">André Kertész</div>
+                    </div>
+
+                    <div class="order-card__price">$ 100.00</div>
                   </div>
-                  <div class="order-card__author">André Kertész</div>
+
+
+                  <div class="shipping-payment__card-info-wrapper">
+
+                    <div class="product-to-sell-card__info-container">
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Paper:</div>
+                        <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Matte:</div>
+                        <div class="product-to-sell-card__info-item-value">1”</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Size:</div>
+                        <div class="product-to-sell-card__info-item-value">8 x 10</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Frame:</div>
+                        <div class="product-to-sell-card__info-item-value">Classic Black</div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
                 </div>
 
-                <div class="order-card__price">$ 100.00</div>
+
               </div>
               <div class="order-card">
                 <div class="order-card__image-container">
@@ -394,14 +489,55 @@
                   <img class="order-card__image" src="./assets/images/order-card-mock.jpg" alt="order-card" />
                 </div>
 
-                <div class="order-card__description">
-                  <div class="order-card__product-name">
-                    "Buy", Long Island University
+
+                <div class="order-card__content">
+                  <div class="order-card__main-info">
+                    <div class="order-card__description">
+                      <div class="order-card__product-name">
+                        "Buy", Long Island University
+                      </div>
+                      <div class="order-card__author">André Kertész</div>
+                    </div>
+
+                    <div class="order-card__price">$ 100.00</div>
                   </div>
-                  <div class="order-card__author">André Kertész</div>
+
+
+                  <div class="shipping-payment__card-info-wrapper">
+
+                    <div class="product-to-sell-card__info-container">
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Paper:</div>
+                        <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Matte:</div>
+                        <div class="product-to-sell-card__info-item-value">1”</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Size:</div>
+                        <div class="product-to-sell-card__info-item-value">8 x 10</div>
+                      </div>
+
+                      <div class="product-to-sell-card__info-item">
+                        <div class="product-to-sell-card__info-item-key">Frame:</div>
+                        <div class="product-to-sell-card__info-item-value">Classic Black</div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+
+
+
                 </div>
 
-                <div class="order-card__price">$ 100.00</div>
+
               </div>
             </div>
 
@@ -479,12 +615,7 @@
           </ul>
         </div>
         <div class="copyright">
-          <div class="copyright__logo">
-            <a href="./index.html">
-              <div class="logo--small_transparent_beige-frame"></div>
-            </a>
-          </div>
-          <div class="copyright__description">© All rights reserved.</div>
+          <div class="copyright__description">Copyright © 2021 Posterhaus. All rights reserved.</div>
         </div>
       </div>
     </div>

@@ -10,15 +10,40 @@
 }
 
 .shipping-payment__left-column {
-  width: 50%;
+  width: 590px;
 }
 
 .shipping-payment__right-column {
-  width: 40%;
+  width: 490px;
+}
+
+.shipping-payment__title-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .shipping-payment__title {
   @include h3-title;
+  display: inline-block;
+}
+
+.shipping-payment__login {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.shipping-payment__login-label {
+  color: $color-neutral-50;
+}
+.shipping-payment__login-link {
+  text-decoration: underline;
+}
+
+.shipping-payment__order-steps-container {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .shipping-payment__input-list {
@@ -44,6 +69,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 16px;
 }
 
 .order-card__price {
@@ -142,4 +168,15 @@
 .shipping-payment__action-btn-container {
   width: 100%;
   padding-top: 80px;
+}
+
+.order-card__content {
+  max-width: 406px;
+}
+
+.order-card__main-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
