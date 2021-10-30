@@ -32,10 +32,21 @@
 
 .actions__list {
   display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -moz-box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
+  row-gap: 30px;
 }
 
 .actions__item {

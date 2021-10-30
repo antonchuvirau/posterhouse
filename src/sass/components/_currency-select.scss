@@ -10,4 +10,11 @@
     background-color: transparent;
     outline: none;
     color: $color-neutral-20;
+
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    background-image: url('../../assets/icons/arrow-bottom-small-svg.svg');
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
 }
