@@ -1,0 +1,35 @@
+.privacy-policy {
+    padding-bottom: 69px;
+}
+
+.privacy-policy__title-container {
+    padding-top: 35px;
+    padding-bottom: 12px;
+}
+
+.privacy-policy__title {
+    @include h1;
+}
+
+.privacy-policy__text {
+    line-height: 25px;
+}
+
+.privacy-policy__section {
+    padding-bottom: 30px;
+}
+
+.privacy-policy__paragraph {
+    margin-bottom: 15px;
+}
+
+.privacy-policy__subtitle {
+    @include h2;
+    margin-bottom: 15px;
+}
+
+.privacy-policy__list-item {
+    list-style-type: initial;
+    margin-left: 25px;
+}
+
