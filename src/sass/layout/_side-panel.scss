@@ -10,15 +10,15 @@
     padding: 30px;
     overflow: auto;
     display: flex;
-    animation-name: 'samplePreviewIn';
-    animation-duration: .40s;
-    animation-timing-function: ease;
-    animation-fill-mode: backwards;
-    animation-delay: 5ms;
+    clip: rect(auto, auto, auto, 0);
+    transition-property: clip;
+    transition-duration: 0.25s;
 }
 
 .side-panel--state_invisible {
-    display: none;
+    clip: rect(auto, auto, auto, 290px) !important;
+    transition-property: clip;
+    transition-duration: 0.25s;
 }
 
 .side-panel__close-btn {

@@ -146,6 +146,7 @@
                   class="manage-panel__search-field manage-panel__search-field--state_invisible"
                   placeholder="Search"
                 >
+                <div id="manage-panel__search-field-close-btn" class="close-btn manage-panel__search-field-close-btn manage-panel__search-field-close-btn--state_invisible"></div>
             </div>
           </div>
 
@@ -177,20 +178,58 @@
                 <hr class="filter__delimiter" />
 
                 <div class="filter">
+                  <div class="filter__title">New filter form</div>
+
+                  <div class="filter__range">
+                    <div class="filer__range-item">
+
+                      <input
+                        type="text"
+                        class="filter__range-field"
+                        placeholder="0"
+                      >
+
+                      <div class="filter__range-currency">
+                        $
+                      </div>
+
+
+                    </div>
+                    <div class="filter__range-delimeter"></div>
+                    <div class="filer__range-item">
+
+                      <input
+                        type="text"
+                        class="filter__range-field"
+                        placeholder="0"
+                      >
+
+                      <div class="filter__range-currency">
+                        $
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <hr class="filter__delimiter" />
+
+                <div class="filter">
                   <div class="filter__title">Filter Title</div>
 
                   <input
                     type="text"
                     class="filter__search-field"
                     placeholder="Search"
-                  />
+                  >
 
                   <div class="filter__content">
                     <label class="filter__label custom-checkbox">
                       <input
                         type="checkbox"
                         class="filter__checkbox custom-checkbox__input"
-                      />
+                      >
                       <span class="custom-checkbox__label">
                         CheckBox label</span
                       >
@@ -199,7 +238,7 @@
                       <input
                         type="checkbox"
                         class="filter__checkbox custom-checkbox__input"
-                      />
+                      >
                       <span class="custom-checkbox__label">
                         CheckBox label
                       </span>
@@ -208,7 +247,7 @@
                       <input
                         type="checkbox"
                         class="filter__checkbox custom-checkbox__input"
-                      />
+                      >
                         <span class="custom-checkbox__label">
                           CheckBox label
                         </span>
@@ -233,9 +272,13 @@
 
             <div
               id="side-panel__backdrop"
-              class="backdrop backdrop--state_invisible"
-            />
+              class="backdrop backdrop--grey backdrop--state_invisible"
+            ></div>
           </div>
+          <!-- ToDo add for search results -->
+          <!-- <div class="search-results-label">
+            Search results for “Lewis J Goetz”
+          </div> -->
 
           <div class="home-page__products-list">
             <div class="home-page__content">
@@ -281,7 +324,7 @@
               </div>
             </div>
           </div>
-
+          <!-- ToDo add class 'action-btn__search-result' in addition to 'action-btn' for search results btn -->
           <div class="action-btn">
             <button class="button--bright__wide">
               <span>View all artwork</span>
@@ -490,7 +533,7 @@
 
       <div
         id="wish-list-side-panel__backdrop"
-        class="backdrop backdrop--state_invisible"
+        class="backdrop backdrop--grey backdrop--state_invisible"
       />
     </div>
   </body>

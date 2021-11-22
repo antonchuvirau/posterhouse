@@ -1,7 +1,3 @@
-
-
-
-
 .wish-list-side-panel {
     position: fixed;
     top: 0;
@@ -11,18 +7,21 @@
     z-index: 107;
     background-color: $color-neutral-20;
     color: $color-neutral-80;
-    overflow: auto;
     display: block;
     animation-name: 'samplePreviewIn';
     animation-duration: .40s;
     animation-timing-function: ease;
     animation-fill-mode: backwards;
     animation-delay: 5ms;
-    overflow: auto;
+    height: 100vh;
+    overflow-y: initial !important;
+    clip: rect(auto, auto, 100vh, auto);
+    transition-property: clip;
+    transition-duration: 0.25s;
 }
 
 .wish-list-side-panel--state_invisible {
-    display: none;
+    clip: rect(auto, auto, 0, auto) !important;
 }
 
 .wish-list-side-panel__close-container {
@@ -41,6 +40,7 @@
 .wish-list-side-panel__content {
     padding: 25px 26px 38px 26px;
     width: 100%;
+    height: calc(100vh - 90px);
 }
 
 .wish-list-side-panel__cardslist {
@@ -50,6 +50,28 @@
   width: 100%;
   padding-bottom: 60px;
   border-bottom: 1px solid $color-neutral-30;
+  overflow-y: auto;
+  height: calc(100vh - 364px);
+}
+
+.wish-list-side-panel__cardslist::-webkit-scrollbar {
+    width: 5px;
+}
+
+.wish-list-side-panel__cardslist::-webkit-scrollbar-track {
+    background: $color-neutral-20;
+}
+
+.wish-list-side-panel__cardslist::-webkit-scrollbar-thumb {
+    background: $color-neutral-0;
+}
+
+.wish-list-side-panel__cardslist::-webkit-scrollbar-corner {
+    display: none;
+}
+
+.wish-list-side-panel__cardslist::-webkit-resizer {
+    display: none;
 }
 
 .wish-list-side-panel-card {
@@ -206,13 +228,30 @@
     background-color: transparent;
     border: 1px solid $color-neutral-80;
 }
+
+.wish-list-side-panel__transparent-btn:active {
+    background-color: darken($color-neutral-20, 5%)
+}
+
+.wish-list-side-panel__transparent-btn:hover {
+    background-color: darken($color-neutral-20, 3%)
+}
+
+
 .wish-list-side-panel__dark-btn {
     background-color: $color-neutral-0;
     border: none;
 }
 
+.wish-list-side-panel__dark-btn:active {
+    background-color: darken($color-neutral-0, 5%);
+}
+.wish-list-side-panel__dark-btn:hover {
+    background-color: darken($color-neutral-0, 3%);
+}
+
 .wish-list-side-panel__no-products-container {
-    height: 1112px;
+    height: calc(100vh - 90px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;

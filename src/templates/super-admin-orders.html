@@ -67,6 +67,7 @@
                   class="manage-panel__search-field manage-panel__search-field--state_invisible"
                   placeholder="Search"
                 >
+                <div class="close-btn manage-panel__search-field-close-btn"></div>
               </div>
             </div>
 
@@ -789,7 +790,7 @@
     </div>
   </div>
 
-  <div id="wish-list-side-panel__backdrop" class="backdrop backdrop--state_invisible" ></div>
+  <div id="wish-list-side-panel__backdrop" class="backdrop backdrop--grey backdrop--state_invisible" ></div>
 
 
 
@@ -966,8 +967,77 @@
 
 
     </div>
-    <div id="order-details-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible order-details-modal-close" />
-</div>
+    <div id="order-details-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible order-details-modal-close"></div>
+  </div>
+
+
+  <div>
+    <div id="sold-product-details-modal" class="order-details-modal order-details-modal--state-invisible">
+    <!-- <div id="sold-product-details-modal" class="order-details-modal"> -->
+      <div class="close-btn order-details-modal__close-btn order-details-modal-close"></div>
+
+      <div class="order-details-modal__content">
+
+        <div class="order-details-modal__table-row">
+          <div class="order-details-modal__table-row-title-grey">
+            14-06-2021
+          </div>
+          <div class="order-details-modal__table-row-content">
+            <div class="order-details-modal__product-cards">
+
+              <div class="order-details-modal__product-card">
+                <div class="order-details-modal__product-card-main">
+                  <div class="order-details-modal__product-name">"Buy", Long Island University</div>
+                  <div class="order-details-modal__product-author">André Kertész</div>
+                </div>
+                <div class="order-details-modal__product-card-info">
+                  <div class="order-details-modal__product-card-info-container">
+
+                    <div class="product-to-sell-card__info-item">
+                      <div class="product-to-sell-card__info-item-key">Paper:</div>
+                      <div class="product-to-sell-card__info-item-value">LexJet Sunset Photo eSatin — 300 gsm</div>
+                    </div>
+
+                    <div class="product-to-sell-card__info-item">
+                      <div class="product-to-sell-card__info-item-key">Matte:</div>
+                      <div class="product-to-sell-card__info-item-value">1”</div>
+                    </div>
+
+                    <div class="product-to-sell-card__info-item">
+                      <div class="product-to-sell-card__info-item-key">Size:</div>
+                      <div class="product-to-sell-card__info-item-value">8 x 10</div>
+                    </div>
+
+                    <div class="product-to-sell-card__info-item">
+                      <div class="product-to-sell-card__info-item-key">Frame:</div>
+                      <div class="product-to-sell-card__info-item-value">Classic Black</div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="order-details-modal__product-card-footer">
+                  <span class="order-details-modal__product-card-price">$ 100.00</span>
+                  <div class="close--little"></div>
+                  <span class="order-details-modal__product-card-count">1</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="order-details-modal__subtotal">
+          <span class="order-details-modal__subtotal-label">Subtotal</span>
+          <span>$ 310.00</span>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="order-details-modal__backdrop" class="backdrop backdrop--grey backdrop--state_invisible order-details-modal-close"></div>
+    <!-- <div id="order-details-modal__backdrop" class="backdrop backdrop--grey order-details-modal-close"></div> -->
+  </div>
 
 
 

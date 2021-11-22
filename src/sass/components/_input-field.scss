@@ -18,23 +18,49 @@
     border: 1px solid $background-color-primary-grey-77;
   }
 
+  .input-field__preview-images {
+    width: 100%;
+    height: 152px;
+    padding: 15px 18px;
+    outline: none;
+    background: $background-color-primary-grey-87;
+    border: 1px solid $background-color-primary-grey-77;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .image-preview__container {
+    position: relative;
+    height: 120px;
+    width: 100px;
+  }
+
+  .image-preview__remove {
+    cursor: pointer;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+  }
+
+  .image-preview__image {
+    width: 100px;
+    height: 120px;
+  }
+
   .input-field__show-hidden-btn {
     position: absolute;
     margin-left: auto;
     margin-right: 0;
     top: 51px;
     right: 17px;
-    visibility: hidden;
     cursor: pointer;
   }
 
   .input-field__input:active, .input-field__input:focus {
     background: $color-neutral-100;
     border: 1px solid $color-neutral-20;
-  }
-
-  .input-field__input:active, .input-field__input:focus ~ .show-hidden-value-btn {
-    visibility: visible !important;
   }
 
   .input-field__inputs-set {

@@ -5,7 +5,8 @@
 }
 
 .order-details-modal__edit-order-btn-container {
-    padding-top: 60px;
+    // padding-top: 60px;
+    padding-top: 44px;
 }
 
 .order-details-modal-btn {
@@ -120,6 +121,14 @@
     width: 20%;
 }
 
+.order-details-modal__table-row-title-grey {
+    color: $color-neutral-60;
+    line-height: 25px;
+    width: 100px;
+    width: 20%;
+    font-size: 16px;
+}
+
 .order-details-modal__table-row-content {
     font-size: 16px;
     line-height: 20px;
@@ -162,6 +171,11 @@
     flex-direction: row;
     justify-content: space-between;
     font-weight: bold;
+    padding-bottom: 16px;
+}
+
+.order-details-modal__subtotal-label {
+    font-size: 22px;
 }
 
 .order-details-modal__product-card {

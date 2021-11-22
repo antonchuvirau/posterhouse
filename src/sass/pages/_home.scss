@@ -27,11 +27,6 @@
   letter-spacing: -0.04em;
 }
 
-.promo__button {
-  @include dark-button;
-  width: 228px;
-}
-
 .home-page {
   padding-top: 65px;
 }
@@ -42,4 +37,11 @@
 
 .home-page__content {
 
+}
+
+.search-results-label {
+  @include h3-title;
+  line-height: 47px;
+  padding-top: 20px;
+  padding-bottom: 25px;
 }

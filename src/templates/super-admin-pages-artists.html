@@ -150,7 +150,12 @@
                   <div class="input-field">
                     <div class="input-field__label">Artist image*</div>
                     <div class="input-field__inputs-set">
-                      <textarea class="input-field__input textarea" placeholder=""></textarea>
+                      <div class="input-field__preview-images">
+                        <div class="image-preview__container">
+                          <div class="close-btn-dark-round image-preview__remove"></div>
+                          <img class="image-preview__image" src="./assets/images/author-mock-little.png" alt="order-card" />
+                        </div>
+                      </div>
                     </div>
 
                     <input type="file" class="custom-file-input custom-file-input__add-artist input-field__button">
@@ -214,6 +219,7 @@
                     class="manage-panel__search-field manage-panel__search-field--state_invisible"
                     placeholder="Search"
                   >
+                  <div class="close-btn manage-panel__search-field-close-btn"></div>
                 </div>
               </div>
 
@@ -381,6 +387,7 @@
   <div class="react" data-type="dropdown-input-field"></div>
   <div class="react" data-type="phone-custom-input"></div>
   <div class="react" data-type="manage-panel"></div>
+  <div class="react" data-type="upload-image-controller"></div>
 </body>
 
 </html>

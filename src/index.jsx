@@ -4,7 +4,6 @@ import ManagePanelController from './controllers/ManagePanelController';
 import './sass/main.scss'
 import DropdownOptionsSelectController from './controllers/DropdownOptionsSelectController';
 import DropdownInfoController from './controllers/DropdownInfoController';
-import WishListSidePanelController from './controllers/WishListSidePanelController';
 import PaperTypesModalController from './controllers/PaperTypesModalController';
 import DropdownInputFieldController from './controllers/DropdownInputFieldController';
 import PhoneCustomInputController from './controllers/PhoneCustomInputController';
@@ -13,6 +12,10 @@ import AddArtworkModalController from './controllers/AddArtworkModalController';
 import LoginController from './controllers/LoginController';
 import OrderDetailsModalController from './controllers/OrderDetailsModalController';
 import EditOrderModalController from './controllers/EditOrderModalController';
+import ShowHiddenValueBtnController from './controllers/ShowHiddenValueBtnController';
+import ReadMoreBtnController from './controllers/ReadMoreBtnController';
+import WishListSidePanelController from './controllers/WishListSidePanelController';
+import UploadImageController from './controllers/UploadImageController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
@@ -42,9 +45,6 @@ function renderComponentInElement(el) {
     case 'dropdown-info':
       ReactDOM.render(<DropdownInfoController />, el);
       break;
-    case 'wish-list-side-panel':
-      ReactDOM.render(<WishListSidePanelController />, el);
-      break;
     case 'order-details-modal':
       ReactDOM.render(<OrderDetailsModalController />, el);
       break;
@@ -54,11 +54,46 @@ function renderComponentInElement(el) {
     case 'add-artwork-modal':
       ReactDOM.render(<AddArtworkModalController />, el);
       break;
+    case 'show-hidden-value-btn':
+      ReactDOM.render(<ShowHiddenValueBtnController />, el);
+      break;
+    case 'read-more-btn-controller':
+      ReactDOM.render(<ReadMoreBtnController />, el);
+      break;
+    case 'upload-image-controller':
+      UploadImageController();
+      break;
     default:
       break;
   }
 }
 
-document
+
+const addScripts = () => {
+  console.log('scripts are reassigned')
+  document
     .querySelectorAll('.react')
     .forEach(renderComponentInElement)
+}
+
+let observer;
+
+const addDOMMutationListener = () => {
+  const config = { attributes: true, childList: true, subtree: true };
+  observer = new MutationObserver(addScripts);
+  observer.observe(document, config);
+}
+
+window.addEventListener('load', () => {
+  console.log('document loaded');
+  addScripts();
+  addDOMMutationListener();
+});
+
+window.addEventListener('unload', () => {
+  observer.disconnect();
+});
+
+console.log('main script is uploaded')
+
+

@@ -170,6 +170,10 @@
   padding-top: 80px;
 }
 
+.shipping-payment__place-order {
+  width: 100%;
+}
+
 .order-card__content {
   max-width: 406px;
 }
@@ -179,4 +183,35 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.shipping-payment__payment-notification {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-neutral-50;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.shipping-payment__international-ship-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.shipping-payment__international-ship-icon {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url('../../assets/icons/Exclamation-small.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.shipping-payment__international-ship-label {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-neutral-50;
 }

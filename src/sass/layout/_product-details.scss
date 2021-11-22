@@ -105,6 +105,14 @@
     margin-bottom: 50px;
 }
 
+.product-info__add-btn:active {
+    background-color: darken($color-neutral-20, 5%);
+}
+
+.product-info__add-btn:hover {
+    background-color: darken($color-neutral-20, 3%);
+}
+
 .product-info__drop-down {
     margin-bottom: 15px;
 

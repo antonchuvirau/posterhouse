@@ -44,6 +44,8 @@
 
 // 4. Layout-related sections
 @import
+'layout/customer-orders-list',
+'layout/body',
 'layout/order-details-modal',
 'layout/edit-order-modal',
 'layout/sold-products',
@@ -70,6 +72,7 @@
 
 // 5. Page-specific styles
 @import
+  'pages/terms-of-use',
   'pages/photographer-account-dashboard',
   'pages/contact',
   'pages/super-admin-orders',

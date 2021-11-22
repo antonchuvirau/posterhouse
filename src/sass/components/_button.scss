@@ -3,9 +3,38 @@
   padding: 15px 45px;
 }
 
+.button--bright__wide:hover {
+  background-color: darken($background-color-main, 3%);
+}
+
+.button--bright__wide:active {
+  background-color: darken($background-color-main, 5%);
+}
+
+.promo__button {
+  @include dark-button;
+  width: 228px;
+}
+
+.promo__button:hover {
+  background-color: darken($color-neutral-20, 3%);
+}
+
+.promo__button:active {
+  background-color: darken($color-neutral-20, 5%);
+}
+
 .button_bright--width_small {
   @include bright-button;
   padding: 15px 39px;
+}
+
+.button_bright--width_small:hover {
+  background-color: darken($background-color-main, 3%);
+}
+
+.button_bright--width_small:active {
+  background-color: darken($background-color-main, 5%);
 }
 
 .button_dark {
@@ -13,9 +42,30 @@
   padding: 15px 45px;
 }
 
+.button_dark--inactive {
+  background-color: $color-neutral-80 !important;
+  color: $color-neutral-50;
+}
+
+.button_dark:active {
+  background-color: darken($color-neutral-20, 5%);
+}
+
+.button_dark:hover {
+  background-color: darken($color-neutral-20, 3%);
+}
+
 .button_dark_arrow {
   @include dark-button;
   padding: 15px 45px;
+}
+
+.button_dark_arrow:hover {
+  background-color: darken($color-neutral-20, 3%);
+}
+
+.button_dark_arrow:active {
+  background-color: darken($color-neutral-20, 5%);
 }
 
 .counter-btn {
@@ -97,4 +147,14 @@
   height: 15px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+.close-btn-dark-round {
+  background-color: $color-neutral-20;
+  background-image: url('../../assets/icons/close-white.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }

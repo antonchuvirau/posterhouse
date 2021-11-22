@@ -1,0 +1,38 @@
+.terms-of-use {
+    padding-bottom: 69px;
+}
+
+.terms-of-use__title-container {
+    padding-top: 35px;
+    padding-bottom: 12px;
+}
+
+.terms-of-use__title {
+    @include h1;
+}
+
+.terms-of-use__text {
+    line-height: 25px;
+}
+
+.terms-of-use__article {
+    padding-bottom: 30px;
+}
+
+.terms-of-use__paragraph {
+    margin-bottom: 15px;
+}
+
+.link-underline {
+}
+
+.terms-of-use__subtitle {
+    @include h2;
+    margin-bottom: 15px;
+}
+
+.terms-of-use__list-item {
+    list-style-type: initial;
+    margin-left: 25px;
+}
+

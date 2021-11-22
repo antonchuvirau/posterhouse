@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home / Account / Orders </title>
+</head>
+
+<body>
+
+  <section class="header-container">
+    <div class="wrapper">
+
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./artworks.html">Artwork</a>
+            </li>
+            <li class="nav__item">
+              <a href="./artists.html">Artists</a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="./index.html">
+          <div class="logo logo--big_transparent_beige-frame"></div>
+        </a>
+
+        <div class="actions">
+          <ul class="actions__list">
+
+            <li id="open-wish-list-side-panel" class="actions__item like">
+              <img src="./assets/icons/heart_black.svg" alt="like" />
+            </li>
+
+            <li class="actions__item login">
+              <a href="./login.html" class="login__link">Log in</a>
+            </li>
+
+            <li class="actions__item currency">
+              <select class="currency__select" name="currency-select" id="currency-select">
+                <option class="currency__option" value="USD">USD</option>
+                <option class="currency__option" value="INR">INR</option>
+                <option class="currency__option" value="GBP">GBP</option>
+                <option class="currency__option" value="CAD">CAD</option>
+                <option class="currency__option" value="AUD">AUD</option>
+                <option class="currency__option" value="EUR">EUR</option>
+                <option class="currency__option" value="JPY">JPY</option>
+              </select>
+            </li>
+
+
+
+            <li class="actions__item cart">
+              <div class="cart__container">
+                <a href="./cart.html" class="cart__link">Cart</a>
+                <div class="cart__counter">0</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+    </div>
+    <br />
+  </section>
+  <hr class="line" />
+
+  <section class="address-bar">
+    <div class="wrapper">
+      <div class="address-bar__container">
+
+            <a href="./index.html" class="address-bar__item">Home</a>
+            &nbsp;/&nbsp;
+            <a href="./photographer-account.html" class="address-bar__item">Account</a>
+            &nbsp;/&nbsp;
+            <a href="./photographer-account.html" class="address-bar__item">Orders</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="main">
+    <div class="wrapper">
+
+      <div class="photographer-dashboard">
+
+        <div class="super-admin__layout">
+          <div class="admin-pages-list">
+            <h3 class="super-admin__title">Hello, Name</h3>
+            <div class="admin-pages-list__item admin-pages-list__item--state_active">Dashboard</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Sales</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Account details</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Security</div>
+            <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Log out</div>
+          </div>
+          <div class="super-admin__content">
+            <div class="super-admin__title-container">
+              <h3 class="super-admin__title">Your orders</h3>
+            </div>
+            <!-- ToDo add if no orders  -->
+            <div class="no-orders-label">
+              No order has been made yet.
+            </div>
+            <!-- ToDo add if there are orders  -->
+            <!-- <div class="customer-orders-list">
+              <div class="customer-orders-list__cards">
+
+                <div class="customer-orders-list__card">
+                  <div class="customer-orders-list__first-row">
+                    <div class="customer-orders-list__number">№ 1</div>
+                    <div class="customer-orders-list__date">07.06.2021</div>
+                    <div class="customer-orders-list__price">$ 300.00</div>
+                  </div>
+                  <div class="customer-orders-list__second-row">
+                    <div class="customer-orders-list__images">
+
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+
+                    </div>
+                    <button class="sold-products-card__details-btn">Details</button>
+
+                  </div>
+
+                </div>
+                <div class="customer-orders-list__card">
+                  <div class="customer-orders-list__first-row">
+                    <div class="customer-orders-list__number">№ 1</div>
+                    <div class="customer-orders-list__date">07.06.2021</div>
+                    <div class="customer-orders-list__price">$ 300.00</div>
+                  </div>
+                  <div class="customer-orders-list__second-row">
+                    <div class="customer-orders-list__images">
+
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+                      <img class="customer-orders-list__image" src="./assets/images/order-card-mock.jpg" alt="artwork">
+
+                    </div>
+                    <button class="sold-products-card__details-btn">Details</button>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <button class="button_bright--width_small">
+              <span>Show more</span>
+            </button> -->
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__content">
+          <ul class="footer__column info">
+            <li class="info__item footer__list-item">
+              <a href="./about.html">About us</a>
+            </li>
+            <li class="info__item footer__list-item">
+              <a href="./contact.html">Contact</a>
+            </li>
+            <li class="info__item footer__list-item">
+              <a href="./faq.html">FAQs</a>
+            </li>
+          </ul>
+          <a href="./index.html">
+            <div class="logo--small_transparent_beige-frame"></div>
+          </a>
+          <ul class="footer__column media">
+            <li class="media__item footer__list-item">
+              <a href="#"> Instagram </a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#"> Facebook </a>
+            </li>
+            <li class="footer__list-item">
+              <a href="#"> Twitter </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <div class="copyright__description">Copyright © 2021 Posterhaus. All rights reserved.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="wish-list-side-panel" class="wish-list-side-panel wish-list-side-panel--state_invisible">
+    <div class="wish-list-side-panel__close-container">
+      <button id="wish-list-side-panel__close-btn" class="wish-list-side-panel__close-btn">
+        Close
+      </button>
+    </div>
+<!-- <div class="wish-list-side-panel__no-products-container">
+                                        <div class="wish-list-side-panel__no-products-label">
+                                            No products in the cart
+                                        </div>
+                                        <button id="wish-list-side-panel__continue-shopping-btn"
+                                            class="wish-list-side-panel__transparent-btn wish-list-side-panel__action-btn">
+                                            <span>Continue shopping</span>
+                                        </button>
+                                    </div> -->
+
+    <div class="wish-list-side-panel__content">
+      <section class="wish-list-side-panel__cardslist">
+        <div class="wish-list-side-panel-card">
+          <div class="wish-list-side-panel-card__container">
+            <div class="wish-list-side-panel-card__image">
+              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+            </div>
+            <div class="wish-list-side-panel-card__content">
+              <div class="wish-list-side-panel-card__name-container">
+                <div class="wish-list-side-panel-card__name">
+                  "Buy", Long Island University
+                </div>
+                <button class="close-btn"></button>
+              </div>
+              <div class="wish-list-side-panel-card__info">
+                <div class="wish-list-side-panel-card__info-keys">
+                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                </div>
+                <div class="wish-list-side-panel-card__info-values">
+                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
+                    Sunset Photo
+                    eSatin — 300 gsm</span>
+                  <span class="wish-list-side-panel-card__info-values-item">1”
+                  </span>
+                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                </div>
+              </div>
+              <div class="wish-list-side-panel-card__price-container">
+                <div class="wish-list-side-panel-card__counter-btn">
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    -
+                  </div>
+                  <div class="wish-list-side-panel-card__count">
+                    <span>1</span>
+                  </div>
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    +
+                  </div>
+                </div>
+                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wish-list-side-panel-card">
+          <div class="wish-list-side-panel-card__container">
+            <div class="wish-list-side-panel-card__image">
+              <img src="./assets/images/Product-to-sell-mock.png" alt="product" />
+            </div>
+            <div class="wish-list-side-panel-card__content">
+              <div class="wish-list-side-panel-card__name-container">
+                <div class="wish-list-side-panel-card__name">
+                  "Buy", Long Island University
+                </div>
+                <button class="close-btn"></button>
+              </div>
+              <div class="wish-list-side-panel-card__info">
+                <div class="wish-list-side-panel-card__info-keys">
+                  <span class="wish-list-side-panel-card__info-keys-item">Paper:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Matte:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Size:</span>
+                  <span class="wish-list-side-panel-card__info-keys-item">Frame:</span>
+                </div>
+                <div class="wish-list-side-panel-card__info-values">
+                  <span class="wish-list-side-panel-card__info-values-item">LexJet Sunset Photo eSatin — 300 gsm LexJet
+                    Sunset Photo
+                    eSatin — 300 gsm</span>
+                  <span class="wish-list-side-panel-card__info-values-item">1”
+                  </span>
+                  <span class="wish-list-side-panel-card__info-values-item">8 x 10</span>
+                  <span class="wish-list-side-panel-card__info-values-item">Classic Black</span>
+                </div>
+              </div>
+              <div class="wish-list-side-panel-card__price-container">
+                <div class="wish-list-side-panel-card__counter-btn">
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    -
+                  </div>
+                  <div class="wish-list-side-panel-card__count">
+                    <span>1</span>
+                  </div>
+                  <div class="wish-list-side-panel-card__counter-btn-action">
+                    +
+                  </div>
+                </div>
+                <div class="wish-list-side-panel-card__price">$ 100.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="wish-list-side-panel__subtotal">
+        <div class="wish-list-side-panel__subtotal-item">Subtotal</div>
+        <div class="wish-list-side-panel__subtotal-item">300.00 EUR</div>
+      </div>
+
+      <div class="wish-list-side-panel__action-btns">
+        <button id="wish-list-side-panel__continue-shopping-btn" class="
+              wish-list-side-panel__transparent-btn
+              wish-list-side-panel__action-btn
+            ">
+          <span>Continue shopping</span>
+        </button>
+        <a href="./wishlist.html">
+          <button class="wish-list-side-panel__dark-btn wish-list-side-panel__action-btn">
+            <span>Go to cart</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="wish-list-side-panel__backdrop" class="backdrop backdrop--grey backdrop--state_invisible" />
+
+  <div class="react" data-type="dropdown-input-field" />
+  <div class="react" data-type="phone-custom-input" />
+  <div class="react" data-type="wish-list-side-panel" />
+</body>
+
+</html>

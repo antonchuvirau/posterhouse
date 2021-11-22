@@ -18,6 +18,7 @@ const ManagePanel = () => {
 
     const openSortByMenuBtn = useRef(null);
     const sortByMenu = useRef(null);
+    const clearSearchBtn = useRef(null);
 
     const { clearAllSearchBars } = useFilterSearchOptionController();
 
@@ -62,7 +63,10 @@ const ManagePanel = () => {
     }, []);
 
     const handleClickOutsideSearchField = useCallback((event) => {
-        if (event.target.matches('.manage-panel__search-field') || event.target.matches('.manage-panel__search-btn')) {
+        if (event.target.matches('.manage-panel__search-field')
+            || event.target.matches('.manage-panel__search-btn')
+            || event.target.matches('.manage-panel__search-field-close-btn')
+        ) {
             return;
         }
 
@@ -101,6 +105,10 @@ const ManagePanel = () => {
 
         openSearchBarBtn.current.classList.toggle('manage-panel__filter-item--state_active');
         searchBar.current.classList.toggle('manage-panel__search-field--state_invisible');
+
+        if (clearSearchBtn.current) {
+            clearSearchBtn.current.classList.toggle('manage-panel__search-field-close-btn--state_invisible');
+        }
     }, []);
 
     const toggleSortMenyVisibility = useCallback(() => {
@@ -137,6 +145,10 @@ const ManagePanel = () => {
         toggleSortMenyVisibility();
     }, [isSortMenuOpen, toggleSortMenyVisibility])
 
+    const clearSearchBar = useCallback(() => {
+        searchBar.current.value = '';
+    }, [])
+
     const addEventListeners = useCallback(() => {
         if (managePanelTabs.current) {
             managePanelTabs.current.addEventListener('click', onTabClick);
@@ -162,6 +174,10 @@ const ManagePanel = () => {
             filtersPanelBackdrop.current.addEventListener('click', onBackdropClick)
         }
 
+        if (clearSearchBtn.current) {
+            clearSearchBtn.current.addEventListener('click', clearSearchBar);
+        }
+
         window.addEventListener("click", handleClickOutsideSearchField);
         window.addEventListener("click", handleClickOutsideSortMenu);
     }, [
@@ -173,6 +189,7 @@ const ManagePanel = () => {
         onChooseSortOption,
         handleClickOutsideSortMenu,
         onTabClick,
+        clearSearchBar,
     ]);
 
     const removeEventListeners = useCallback(() => {
@@ -222,6 +239,7 @@ const ManagePanel = () => {
         openSortByMenuBtn.current = document.getElementById('manage-panel__sort-btn');
         sortByMenu.current = document.getElementById('manage-panel__sort-menu');
         managePanelTabs.current = document.getElementById('manage-panel__tabs');
+        clearSearchBtn.current = document.getElementById('manage-panel__search-field-close-btn');
 
         addEventListeners();
 

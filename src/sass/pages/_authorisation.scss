@@ -46,9 +46,9 @@
   position: absolute;
   margin-left: auto;
   margin-right: 0;
-  bottom: 55px;
+  top: 50px;
   right: 17px;
-  visibility: hidden;
+  // visibility: hidden;
   cursor: pointer;
 }
 
@@ -70,13 +70,17 @@
   border: 1px solid $color-neutral-20;
 }
 
-.authorisation-field__input:active, .authorisation-field__input:focus ~ .authorisation-field__show-hidden-btn {
-  visibility: visible !important;
-}
+// .authorisation-field__input:active ~ .authorisation-field__show-hidden-btn {
+//   visibility: visible !important;
+// }
 
-.authorisation-field__input:active .show-hidden-value-btn {
-  display: block !important;
-}
+// .authorisation-field__input:focus ~ .authorisation-field__show-hidden-btn {
+//   visibility: visible !important;
+// }
+
+// .authorisation-field__input:active .show-hidden-value-btn {
+//   display: block !important;
+// }
 
 .authorisation-field__actions {
   display: flex;

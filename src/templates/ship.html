@@ -332,10 +332,18 @@
                   </div>
                   <div class="backdrop backdrop--state_invisible"></div>
                 </div>
+
+
+
+                <div class="shipping-payment__international-ship-container">
+                  <div class="shipping-payment__international-ship-icon"></div>
+                  <div class="shipping-payment__international-ship-label">
+                    International shipping, outside of North America is available needs to be quoted: Please email <a class="link-underline" href="#">quotes@posterhaus.co</a> and include the piece, size and quantity along with the address of the delivery location and someone will get back to you with a quote.
+                  </div>
+                </div>
+
+
               </div>
-
-
-
 
 
               <div class="input-field">
@@ -574,8 +582,17 @@
               </div>
             </div>
 
+            <label class="filter__label custom-checkbox shipping-payment__payment-notification">
+              <input type="checkbox" class="filter__checkbox custom-checkbox__input"/>
+              <span class="custom-checkbox__label">
+                <span>
+                  Payment will be made in USD (US dollar). Upon clicking "Place Order" button, I confirm I have read and acknowledge <a href="#">Terms of Use</a>
+                </span>
+              </span>
+            </label>
+
             <div class="shipping-payment__action-btn-container">
-              <button class="button_dark">
+              <button class="button_dark button_dark--inactive shipping-payment__place-order" disabled>
                 <span>Place order</span>
               </button>
             </div>
@@ -757,7 +774,7 @@
     </div>
   </div>
 
-  <div id="wish-list-side-panel__backdrop" class="backdrop backdrop--state_invisible" />
+  <div id="wish-list-side-panel__backdrop" class="backdrop backdrop--grey backdrop--state_invisible" />
 
   <div class="react" data-type="dropdown-input-field" />
   <div class="react" data-type="phone-custom-input" />

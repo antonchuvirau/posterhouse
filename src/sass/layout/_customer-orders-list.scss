@@ -1,0 +1,59 @@
+.customer-orders-list {
+  padding-top: 25px;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+.customer-orders-list__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.customer-orders-list__card {
+  padding-bottom: 7px;
+  border-bottom: 1px solid $color-line;
+}
+
+.customer-orders-list__first-row {
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customer-orders-list__number {
+  font-size: 16px;
+}
+
+.customer-orders-list__date {
+}
+.customer-orders-list__price {
+}
+.customer-orders-list__second-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.customer-orders-list__images {
+  padding-bottom: 20px;
+}
+
+.customer-orders-list__image {
+  width: 68px;
+  height: 80px;
+}
+
+.customer-orders-list__details_btn {
+}
+
+.no-orders-label {
+  margin-top: 12px;
+  font-size: 22px;
+  line-height: 30px;
+  color: $color-neutral-60;
+}

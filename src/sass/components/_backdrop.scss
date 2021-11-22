@@ -18,3 +18,16 @@
 .backdrop--state_invisible {
     display: none;
 }
+
+.wish-list-side-panel__backdrop {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wish-list-side-panel__backdrop--state-invisible {
+    display: none;
+}

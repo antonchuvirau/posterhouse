@@ -4,8 +4,9 @@
   line-height: 70px;
   text-align: center;
   letter-spacing: -0.01em;
-  text-transform: capitalize;
+  text-transform: uppercase;
   margin-bottom: 29px;
+  font-weight: normal;
 }
 
 @mixin h2 {

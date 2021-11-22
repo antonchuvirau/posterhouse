@@ -131,14 +131,16 @@
             <div class="artist-page-biography__title">
               Biography
             </div>
-            <div class="artist-page-biography__content">
-              In 1925, André moved to Paris to fulfill his dream of pursuing a career as a photographer. After a short
-              period of both artistic and personal struggle, his pioneering vision, brought him great success. His
-              approach to the medium helped to define the shape of photojournalism in Europe, and subsequently America.
-              During the next eleven years, Kertész built an extraordinary body of work, influenced by and influencing
-              the many Artists with whom he interacted in Paris between the wars.
-              In an increasingly competitive world, Kertész found his career began to fade in the mid 1930’s. With his
-              wife Elizabeth, he left
+            <div class="artist-page-biography__content-container">
+              <div class="artist-page-biography__content artist-page-biography__content--limited-height">
+                In 1925, André moved to Paris to fulfill his dream of pursuing a career as a photographer. After a short
+                period of both artistic and personal struggle, his pioneering vision, brought him great success. His
+                approach to the medium helped to define the shape of photojournalism in Europe, and subsequently America.
+                During
+              </div>
+              <div class="artist-page-biography__content-blur">
+                <div id="artist-page-biography__content-read-more-btn" class="artist-page-biography__content-read-more-btn">Read more</div>
+              </div>
             </div>
           </div>
         </div>
@@ -220,6 +222,7 @@
                   class="manage-panel__search-field manage-panel__search-field--state_invisible"
                   placeholder="Search"
                 >
+                <div class="close-btn manage-panel__search-field-close-btn"></div>
             </div>
           </div>
           <div>
@@ -323,7 +326,7 @@
 
             <div
               id="side-panel__backdrop"
-              class="backdrop backdrop--state_invisible"
+              class="backdrop backdrop--grey backdrop--state_invisible"
             />
           </div>
 
@@ -533,23 +536,9 @@
                                   </div>
                                   <div class="wish-list-side-panel-card__price">$ 100.00</div>
                               </div>
-
-
                           </div>
-
                       </div>
-
-
                   </div>
-
-
-
-
-
-
-
-
-
               </section>
 
 
@@ -588,10 +577,10 @@
 
       <div
         id="wish-list-side-panel__backdrop"
-        class="backdrop backdrop--state_invisible"
-      />
+        class="backdrop backdrop--grey backdrop--state_invisible"></div>
     </div>
   </footer>
+  <div class="react" data-type="read-more-btn-controller"></div>
 </body>
 
 </html>
