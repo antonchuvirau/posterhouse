@@ -70,17 +70,84 @@
   border: 1px solid $color-neutral-20;
 }
 
-// .authorisation-field__input:active ~ .authorisation-field__show-hidden-btn {
-//   visibility: visible !important;
-// }
+.authorisation-field__input--state_valid {
+  border: 1px solid #51C21A !important;
+}
 
-// .authorisation-field__input:focus ~ .authorisation-field__show-hidden-btn {
-//   visibility: visible !important;
-// }
+.authorisation-field__input--state_invalid {
+  border: 1px solid #F63C14 !important;
+}
 
-// .authorisation-field__input:active .show-hidden-value-btn {
-//   display: block !important;
-// }
+.authorisation-field__input--state_acceptable {
+  border: 1px solid #FFB11A !important;
+}
+
+.status-icon-valid {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/ok_green.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.status-icon-invalid {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/cross_red.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.status-icon-password-week {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/exclamation_small_red.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.status-icon-password-acceptable {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/exclamation_small_orange.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.status-icon-password-strong {
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icons/exclamation_small_green.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.authorisation-field__valid-status-comment {
+  padding-top: 10px;
+  color: #51C21A;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.authorisation-field__invalid-status-comment {
+  padding-top: 10px;
+  color: #F63C14;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.authorisation-field__acceptable-status-comment {
+  padding-top: 10px;
+  color: #FFB11A;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .authorisation-field__actions {
   display: flex;

@@ -125,8 +125,16 @@
 
             <table class="super-admin-orders-table">
               <tr class="super-admin-orders-table__head">
-                <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-number">№</th>
-                <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-data">Data</th>
+                <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-number super-admin-orders-table__head-cell--with-sorting">
+                  <span class="super-admin-orders-table__head-cell-label">
+                    №
+                  </span>
+                  <div class="sort-arrow-up"></div>
+                </th>
+                <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-data super-admin-orders-table__head-cell--with-sorting">
+                  Data
+                  <div class="sort-arrow-down"></div>
+                </th>
                 <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-name">Name</th>
                 <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-total">Total</th>
                 <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-payment">Payment</th>
@@ -134,7 +142,7 @@
                 <th class="super-admin-orders-table__head-cell super-admin-orders-table__column-details"></th>
               </tr>
               <tr class="super-admin-orders-table__row">
-                <td class="super-admin-orders-table__row-cell">1</td>
+                <td class="super-admin-orders-table__row-cell super-admin-orders-table__row-cell--first">1</td>
                 <td class="super-admin-orders-table__row-cell">14.06.2021</td>
                 <td class="super-admin-orders-table__row-cell">Name Surname</td>
                 <td class="super-admin-orders-table__row-cell">$ 100</td>

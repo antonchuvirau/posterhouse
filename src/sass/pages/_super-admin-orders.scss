@@ -4,7 +4,6 @@
 }
 
 .super-admin-orders__manage-panel {
-    padding-top: 45px;
     padding-bottom: 29px !important;
     border-bottom: none !important;
 }
@@ -40,12 +39,50 @@
     text-align: end;
 }
 
+.super-admin-orders-table__row-cell--first {
+    text-align: start;
+    padding-left: 5px;
+}
+
+.super-admin-orders-table__head-cell--with-sorting {
+    cursor: pointer;
+}
+
 .super-admin-orders-table__details-btn {
     text-decoration: underline;
 }
 
 .super-admin-orders-table__column-number {
-    width: 41px;
+    width: 62px;
+    text-align: start;
+}
+
+.sort-arrow-down {
+    width: 10px;
+    height: 10px;
+    background-image: url('../../assets/icons/sort_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: inline-block;
+}
+
+.sort-arrow-up {
+    width: 10px;
+    height: 10px;
+    background-image: url('../../assets/icons/sort_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: inline-block;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.super-admin-orders-table__head-cell-label {
+    padding-right: 10px;
+    padding-left: 5px;
 }
 
 .super-admin-orders-table__column-data {

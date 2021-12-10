@@ -8,23 +8,31 @@
 
 .admin-pages-list__item {
   cursor: pointer;
+  line-height: 25px;
 }
 
 .admin-pages-list__item--state_inactive {
-  color: $color-neutral-60;
+  color: $color-neutral-70;
 }
 
 .admin-pages-list__item--state_active {
   text-decoration: underline;
 }
 
-.admin-pages-list__subitems {
-  padding-left: 20px;
-  padding-top: 5px;
-  padding-bottom: 15px;
+.admin-pages-list__subitems-container {
+  padding-top: 15px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.admin-pages-list__subitems {
+  padding-left: 20px;
+  height: auto;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .admin-pages-list__subitem {
@@ -38,4 +46,14 @@
   color: $color-neutral-50;
   font-weight: 600;
   line-height: 30px;
+}
+
+.admin-pages-list__expandable-item {}
+
+.admin-pages-list__subitems--state_visible {
+  max-height: 100px;
+}
+
+.admin-pages-list__subitems--state_invisible {
+  max-height: 0;
 }

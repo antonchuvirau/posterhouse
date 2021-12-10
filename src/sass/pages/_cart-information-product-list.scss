@@ -6,6 +6,10 @@
   min-height: 525px;
 }
 
+.cart-information-product-list__no-products {
+  margin-top: 15.5px;
+}
+
 .cart-information-product-list__title {
   @include h3-title;
   line-height: 70px;

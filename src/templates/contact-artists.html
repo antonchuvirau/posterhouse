@@ -372,19 +372,22 @@
               </div>
 
               <div class="input-field">
-                <div class="input-field__label">Portfolio (TIFF, JPEG, DOC, PDF) - Size 2MB max*</div>
-                <div class="input-field__inputs-set">
-                  <textarea class="input-field__input textarea" placeholder=""></textarea>
-                </div>
-
-                <input type="file" class="custom-file-input custom-file-input__add-artist input-field__button">
-
-
-
-
-
-
+                <div class="input-field__label">Portfolio (TIFF, JPEG, DOC, PDF)*</div>
+                <form action method="post" class="file-uploader__form">
+                  <div class="form-group file-area">
+                    <input type="file" name="images" id="images" required="required" multiple="multiple" class="file-input"/>
+                    <div class="file-dummy">
+                      <div class="default">
+                        <p class="file-uploader__title">Drag files here or <span class="file-uploader__link">browse</span></p>
+                        <p class="file-uploader__description">Size 2MB max</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <section class="progress-area"></section>
+                <section class="uploaded-area"></section>
               </div>
+
 
 
             </div>
@@ -466,7 +469,8 @@
         </div> -->
 
   <div class="react" data-type="status-modal"></div>
-  <div class="react" data-type="dropdown-input-field" />
-  <div class="react" data-type="phone-custom-input" />
+  <div class="react" data-type="dropdown-input-field"></div>
+  <div class="react" data-type="phone-custom-input"></div>
+  <div class="react" data-type="upload-file-controller"></div>
 </body>
 </html>

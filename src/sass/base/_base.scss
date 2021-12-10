@@ -38,7 +38,12 @@ h1 {
 }
 
 .line {
-  border: 1px solid #C4C4C4;
+  border: none;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.mt23 {
+  margin-top: 23px;
 }
 
 .link-underline {

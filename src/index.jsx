@@ -14,11 +14,14 @@ import OrderDetailsModalController from './controllers/OrderDetailsModalControll
 import EditOrderModalController from './controllers/EditOrderModalController';
 import ShowHiddenValueBtnController from './controllers/ShowHiddenValueBtnController';
 import ReadMoreBtnController from './controllers/ReadMoreBtnController';
-import WishListSidePanelController from './controllers/WishListSidePanelController';
 import UploadImageController from './controllers/UploadImageController';
+import UploadFileController from './controllers/UploadFileController';
+import ExpandDashbordMenuController from './controllers/ExpandDashbordMenuController';
 
 function renderComponentInElement(el) {
   const props = Object.assign({}, el.dataset);
+
+  ExpandDashbordMenuController()
 
   switch (props.type) {
     case 'edit-order-modal':
@@ -55,13 +58,16 @@ function renderComponentInElement(el) {
       ReactDOM.render(<AddArtworkModalController />, el);
       break;
     case 'show-hidden-value-btn':
-      ReactDOM.render(<ShowHiddenValueBtnController />, el);
+      ShowHiddenValueBtnController();
       break;
     case 'read-more-btn-controller':
       ReactDOM.render(<ReadMoreBtnController />, el);
       break;
     case 'upload-image-controller':
       UploadImageController();
+      break;
+    case 'upload-file-controller':
+      UploadFileController();
       break;
     default:
       break;

@@ -31,11 +31,16 @@
         <div class="super-admin__layout">
           <div class="admin-pages-list">
             <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Dashboard</div>
-            <div class="admin-pages-list__item admin-pages-list__item--state_active">Pages</div>
 
-            <div class="admin-pages-list__subitems">
-              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_inactive">Artwork</div>
-              <div class="admin-pages-list__subitem admin-pages-list__subitem--state_active">Artists</div>
+            <div class="admin-pages-list__expandable-item">
+              <div class="admin-pages-list__item admin-pages-list__item--state_active">Pages</div>
+
+              <div class="admin-pages-list__subitems admin-pages-list__subitems--state_invisible">
+                <div class="admin-pages-list__subitems-container">
+                  <div class="admin-pages-list__subitem admin-pages-list__subitem--state_inactive">Artwork</div>
+                  <div class="admin-pages-list__subitem admin-pages-list__subitem--state_active">Artists</div>
+                </div>
+              </div>
             </div>
 
             <div class="admin-pages-list__item admin-pages-list__item--state_inactive">Sales</div>
@@ -157,11 +162,7 @@
                         </div>
                       </div>
                     </div>
-
                     <input type="file" class="custom-file-input custom-file-input__add-artist input-field__button">
-
-
-
                   </div>
 
 

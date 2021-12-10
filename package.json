@@ -149,6 +149,9 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
     "sass": "^1.38.2"
   }
 }

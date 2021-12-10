@@ -8,6 +8,8 @@ const ManagePanel = () => {
     const [isSortMenuOpen, setIsSortMenuOpen] = useState(false);
 
     const managePanelTabs = useRef(null);
+    const clearSearchBtn = useRef(null);
+
     const filtersPanel = useRef(null);
 
     const filtersPanelBackdrop = useRef(null);
@@ -18,7 +20,6 @@ const ManagePanel = () => {
 
     const openSortByMenuBtn = useRef(null);
     const sortByMenu = useRef(null);
-    const clearSearchBtn = useRef(null);
 
     const { clearAllSearchBars } = useFilterSearchOptionController();
 
